@@ -1,0 +1,1218 @@
+[
+  {
+    "id": 1068,
+    "title": "Weird Algorithm",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1068",
+    "topics": ["Implementation", "Simulation"]
+  },
+  {
+    "id": 1083,
+    "title": "Missing Number",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1083",
+    "topics": ["Math", "Bit Manipulation"]
+  },
+  {
+    "id": 1069,
+    "title": "Repetitions",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1069",
+    "topics": ["String", "Implementation"]
+  },
+  {
+    "id": 1094,
+    "title": "Increasing Array",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1094",
+    "topics": ["Greedy", "Array"]
+  },
+  {
+    "id": 1070,
+    "title": "Permutations",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1070",
+    "topics": ["Constructive Algorithms", "Math"]
+  },
+  {
+    "id": 1071,
+    "title": "Number Spiral",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1071",
+    "topics": ["Math", "Implementation"]
+  },
+  {
+    "id": 1072,
+    "title": "Two Knights",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1072",
+    "topics": ["Math", "Combinatorics"]
+  },
+  {
+    "id": 1621,
+    "title": "Distinct Numbers",
+    "difficulty": "Easy",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1621",
+    "topics": ["Sorting", "Data Structures"]
+  },
+  {
+    "id": 1084,
+    "title": "Apartments",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1084",
+    "topics": ["Greedy", "Two Pointers", "Sorting"]
+  },
+  {
+    "id": 1090,
+    "title": "Ferris Wheel",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1090",
+    "topics": ["Greedy", "Two Pointers", "Sorting"]
+  },
+  {
+    "id": 1091,
+    "title": "Concert Tickets",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1091",
+    "topics": ["Data Structures", "Binary Search", "Multiset"]
+  },
+  {
+    "id": 1619,
+    "title": "Restaurant Customers",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1619",
+    "topics": ["Sorting", "Events", "Sweep Line"]
+  },
+  {
+    "id": 1629,
+    "title": "Movie Festival",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1629",
+    "topics": ["Greedy", "Sorting", "Activity Selection"]
+  },
+  {
+    "id": 1640,
+    "title": "Sum of Two Values",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1640",
+    "topics": ["Hash Table", "Two Pointers", "Sorting"]
+  },
+  {
+    "id": 1643,
+    "title": "Maximum Subarray Sum",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1643",
+    "topics": ["Dynamic Programming", "Kadane's Algorithm"]
+  },
+  {
+    "id": 1633,
+    "title": "Dice Combinations",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1633",
+    "topics": ["Dynamic Programming", "Combinatorics"]
+  },
+  {
+    "id": 1634,
+    "title": "Minimizing Coins",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1634",
+    "topics": ["Dynamic Programming", "Coin Change"]
+  },
+  {
+    "id": 1635,
+    "title": "Coin Combinations I",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1635",
+    "topics": ["Dynamic Programming", "Combinatorics"]
+  },
+  {
+    "id": 1636,
+    "title": "Coin Combinations II",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1636",
+    "topics": ["Dynamic Programming", "Combinatorics"]
+  },
+  {
+    "id": 1637,
+    "title": "Removing Digits",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1637",
+    "topics": ["Dynamic Programming", "Greedy"]
+  },
+  {
+    "id": 1638,
+    "title": "Grid Paths",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1638",
+    "topics": ["Dynamic Programming", "Grid"]
+  },
+  {
+    "id": 1158,
+    "title": "Book Shop",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1158",
+    "topics": ["Dynamic Programming", "Knapsack"]
+  },
+  {
+    "id": 1192,
+    "title": "Counting Rooms",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1192",
+    "topics": ["DFS", "BFS", "Connected Components"]
+  },
+  {
+    "id": 1193,
+    "title": "Labyrinth",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1193",
+    "topics": ["BFS", "Shortest Path", "Grid"]
+  },
+  {
+    "id": 1666,
+    "title": "Building Roads",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1666",
+    "topics": ["Union Find", "Connected Components"]
+  },
+  {
+    "id": 1667,
+    "title": "Message Route",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1667",
+    "topics": ["BFS", "Shortest Path"]
+  },
+  {
+    "id": 1668,
+    "title": "Building Teams",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1668",
+    "topics": ["DFS", "BFS", "Bipartite Graph", "Graph Coloring"]
+  },
+  {
+    "id": 1669,
+    "title": "Round Trip",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1669",
+    "topics": ["DFS", "Cycle Detection"]
+  },
+  {
+    "id": 1671,
+    "title": "Shortest Routes I",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1671",
+    "topics": ["Dijkstra", "Shortest Path"]
+  },
+  {
+    "id": 1672,
+    "title": "Shortest Routes II",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1672",
+    "topics": ["Floyd Warshall", "All Pairs Shortest Path"]
+  },
+  {
+    "id": 1646,
+    "title": "Static Range Sum Queries",
+    "difficulty": "Easy",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1646",
+    "topics": ["Prefix Sum", "Range Queries"]
+  },
+  {
+    "id": 1647,
+    "title": "Static Range Minimum Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1647",
+    "topics": ["Sparse Table", "Range Queries", "RMQ"]
+  },
+  {
+    "id": 1648,
+    "title": "Dynamic Range Sum Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1648",
+    "topics": ["Segment Tree", "Fenwick Tree", "Range Updates"]
+  },
+  {
+    "id": 1649,
+    "title": "Dynamic Range Minimum Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1649",
+    "topics": ["Segment Tree", "Range Queries"]
+  },
+  {
+    "id": 1674,
+    "title": "Subordinates",
+    "difficulty": "Easy",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1674",
+    "topics": ["Tree", "DFS", "Subtree"]
+  },
+  {
+    "id": 1130,
+    "title": "Tree Matching",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1130",
+    "topics": ["Tree", "Dynamic Programming", "Matching"]
+  },
+  {
+    "id": 1131,
+    "title": "Tree Diameter",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1131",
+    "topics": ["Tree", "DFS", "Diameter"]
+  },
+  {
+    "id": 1132,
+    "title": "Tree Distances I",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1132",
+    "topics": ["Tree", "DFS", "Re-rooting"]
+  },
+  {
+    "id": 1095,
+    "title": "Exponentiation",
+    "difficulty": "Medium",
+    "categories": ["Mathematics"],
+    "url": "https://cses.fi/problemset/task/1095",
+    "topics": ["Number Theory", "Modular Exponentiation"]
+  },
+  {
+    "id": 1712,
+    "title": "Exponentiation II",
+    "difficulty": "Hard",
+    "categories": ["Mathematics"],
+    "url": "https://cses.fi/problemset/task/1712",
+    "topics": ["Number Theory", "Modular Exponentiation", "Euler's Theorem"]
+  },
+  {
+    "id": 1713,
+    "title": "Counting Divisors",
+    "difficulty": "Medium",
+    "categories": ["Mathematics"],
+    "url": "https://cses.fi/problemset/task/1713",
+    "topics": ["Number Theory", "Prime Factorization"]
+  },
+  {
+    "id": 1081,
+    "title": "Common Divisors",
+    "difficulty": "Medium",
+    "categories": ["Mathematics"],
+    "url": "https://cses.fi/problemset/task/1081",
+    "topics": ["Number Theory", "GCD", "Sieve"]
+  },
+  {
+    "id": 1731,
+    "title": "Word Combinations",
+    "difficulty": "Medium",
+    "categories": ["String Algorithms"],
+    "url": "https://cses.fi/problemset/task/1731",
+    "topics": ["Trie", "Dynamic Programming", "String Matching"]
+  },
+  {
+    "id": 1753,
+    "title": "String Matching",
+    "difficulty": "Medium",
+    "categories": ["String Algorithms"],
+    "url": "https://cses.fi/problemset/task/1753",
+    "topics": ["KMP", "String Matching", "Hashing"]
+  },
+  {
+    "id": 1732,
+    "title": "Finding Borders",
+    "difficulty": "Medium",
+    "categories": ["String Algorithms"],
+    "url": "https://cses.fi/problemset/task/1732",
+    "topics": ["KMP", "String", "Prefix Function"]
+  },
+  {
+    "id": 2189,
+    "title": "Point Location Test",
+    "difficulty": "Medium",
+    "categories": ["Geometry"],
+    "url": "https://cses.fi/problemset/task/2189",
+    "topics": ["Computational Geometry", "Cross Product"]
+  },
+  {
+    "id": 2190,
+    "title": "Line Segment Intersection",
+    "difficulty": "Medium",
+    "categories": ["Geometry"],
+    "url": "https://cses.fi/problemset/task/2190",
+    "topics": ["Computational Geometry", "Line Intersection"]
+  },
+  {
+    "id": 2191,
+    "title": "Polygon Area",
+    "difficulty": "Medium",
+    "categories": ["Geometry"],
+    "url": "https://cses.fi/problemset/task/2191",
+    "topics": ["Computational Geometry", "Shoelace Formula"]
+  },
+  {
+    "id": 1628,
+    "title": "Meet in the Middle",
+    "difficulty": "Hard",
+    "categories": ["Advanced Techniques"],
+    "url": "https://cses.fi/problemset/task/1628",
+    "topics": ["Meet in the Middle", "Binary Search", "Hash Table"]
+  },
+  {
+    "id": 2136,
+    "title": "Hamming Distance",
+    "difficulty": "Medium",
+    "categories": ["Advanced Techniques"],
+    "url": "https://cses.fi/problemset/task/2136",
+    "topics": ["Bit Manipulation", "Hamming Distance"]
+  },
+  {
+    "id": 1076,
+    "title": "Sliding Window Median",
+    "difficulty": "Hard",
+    "categories": ["Sliding Window Problems"],
+    "url": "https://cses.fi/problemset/task/1076",
+    "topics": ["Sliding Window", "Data Structures", "Median"]
+  },
+  {
+    "id": 1077,
+    "title": "Sliding Window Cost",
+    "difficulty": "Hard",
+    "categories": ["Sliding Window Problems"],
+    "url": "https://cses.fi/problemset/task/1077",
+    "topics": ["Sliding Window", "Data Structures"]
+  },
+  {
+    "id": 1146,
+    "title": "Counting Bits",
+    "difficulty": "Medium",
+    "categories": ["Bitwise Operations"],
+    "url": "https://cses.fi/problemset/task/1146",
+    "topics": ["Bit Manipulation", "Digit DP"]
+  },
+  {
+    "id": 1655,
+    "title": "Maximum Xor Subarray",
+    "difficulty": "Hard",
+    "categories": ["Bitwise Operations"],
+    "url": "https://cses.fi/problemset/task/1655",
+    "topics": ["Bit Manipulation", "Trie", "XOR"]
+  },
+  {
+    "id": 1092,
+    "title": "Two Sets",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1092",
+    "topics": ["Math", "Constructive Algorithms"]
+  },
+  {
+    "id": 1617,
+    "title": "Bit Strings",
+    "difficulty": "Easy",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1617",
+    "topics": ["Math", "Modular Exponentiation"]
+  },
+  {
+    "id": 1618,
+    "title": "Trailing Zeros",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1618",
+    "topics": ["Math", "Prime Factorization"]
+  },
+  {
+    "id": 1754,
+    "title": "Coin Piles",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1754",
+    "topics": ["Math", "Game Theory"]
+  },
+  {
+    "id": 1755,
+    "title": "Palindrome Reorder",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1755",
+    "topics": ["String", "Greedy"]
+  },
+  {
+    "id": 2205,
+    "title": "Gray Code",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/2205",
+    "topics": ["Bit Manipulation", "Recursion"]
+  },
+  {
+    "id": 2165,
+    "title": "Tower of Hanoi",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/2165",
+    "topics": ["Recursion", "Mathematical"]
+  },
+  {
+    "id": 1622,
+    "title": "Creating Strings",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1622",
+    "topics": ["Backtracking", "Permutation"]
+  },
+  {
+    "id": 1623,
+    "title": "Apple Division",
+    "difficulty": "Medium",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1623",
+    "topics": ["Backtracking", "Subset Sum"]
+  },
+  {
+    "id": 1624,
+    "title": "Chessboard and Queens",
+    "difficulty": "Hard",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1624",
+    "topics": ["Backtracking", "N-Queens"]
+  },
+  {
+    "id": 2431,
+    "title": "Digit Queries",
+    "difficulty": "Hard",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/2431",
+    "topics": ["Math", "Number Theory"]
+  },
+  {
+    "id": 1625,
+    "title": "Grid Paths",
+    "difficulty": "Hard",
+    "categories": ["Introductory Problems"],
+    "url": "https://cses.fi/problemset/task/1625",
+    "topics": ["Backtracking", "Pruning"]
+  },
+  {
+    "id": 1074,
+    "title": "Stick Lengths",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1074",
+    "topics": ["Sorting", "Median", "Greedy"]
+  },
+  {
+    "id": 2183,
+    "title": "Missing Coin Sum",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2183",
+    "topics": ["Greedy", "Sorting"]
+  },
+  {
+    "id": 2216,
+    "title": "Collecting Numbers",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2216",
+    "topics": ["Array", "Greedy"]
+  },
+  {
+    "id": 2217,
+    "title": "Collecting Numbers II",
+    "difficulty": "Hard",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2217",
+    "topics": ["Array", "Data Structures"]
+  },
+  {
+    "id": 1141,
+    "title": "Playlist",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1141",
+    "topics": ["Two Pointers", "Sliding Window", "Hash Set"]
+  },
+  {
+    "id": 1073,
+    "title": "Towers",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1073",
+    "topics": ["Greedy", "Binary Search", "Multiset"]
+  },
+  {
+    "id": 1163,
+    "title": "Traffic Lights",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1163",
+    "topics": ["Data Structures", "Set", "Multiset"]
+  },
+  {
+    "id": 2162,
+    "title": "Josephus Problem I",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2162",
+    "topics": ["Simulation", "Circular Array"]
+  },
+  {
+    "id": 2163,
+    "title": "Josephus Problem II",
+    "difficulty": "Hard",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2163",
+    "topics": ["Data Structures", "Fenwick Tree"]
+  },
+  {
+    "id": 2168,
+    "title": "Nested Ranges Check",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2168",
+    "topics": ["Sorting", "Stack"]
+  },
+  {
+    "id": 2169,
+    "title": "Nested Ranges Count",
+    "difficulty": "Hard",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/2169",
+    "topics": ["Coordinate Compression", "Fenwick Tree"]
+  },
+  {
+    "id": 1164,
+    "title": "Room Allocation",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1164",
+    "topics": ["Greedy", "Priority Queue", "Events"]
+  },
+  {
+    "id": 1620,
+    "title": "Factory Machines",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1620",
+    "topics": ["Binary Search", "Math"]
+  },
+  {
+    "id": 1630,
+    "title": "Tasks and Deadlines",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1630",
+    "topics": ["Greedy", "Sorting"]
+  },
+  {
+    "id": 1631,
+    "title": "Reading Books",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1631",
+    "topics": ["Greedy", "Math"]
+  },
+  {
+    "id": 1641,
+    "title": "Sum of Three Values",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1641",
+    "topics": ["Two Pointers", "Sorting"]
+  },
+  {
+    "id": 1642,
+    "title": "Sum of Four Values",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1642",
+    "topics": ["Hash Table", "Two Pointers"]
+  },
+  {
+    "id": 1645,
+    "title": "Nearest Smaller Values",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1645",
+    "topics": ["Stack", "Monotonic Stack"]
+  },
+  {
+    "id": 1660,
+    "title": "Subarray Sums I",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1660",
+    "topics": ["Two Pointers", "Prefix Sum"]
+  },
+  {
+    "id": 1661,
+    "title": "Subarray Sums II",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1661",
+    "topics": ["Hash Table", "Prefix Sum"]
+  },
+  {
+    "id": 1662,
+    "title": "Subarray Divisibility",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1662",
+    "topics": ["Hash Table", "Prefix Sum", "Modular Arithmetic"]
+  },
+  {
+    "id": 1085,
+    "title": "Array Division",
+    "difficulty": "Medium",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1085",
+    "topics": ["Binary Search", "Greedy"]
+  },
+  {
+    "id": 1632,
+    "title": "Movie Festival II",
+    "difficulty": "Hard",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1632",
+    "topics": ["Greedy", "Multiset", "Activity Selection"]
+  },
+  {
+    "id": 1644,
+    "title": "Maximum Subarray Sum II",
+    "difficulty": "Hard",
+    "categories": ["Sorting and Searching"],
+    "url": "https://cses.fi/problemset/task/1644",
+    "topics": ["Sliding Window", "Deque", "Dynamic Programming"]
+  },
+  {
+    "id": 1746,
+    "title": "Array Description",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1746",
+    "topics": ["Dynamic Programming", "Array"]
+  },
+  {
+    "id": 2413,
+    "title": "Counting Towers",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/2413",
+    "topics": ["Dynamic Programming", "Combinatorics"]
+  },
+  {
+    "id": 1639,
+    "title": "Edit Distance",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1639",
+    "topics": ["Dynamic Programming", "String"]
+  },
+  {
+    "id": 1744,
+    "title": "Rectangle Cutting",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1744",
+    "topics": ["Dynamic Programming", "Memoization"]
+  },
+  {
+    "id": 1745,
+    "title": "Money Sums",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1745",
+    "topics": ["Dynamic Programming", "Subset Sum"]
+  },
+  {
+    "id": 1097,
+    "title": "Removal Game",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1097",
+    "topics": ["Dynamic Programming", "Game Theory", "Minimax"]
+  },
+  {
+    "id": 1093,
+    "title": "Two Sets II",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1093",
+    "topics": ["Dynamic Programming", "Combinatorics"]
+  },
+  {
+    "id": 1145,
+    "title": "Increasing Subsequence",
+    "difficulty": "Medium",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1145",
+    "topics": ["Dynamic Programming", "Binary Search", "LIS"]
+  },
+  {
+    "id": 1140,
+    "title": "Projects",
+    "difficulty": "Hard",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1140",
+    "topics": ["Dynamic Programming", "Coordinate Compression"]
+  },
+  {
+    "id": 1653,
+    "title": "Elevator Rides",
+    "difficulty": "Hard",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1653",
+    "topics": ["Dynamic Programming", "Bitmask DP"]
+  },
+  {
+    "id": 2181,
+    "title": "Counting Tilings",
+    "difficulty": "Hard",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/2181",
+    "topics": ["Dynamic Programming", "Bitmask DP", "Tiling"]
+  },
+  {
+    "id": 2220,
+    "title": "Counting Numbers",
+    "difficulty": "Hard",
+    "categories": ["Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/2220",
+    "topics": ["Dynamic Programming", "Digit DP"]
+  },
+  {
+    "id": 1194,
+    "title": "Monsters",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1194",
+    "topics": ["BFS", "Multi-source BFS", "Grid"]
+  },
+  {
+    "id": 1673,
+    "title": "High Score",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1673",
+    "topics": ["Bellman-Ford", "Longest Path", "Cycle Detection"]
+  },
+  {
+    "id": 1195,
+    "title": "Flight Discount",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1195",
+    "topics": ["Dijkstra", "State Space Search"]
+  },
+  {
+    "id": 1197,
+    "title": "Cycle Finding",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1197",
+    "topics": ["Bellman-Ford", "Negative Cycle Detection"]
+  },
+  {
+    "id": 1196,
+    "title": "Flight Routes",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1196",
+    "topics": ["Dijkstra", "K Shortest Paths"]
+  },
+  {
+    "id": 1678,
+    "title": "Round Trip II",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1678",
+    "topics": ["DFS", "Cycle Detection", "Directed Graph"]
+  },
+  {
+    "id": 1679,
+    "title": "Course Schedule",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1679",
+    "topics": ["Topological Sort", "DFS", "Kahn's Algorithm"]
+  },
+  {
+    "id": 1680,
+    "title": "Longest Flight Route",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1680",
+    "topics": ["Dynamic Programming", "DAG", "Longest Path"]
+  },
+  {
+    "id": 1681,
+    "title": "Game Routes",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1681",
+    "topics": ["Dynamic Programming", "DAG", "Path Counting"]
+  },
+  {
+    "id": 1202,
+    "title": "Investigation",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1202",
+    "topics": ["Dijkstra", "Dynamic Programming", "Multiple Criteria"]
+  },
+  {
+    "id": 1750,
+    "title": "Planets Queries I",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1750",
+    "topics": ["Binary Lifting", "Functional Graph"]
+  },
+  {
+    "id": 1160,
+    "title": "Planets Queries II",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1160",
+    "topics": ["Functional Graph", "Cycle Detection"]
+  },
+  {
+    "id": 1751,
+    "title": "Planets Cycles",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1751",
+    "topics": ["Functional Graph", "Cycle Detection"]
+  },
+  {
+    "id": 1675,
+    "title": "Road Reparation",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1675",
+    "topics": ["MST", "Kruskal", "Prim"]
+  },
+  {
+    "id": 1676,
+    "title": "Road Construction",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1676",
+    "topics": ["Union Find", "Connected Components"]
+  },
+  {
+    "id": 1682,
+    "title": "Flight Routes Check",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1682",
+    "topics": ["SCC", "Kosaraju", "Tarjan"]
+  },
+  {
+    "id": 1683,
+    "title": "Planets and Kingdoms",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1683",
+    "topics": ["SCC", "Kosaraju", "Tarjan"]
+  },
+  {
+    "id": 1684,
+    "title": "Giant Pizza",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1684",
+    "topics": ["2-SAT", "SCC"]
+  },
+  {
+    "id": 1686,
+    "title": "Coin Collector",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1686",
+    "topics": ["SCC", "Dynamic Programming", "DAG"]
+  },
+  {
+    "id": 1691,
+    "title": "Mail Delivery",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1691",
+    "topics": ["Eulerian Path", "Graph Theory"]
+  },
+  {
+    "id": 1692,
+    "title": "De Bruijn Sequence",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1692",
+    "topics": ["Eulerian Path", "De Bruijn Graph"]
+  },
+  {
+    "id": 1693,
+    "title": "Teleporters Path",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1693",
+    "topics": ["Eulerian Path", "Directed Graph"]
+  },
+  {
+    "id": 1690,
+    "title": "Hamiltonian Flights",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1690",
+    "topics": ["Dynamic Programming", "Bitmask DP", "Hamiltonian Path"]
+  },
+  {
+    "id": 1689,
+    "title": "Knight's Tour",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1689",
+    "topics": ["Backtracking", "Hamiltonian Path", "Heuristics"]
+  },
+  {
+    "id": 1694,
+    "title": "Download Speed",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1694",
+    "topics": ["Max Flow", "Ford-Fulkerson", "Dinic"]
+  },
+  {
+    "id": 1695,
+    "title": "Police Chase",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1695",
+    "topics": ["Max Flow", "Min Cut"]
+  },
+  {
+    "id": 1696,
+    "title": "School Dance",
+    "difficulty": "Medium",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1696",
+    "topics": ["Maximum Bipartite Matching", "Max Flow"]
+  },
+  {
+    "id": 1711,
+    "title": "Distinct Routes",
+    "difficulty": "Hard",
+    "categories": ["Graph Algorithms"],
+    "url": "https://cses.fi/problemset/task/1711",
+    "topics": ["Max Flow", "Edge Disjoint Paths"]
+  },
+  {
+    "id": 1650,
+    "title": "Range Xor Queries",
+    "difficulty": "Easy",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1650",
+    "topics": ["Prefix Sum", "XOR", "Range Queries"]
+  },
+  {
+    "id": 1651,
+    "title": "Range Update Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1651",
+    "topics": ["Segment Tree", "Lazy Propagation", "Range Updates"]
+  },
+  {
+    "id": 1652,
+    "title": "Forest Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1652",
+    "topics": ["2D Prefix Sum", "Rectangle Queries"]
+  },
+  {
+    "id": 1143,
+    "title": "Hotel Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1143",
+    "topics": ["Segment Tree", "Binary Search"]
+  },
+  {
+    "id": 1749,
+    "title": "List Removals",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1749",
+    "topics": ["Segment Tree", "Order Statistics"]
+  },
+  {
+    "id": 1144,
+    "title": "Salary Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1144",
+    "topics": ["Coordinate Compression", "Fenwick Tree"]
+  },
+  {
+    "id": 2166,
+    "title": "Prefix Sum Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/2166",
+    "topics": ["Segment Tree", "Maximum Prefix Sum"]
+  },
+  {
+    "id": 2206,
+    "title": "Pizzeria Queries",
+    "difficulty": "Medium",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/2206",
+    "topics": ["Segment Tree", "Range Minimum Query"]
+  },
+  {
+    "id": 1190,
+    "title": "Subarray Sum Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1190",
+    "topics": ["Segment Tree", "Maximum Subarray"]
+  },
+  {
+    "id": 1734,
+    "title": "Distinct Values Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1734",
+    "topics": ["Mo's Algorithm", "Offline Queries"]
+  },
+  {
+    "id": 2416,
+    "title": "Increasing Array Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/2416",
+    "topics": ["Segment Tree", "Stack", "Monotonic Stack"]
+  },
+  {
+    "id": 1664,
+    "title": "Movie Festival Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1664",
+    "topics": ["Segment Tree", "Coordinate Compression"]
+  },
+  {
+    "id": 1739,
+    "title": "Forest Queries II",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1739",
+    "topics": ["2D Fenwick Tree", "2D Range Updates"]
+  },
+  {
+    "id": 1735,
+    "title": "Range Updates and Sums",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1735",
+    "topics": ["Segment Tree", "Lazy Propagation", "Multiple Operations"]
+  },
+  {
+    "id": 1736,
+    "title": "Polynomial Queries",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1736",
+    "topics": ["Segment Tree", "Lazy Propagation", "Polynomial Updates"]
+  },
+  {
+    "id": 1737,
+    "title": "Range Queries and Copies",
+    "difficulty": "Hard",
+    "categories": ["Range Queries"],
+    "url": "https://cses.fi/problemset/task/1737",
+    "topics": ["Persistent Segment Tree", "Versioning"]
+  },
+  {
+    "id": 1133,
+    "title": "Tree Distances II",
+    "difficulty": "Hard",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1133",
+    "topics": ["Tree", "DFS", "Re-rooting", "Dynamic Programming"]
+  },
+  {
+    "id": 1687,
+    "title": "Company Queries I",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1687",
+    "topics": ["Tree", "Binary Lifting", "LCA"]
+  },
+  {
+    "id": 1688,
+    "title": "Company Queries II",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1688",
+    "topics": ["Tree", "LCA", "Binary Lifting"]
+  },
+  {
+    "id": 1135,
+    "title": "Distance Queries",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1135",
+    "topics": ["Tree", "LCA", "Tree Distances"]
+  },
+  {
+    "id": 1136,
+    "title": "Counting Paths",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1136",
+    "topics": ["Tree", "LCA", "Difference Array"]
+  },
+  {
+    "id": 1137,
+    "title": "Subtree Queries",
+    "difficulty": "Medium",
+    "categories": ["Tree Algorithms"],
+    "url": "https://cses.fi/problemset/task/1137",
+    "topics": ["Tree", "DFS Order", "Fenwick Tree"]
+  }
+]

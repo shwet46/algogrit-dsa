@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1000,
+    "title": "Greetings from LightOJ",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/greetings-from-lightoj",
+    "topics": ["Implementation", "Ad Hoc"]
+  },
+  {
+    "id": 1001,
+    "title": "Opposite Task",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/opposite-task",
+    "topics": ["Math", "Greedy"]
+  },
+  {
+    "id": 1002,
+    "title": "Country Roads",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/country-roads",
+    "topics": ["Graph Theory", "Shortest Path", "Dijkstra"]
+  },
+  {
+    "id": 1003,
+    "title": "Drunk",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/drunk",
+    "topics": ["Graph Theory", "Topological Sort", "DFS"]
+  },
+  {
+    "id": 1004,
+    "title": "Monkey Banana Problem",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/monkey-banana-problem",
+    "topics": ["Dynamic Programming", "Grid DP"]
+  },
+  {
+    "id": 1005,
+    "title": "Rooks",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/rooks",
+    "topics": ["Combinatorics", "Math"]
+  },
+  {
+    "id": 1006,
+    "title": "Hex-a-bonacci",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/hex-a-bonacci",
+    "topics": ["Dynamic Programming", "Memoization"]
+  },
+  {
+    "id": 1007,
+    "title": "Mathematically Hard",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/mathematically-hard",
+    "topics": ["Number Theory", "Euler's Totient", "Sieve"]
+  },
+  {
+    "id": 1008,
+    "title": "Fibsieve's Fantabulous Birthday",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/fibsieves-fantabulous-birthday",
+    "topics": ["Math", "Implementation"]
+  },
+  {
+    "id": 1009,
+    "title": "Back to Underworld",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/back-to-underworld",
+    "topics": ["Graph Theory", "Bipartite Graph", "DFS", "BFS"]
+  },
+  {
+    "id": 1010,
+    "title": "Knights in Chessboard",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/knights-in-chessboard",
+    "topics": ["Math", "Combinatorics"]
+  },
+  {
+    "id": 1011,
+    "title": "Marriage Ceremonies",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/marriage-ceremonies",
+    "topics": ["Dynamic Programming", "Bitmask DP"]
+  },
+  {
+    "id": 1012,
+    "title": "Guilty Prince",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/guilty-prince",
+    "topics": ["Graph Theory", "DFS", "BFS", "Connected Components"]
+  },
+  {
+    "id": 1013,
+    "title": "Love Calculator",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/love-calculator",
+    "topics": ["Dynamic Programming", "LCS"]
+  },
+  {
+    "id": 1014,
+    "title": "Ifter Party",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/ifter-party",
+    "topics": ["Math", "Number Theory", "Divisors"]
+  },
+  {
+    "id": 1015,
+    "title": "Brush (I)",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/brush-i",
+    "topics": ["Geometry", "Line Intersection"]
+  },
+  {
+    "id": 1016,
+    "title": "Brush (II)",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/brush-ii",
+    "topics": ["Geometry", "Computational Geometry"]
+  },
+  {
+    "id": 1017,
+    "title": "Brush (III)",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/brush-iii",
+    "topics": ["Geometry", "Sweep Line", "Computational Geometry"]
+  },
+  {
+    "id": 1018,
+    "title": "Brush (IV)",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/brush-iv",
+    "topics": ["Geometry", "Convex Hull", "Computational Geometry"]
+  },
+  {
+    "id": 1019,
+    "title": "Brush (V)",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/brush-v",
+    "topics": ["Geometry", "Polygon", "Computational Geometry"]
+  },
+  {
+    "id": 1020,
+    "title": "A Childhood Game",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/a-childhood-game",
+    "topics": ["Game Theory", "Nim Game"]
+  },
+  {
+    "id": 1021,
+    "title": "Painful Bases",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/painful-bases",
+    "topics": ["Dynamic Programming", "Digit DP", "Number Theory"]
+  },
+  {
+    "id": 1022,
+    "title": "Circle in Square",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/circle-in-square",
+    "topics": ["Geometry", "Math"]
+  },
+  {
+    "id": 1023,
+    "title": "Goldbach's Conjecture",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/goldbachs-conjecture",
+    "topics": ["Number Theory", "Prime Numbers", "Sieve"]
+  },
+  {
+    "id": 1024,
+    "title": "Eid",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/eid",
+    "topics": ["Math", "Probability"]
+  },
+  {
+    "id": 1025,
+    "title": "The Specials Menu",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/the-specials-menu",
+    "topics": ["Dynamic Programming", "Palindrome"]
+  },
+  {
+    "id": 1026,
+    "title": "Critical Links",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/critical-links",
+    "topics": ["Graph Theory", "Bridges", "Tarjan's Algorithm"]
+  },
+  {
+    "id": 1027,
+    "title": "A Dangerous Maze",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/a-dangerous-maze",
+    "topics": ["Probability", "Expected Value", "Math"]
+  },
+  {
+    "id": 1028,
+    "title": "Trailing Zeroes (I)",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/trailing-zeroes-i",
+    "topics": ["Math", "Number Theory", "Factorial"]
+  },
+  {
+    "id": 1029,
+    "title": "Civil and Evil Engineer",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/civil-and-evil-engineer",
+    "topics": ["Graph Theory", "MST", "Kruskal", "Prim"]
+  },
+  {
+    "id": 1030,
+    "title": "Discovering Gold",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/discovering-gold",
+    "topics": ["Dynamic Programming", "Probability", "Expected Value"]
+  },
+  {
+    "id": 1031,
+    "title": "Easy Game",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/easy-game",
+    "topics": ["Game Theory", "Minimax", "Dynamic Programming"]
+  },
+  {
+    "id": 1032,
+    "title": "Fast Bit Calculations",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/fast-bit-calculations",
+    "topics": ["Dynamic Programming", "Digit DP", "Bit Manipulation"]
+  },
+  {
+    "id": 1033,
+    "title": "Generating Palindromes",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/generating-palindromes",
+    "topics": ["Dynamic Programming", "String", "Palindrome"]
+  },
+  {
+    "id": 1034,
+    "title": "Hit the Light Switches",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/hit-the-light-switches",
+    "topics": ["Graph Theory", "SCC", "Tarjan", "Kosaraju"]
+  },
+  {
+    "id": 1035,
+    "title": "Intelligent Factorial Factorization",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/intelligent-factorial-factorization",
+    "topics": ["Number Theory", "Prime Factorization", "Math"]
+  },
+  {
+    "id": 1036,
+    "title": "Birthday Paradox",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/birthday-paradox",
+    "topics": ["Probability", "Math"]
+  },
+  {
+    "id": 1037,
+    "title": "Agent 47",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/agent-47",
+    "topics": ["Graph Theory", "Shortest Path", "Dijkstra"]
+  },
+  {
+    "id": 1038,
+    "title": "Race to 1 Again",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/race-to-1-again",
+    "topics": ["Probability", "Expected Value", "Dynamic Programming"]
+  },
+  {
+    "id": 1039,
+    "title": "A Toy Company",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/a-toy-company",
+    "topics": ["Graph Theory", "BFS", "Shortest Path"]
+  },
+  {
+    "id": 1040,
+    "title": "Donation",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/donation",
+    "topics": ["Graph Theory", "MST", "Greedy"]
+  },
+  {
+    "id": 1041,
+    "title": "Road Construction",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/road-construction",
+    "topics": ["Graph Theory", "MST", "Union Find"]
+  },
+  {
+    "id": 1042,
+    "title": "Secret Origins",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/secret-origins",
+    "topics": ["Bit Manipulation", "Math"]
+  },
+  {
+    "id": 1043,
+    "title": "Triangle Partitioning",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/triangle-partitioning",
+    "topics": ["Geometry", "Binary Search"]
+  },
+  {
+    "id": 1044,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/palindrome-partitioning",
+    "topics": ["Dynamic Programming", "String", "Palindrome"]
+  },
+  {
+    "id": 1045,
+    "title": "Digits of Factorial",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/digits-of-factorial",
+    "topics": ["Math", "Logarithm"]
+  },
+  {
+    "id": 1046,
+    "title": "Rider",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/rider",
+    "topics": ["Graph Theory", "BFS", "Knight's Move"]
+  },
+  {
+    "id": 1047,
+    "title": "Neighbor House",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/neighbor-house",
+    "topics": ["Dynamic Programming"]
+  },
+  {
+    "id": 1048,
+    "title": "Conquering Keokradong",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/conquering-keokradong",
+    "topics": ["Graph Theory", "Shortest Path", "Dijkstra"]
+  },
+  {
+    "id": 1049,
+    "title": "One Way Roads",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/one-way-roads",
+    "topics": ["Graph Theory", "DFS", "Tree"]
+  },
+  {
+    "id": 1050,
+    "title": "Marbles",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/marbles",
+    "topics": ["Combinatorics", "Math"]
+  },
+  {
+    "id": 1051,
+    "title": "Good or Bad",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/good-or-bad",
+    "topics": ["Dynamic Programming", "String"]
+  },
+  {
+    "id": 1052,
+    "title": "String Growth",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/string-growth",
+    "topics": ["Math", "Modular Arithmetic"]
+  },
+  {
+    "id": 1053,
+    "title": "Higher Math",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/higher-math",
+    "topics": ["Math", "Pythagorean Theorem"]
+  },
+  {
+    "id": 1054,
+    "title": "Efficient Power",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/efficient-power",
+    "topics": ["Math", "Fast Exponentiation"]
+  },
+  {
+    "id": 1055,
+    "title": "Going Together",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/going-together",
+    "topics": ["Graph Theory", "BFS", "State Space Search"]
+  },
+  {
+    "id": 1056,
+    "title": "Olympics",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/olympics",
+    "topics": ["Math", "Implementation"]
+  },
+  {
+    "id": 1057,
+    "title": "Collecting Gold",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/collecting-gold",
+    "topics": ["Dynamic Programming", "Bitmask DP", "TSP"]
+  },
+  {
+    "id": 1058,
+    "title": "Parallelogram Counting",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/parallelogram-counting",
+    "topics": ["Geometry", "Combinatorics"]
+  },
+  {
+    "id": 1059,
+    "title": "Air Ports",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/air-ports",
+    "topics": ["Graph Theory", "MST", "Union Find"]
+  },
+  {
+    "id": 1060,
+    "title": "nth Permutation",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/nth-permutation",
+    "topics": ["Combinatorics", "Factorial Number System"]
+  },
+  {
+    "id": 1061,
+    "title": "N Queen Again",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/n-queen-again",
+    "topics": ["Backtracking", "N-Queens"]
+  },
+  {
+    "id": 1062,
+    "title": "Crossed Ladders",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/crossed-ladders",
+    "topics": ["Math", "Binary Search", "Geometry"]
+  },
+  {
+    "id": 1063,
+    "title": "Ant Hills",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/ant-hills",
+    "topics": ["Graph Theory", "Articulation Points"]
+  },
+  {
+    "id": 1064,
+    "title": "Throwing Dice",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/throwing-dice",
+    "topics": ["Dynamic Programming", "Probability"]
+  },
+  {
+    "id": 1065,
+    "title": "Number Transformation",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/number-transformation",
+    "topics": ["Graph Theory", "BFS", "Number Theory"]
+  },
+  {
+    "id": 1066,
+    "title": "Gathering Food",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/gathering-food",
+    "topics": ["Graph Theory", "BFS", "Shortest Path"]
+  },
+  {
+    "id": 1067,
+    "title": "Combinations",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/combinations",
+    "topics": ["Combinatorics", "Lucas Theorem"]
+  },
+  {
+    "id": 1068,
+    "title": "Investigation",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/investigation",
+    "topics": ["Dynamic Programming", "Digit DP"]
+  },
+  {
+    "id": 1069,
+    "title": "Lift",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/lift",
+    "topics": ["Implementation", "Simulation"]
+  },
+  {
+    "id": 1070,
+    "title": "Algebraic Problem",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/algebraic-problem",
+    "topics": ["Math", "Matrix Exponentiation"]
+  },
+  {
+    "id": 1071,
+    "title": "Baker Vai",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/baker-vai",
+    "topics": ["Graph Theory", "BFS", "Grid"]
+  },
+  {
+    "id": 1072,
+    "title": "Calm Down",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/calm-down",
+    "topics": ["Geometry", "Circle", "Math"]
+  },
+  {
+    "id": 1073,
+    "title": "DNA Sequence",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/dna-sequence",
+    "topics": ["Dynamic Programming", "String"]
+  },
+  {
+    "id": 1074,
+    "title": "Extended Traffic",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/extended-traffic",
+    "topics": ["Graph Theory", "Shortest Path", "Bellman Ford"]
+  },
+  {
+    "id": 1075,
+    "title": "Finding Routes",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/finding-routes",
+    "topics": ["Graph Theory", "All Pairs Shortest Path", "Floyd Warshall"]
+  },
+  {
+    "id": 1076,
+    "title": "Get the Containers",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/get-the-containers",
+    "topics": ["Binary Search", "Greedy"]
+  },
+  {
+    "id": 1077,
+    "title": "How Many Points of Intersection",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/how-many-points-of-intersection",
+    "topics": ["Combinatorics", "Math"]
+  },
+  {
+    "id": 1078,
+    "title": "Integer Divisibility",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/integer-divisibility",
+    "topics": ["Number Theory", "Modular Arithmetic", "BFS"]
+  },
+  {
+    "id": 1079,
+    "title": "Just another Number Sequence",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/just-another-number-sequence",
+    "topics": ["Matrix Exponentiation", "Linear Recurrence"]
+  },
+  {
+    "id": 1080,
+    "title": "Binary Simulation",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/binary-simulation",
+    "topics": ["Data Structures", "Segment Tree", "Lazy Propagation"]
+  },
+  {
+    "id": 1081,
+    "title": "Square Queries",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/square-queries",
+    "topics": ["Data Structures", "2D Range Query", "Square Root Decomposition"]
+  },
+  {
+    "id": 1082,
+    "title": "Array Queries",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/array-queries",
+    "topics": ["Data Structures", "Sparse Table", "RMQ"]
+  },
+  {
+    "id": 1083,
+    "title": "Histogram",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/histogram",
+    "topics": ["Stack", "Largest Rectangle in Histogram"]
+  },
+  {
+    "id": 1084,
+    "title": "Winter",
+    "difficulty": "Easy",
+    "url": "https://lightoj.com/problem/winter",
+    "topics": ["Implementation", "Ad Hoc"]
+  },
+  {
+    "id": 1085,
+    "title": "All Possible Increasing Subsequences",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/all-possible-increasing-subsequences",
+    "topics": ["Dynamic Programming", "Data Structures", "Fenwick Tree"]
+  },
+  {
+    "id": 1086,
+    "title": "Jogging Trails",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/jogging-trails",
+    "topics": ["Graph Theory", "Chinese Postman Problem", "Eulerian Path"]
+  },
+  {
+    "id": 1087,
+    "title": "Diablo",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/diablo",
+    "topics": ["Data Structures", "Order Statistics Tree"]
+  },
+  {
+    "id": 1088,
+    "title": "Points in Segments",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/points-in-segments",
+    "topics": ["Binary Search", "Coordinate Compression"]
+  },
+  {
+    "id": 1089,
+    "title": "Points in Segments (II)",
+    "difficulty": "Hard",
+    "url": "https://lightoj.com/problem/points-in-segments-ii",
+    "topics": ["Data Structures", "Segment Tree", "Range Update"]
+  },
+  {
+    "id": 1090,
+    "title": "Trailing Zeroes (II)",
+    "difficulty": "Medium",
+    "url": "https://lightoj.com/problem/trailing-zeroes-ii",
+    "topics": ["Number Theory", "Prime Factorization"]
+  }
+]

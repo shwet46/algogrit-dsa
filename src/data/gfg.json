@@ -1,0 +1,1042 @@
+[
+  {
+    "id": 1,
+    "title": "Array Rotation Count",
+    "difficulty": "Easy",
+    "companies": ["TCS", "Infosys", "Wipro", "Accenture"],
+    "url": "https://practice.geeksforgeeks.org/problems/rotation-count/",
+    "topics": ["Array", "Binary Search"]
+  },
+  {
+    "id": 2,
+    "title": "Leaders in Array",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/leaders-in-an-array/",
+    "topics": ["Array", "Traversal"]
+  },
+  {
+    "id": 3,
+    "title": "Kadane's Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Google", "Facebook", "Amazon", "Microsoft"],
+    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/",
+    "topics": ["Array", "Dynamic Programming"]
+  },
+  {
+    "id": 4,
+    "title": "Chocolate Distribution Problem",
+    "difficulty": "Easy",
+    "companies": ["Accenture", "Amazon", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem/",
+    "topics": ["Array", "Sorting", "Greedy"]
+  },
+  {
+    "id": 5,
+    "title": "Stock Buy and Sell",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/stock-buy-and-sell/",
+    "topics": ["Array", "Greedy", "Dynamic Programming"]
+  },
+  {
+    "id": 6,
+    "title": "Level Order Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/level-order-traversal/",
+    "topics": ["Tree", "Queue", "BFS"]
+  },
+  {
+    "id": 7,
+    "title": "Vertical Traversal of Binary Tree",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Flipkart"],
+    "url": "https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/",
+    "topics": ["Tree", "Hash Table", "DFS"]
+  },
+  {
+    "id": 8,
+    "title": "Detect Loop in Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Accenture"],
+    "url": "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/",
+    "topics": ["Linked List", "Two Pointers"]
+  },
+  {
+    "id": 9,
+    "title": "Reverse Words in String",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Paytm", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string/",
+    "topics": ["String", "Stack"]
+  },
+  {
+    "id": 10,
+    "title": "Longest Common Subsequence",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence/",
+    "topics": ["String", "Dynamic Programming"]
+  },
+  {
+    "id": 11,
+    "title": "Count Inversions",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/inversion-of-array/",
+    "topics": ["Array", "Merge Sort", "Divide and Conquer"]
+  },
+  {
+    "id": 12,
+    "title": "Spirally Traversing Matrix",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/",
+    "topics": ["Matrix", "Array", "Simulation"]
+  },
+  {
+    "id": 13,
+    "title": "Print All Permutations",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/",
+    "topics": ["String", "Backtracking", "Recursion"]
+  },
+  {
+    "id": 14,
+    "title": "N-Queen Problem",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/n-queen-problem/",
+    "topics": ["Backtracking", "Recursion", "Matrix"]
+  },
+  {
+    "id": 15,
+    "title": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/",
+    "topics": ["Graph", "Greedy", "Union Find"]
+  },
+  {
+    "id": 16,
+    "title": "Topological Sort",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/topological-sort/",
+    "topics": ["Graph", "DFS", "Stack"]
+  },
+  {
+    "id": 17,
+    "title": "Coin Change Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/coin-change2448/",
+    "topics": ["Dynamic Programming", "Greedy"]
+  },
+  {
+    "id": 18,
+    "title": "Edit Distance",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/edit-distance/",
+    "topics": ["String", "Dynamic Programming"]
+  },
+  {
+    "id": 19,
+    "title": "Job Sequencing Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem/",
+    "topics": ["Greedy", "Sorting", "Disjoint Set"]
+  },
+  {
+    "id": 20,
+    "title": "Rat in a Maze",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/",
+    "topics": ["Backtracking", "Matrix", "Recursion"]
+  },
+  {
+    "id": 21,
+    "title": "Implement Stack using Queues",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/stack-using-two-queues/",
+    "topics": ["Stack", "Queue", "Design"]
+  },
+  {
+    "id": 22,
+    "title": "Binary Tree to DLL",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/",
+    "topics": ["Tree", "Linked List", "Recursion"]
+  },
+  {
+    "id": 23,
+    "title": "Aggressive Cows",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/aggressive-cows/",
+    "topics": ["Binary Search", "Array", "Greedy"]
+  },
+  {
+    "id": 24,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning/",
+    "topics": ["String", "Dynamic Programming", "Backtracking"]
+  },
+  {
+    "id": 25,
+    "title": "Word Break Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/word-break/",
+    "topics": ["String", "Dynamic Programming", "Trie"]
+  },
+  {
+    "id": 26,
+    "title": "Fractional Knapsack",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/fractional-knapsack/",
+    "topics": ["Greedy", "Sorting", "Array"]
+  },
+  {
+    "id": 27,
+    "title": "Largest Rectangle in Histogram",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/",
+    "topics": ["Array", "Stack", "Histogram"]
+  },
+  {
+    "id": 28,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence/",
+    "topics": ["Array", "Dynamic Programming", "Binary Search"]
+  },
+  {
+    "id": 29,
+    "title": "Shortest Path in DAG",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/shortest-path-in-undirected-graph/",
+    "topics": ["Graph", "Topological Sort", "DFS"]
+  },
+  {
+    "id": 30,
+    "title": "Bridges in Graph",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/bridge-edge-in-graph/",
+    "topics": ["Graph", "DFS", "Tarjan's Algorithm"]
+  },
+  {
+    "id": 31,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google", "Facebook"],
+    "url": "https://practice.geeksforgeeks.org/problems/smallest-distant-window/",
+    "topics": ["String", "Hash Table", "Sliding Window"]
+  },
+  {
+    "id": 32,
+    "title": "Implement Trie",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/trie-insert-and-search/",
+    "topics": ["Trie", "String", "Design"]
+  },
+  {
+    "id": 33,
+    "title": "Alien Dictionary",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/alien-dictionary/",
+    "topics": ["Graph", "Topological Sort", "String"]
+  },
+  {
+    "id": 34,
+    "title": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/serialize-and-deserialize-a-binary-tree/",
+    "topics": ["Tree", "String", "Design"]
+  },
+  {
+    "id": 35,
+    "title": "Maximum Sum Path",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-path-sum/",
+    "topics": ["Tree", "Dynamic Programming", "Recursion"]
+  },
+  {
+    "id": 36,
+    "title": "Median in Stream",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/find-median-in-a-stream/",
+    "topics": ["Heap", "Design", "Priority Queue"]
+  },
+  {
+    "id": 37,
+    "title": "Sliding Window Maximum",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k/",
+    "topics": ["Array", "Deque", "Sliding Window"]
+  },
+  {
+    "id": 38,
+    "title": "Count Distinct Elements",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/",
+    "topics": ["Array", "Hash Table", "Sliding Window"]
+  },
+  {
+    "id": 39,
+    "title": "Minimum Cost Path",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-cost-path/",
+    "topics": ["Matrix", "Dynamic Programming", "Graph"]
+  },
+  {
+    "id": 40,
+    "title": "Expression Evaluation",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/evaluation-of-postfix-expression/",
+    "topics": ["Stack", "String", "Expression"]
+  },
+  {
+    "id": 41,
+    "title": "Parentheses Checker",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/",
+    "topics": ["Stack", "String"]
+  },
+  {
+    "id": 42,
+    "title": "Next Greater Element",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/next-larger-element/",
+    "topics": ["Array", "Stack", "Monotonic Stack"]
+  },
+  {
+    "id": 43,
+    "title": "Longest Palindromic Subsequence",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/longest-palindromic-subsequence/",
+    "topics": ["String", "Dynamic Programming"]
+  },
+  {
+    "id": 44,
+    "title": "Matrix Chain Multiplication",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication/",
+    "topics": ["Dynamic Programming", "Matrix"]
+  },
+  {
+    "id": 45,
+    "title": "Strongly Connected Components",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/",
+    "topics": ["Graph", "DFS", "Kosaraju's Algorithm"]
+  },
+  {
+    "id": 46,
+    "title": "Articulation Points",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/articulation-point-1/",
+    "topics": ["Graph", "DFS", "Tarjan's Algorithm"]
+  },
+  {
+    "id": 47,
+    "title": "Mobile Numeric Keypad",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/mobile-numeric-keypad/",
+    "topics": ["Dynamic Programming", "Matrix"]
+  },
+  {
+    "id": 48,
+    "title": "Egg Dropping Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle/",
+    "topics": ["Dynamic Programming", "Recursion"]
+  },
+  {
+    "id": 49,
+    "title": "Subset Sum Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem/",
+    "topics": ["Dynamic Programming", "Array"]
+  },
+  {
+    "id": 50,
+    "title": "Activity Selection Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/activity-selection/",
+    "topics": ["Greedy", "Sorting", "Interval"]
+  },
+  {
+    "id": 51,
+    "title": "Find Missing Number",
+    "difficulty": "Easy",
+    "companies": ["TCS", "Infosys", "Wipro", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/missing-number-in-array/",
+    "topics": ["Array", "Mathematics", "Bit Manipulation"]
+  },
+  {
+    "id": 52,
+    "title": "Majority Element",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/majority-element/",
+    "topics": ["Array", "Boyer-Moore Algorithm"]
+  },
+  {
+    "id": 53,
+    "title": "Peak Element",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/peak-element/",
+    "topics": ["Array", "Binary Search"]
+  },
+  {
+    "id": 54,
+    "title": "Minimize Heights",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/minimize-the-heights/",
+    "topics": ["Array", "Greedy", "Sorting"]
+  },
+  {
+    "id": 55,
+    "title": "Kth Smallest Element",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/kth-smallest-element/",
+    "topics": ["Array", "Heap", "Quick Select"]
+  },
+  {
+    "id": 56,
+    "title": "Merge Without Extra Space",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-without-extra-space/",
+    "topics": ["Array", "Two Pointers", "Sorting"]
+  },
+  {
+    "id": 57,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/",
+    "topics": ["Linked List", "Recursion", "Iteration"]
+  },
+  {
+    "id": 58,
+    "title": "Middle of Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/",
+    "topics": ["Linked List", "Two Pointers"]
+  },
+  {
+    "id": 59,
+    "title": "Add Two Numbers LL",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/",
+    "topics": ["Linked List", "Mathematics", "Carry Forward"]
+  },
+  {
+    "id": 60,
+    "title": "Clone Random Pointer LL",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/",
+    "topics": ["Linked List", "Hash Table", "Cloning"]
+  },
+  {
+    "id": 61,
+    "title": "Remove Nth Node from End",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/",
+    "topics": ["Linked List", "Two Pointers"]
+  },
+  {
+    "id": 62,
+    "title": "Flatten Linked List",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/",
+    "topics": ["Linked List", "Merge", "Recursion"]
+  },
+  {
+    "id": 63,
+    "title": "Rotate Linked List",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/rotate-a-linked-list/",
+    "topics": ["Linked List", "Two Pointers"]
+  },
+  {
+    "id": 64,
+    "title": "Delete Node in LL",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/delete-node-in-single-linked-list/",
+    "topics": ["Linked List", "Pointer Manipulation"]
+  },
+  {
+    "id": 65,
+    "title": "Intersection of Two LL",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/",
+    "topics": ["Linked List", "Two Pointers", "Hash Table"]
+  },
+  {
+    "id": 66,
+    "title": "Palindromic Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/",
+    "topics": ["Linked List", "Two Pointers", "Stack"]
+  },
+  {
+    "id": 67,
+    "title": "Sort 0s 1s 2s",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/",
+    "topics": ["Array", "Dutch Flag Algorithm", "Sorting"]
+  },
+  {
+    "id": 68,
+    "title": "First Negative in Window",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k/",
+    "topics": ["Array", "Sliding Window", "Queue"]
+  },
+  {
+    "id": 69,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/",
+    "topics": ["Stack", "String"]
+  },
+  {
+    "id": 70,
+    "title": "Implement Queue using Stack",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/",
+    "topics": ["Stack", "Queue", "Design"]
+  },
+  {
+    "id": 71,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/lru-cache/",
+    "topics": ["Hash Table", "Linked List", "Design"]
+  },
+  {
+    "id": 72,
+    "title": "Minimum Stack",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/get-minimum-element-from-stack/",
+    "topics": ["Stack", "Design"]
+  },
+  {
+    "id": 73,
+    "title": "Height of Binary Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/height-of-binary-tree/",
+    "topics": ["Tree", "Recursion", "DFS"]
+  },
+  {
+    "id": 74,
+    "title": "Diameter of Binary Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/",
+    "topics": ["Tree", "Recursion", "DFS"]
+  },
+  {
+    "id": 75,
+    "title": "Mirror Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/mirror-tree/",
+    "topics": ["Tree", "Recursion"]
+  },
+  {
+    "id": 76,
+    "title": "Inorder Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/inorder-traversal/",
+    "topics": ["Tree", "DFS", "Stack"]
+  },
+  {
+    "id": 77,
+    "title": "Preorder Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/preorder-traversal/",
+    "topics": ["Tree", "DFS", "Stack"]
+  },
+  {
+    "id": 78,
+    "title": "Postorder Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/postorder-traversal/",
+    "topics": ["Tree", "DFS", "Stack"]
+  },
+  {
+    "id": 79,
+    "title": "Left View of Binary Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/",
+    "topics": ["Tree", "BFS", "DFS"]
+  },
+  {
+    "id": 80,
+    "title": "Right View of Binary Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/",
+    "topics": ["Tree", "BFS", "DFS"]
+  },
+  {
+    "id": 81,
+    "title": "Top View of Binary Tree",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/",
+    "topics": ["Tree", "Hash Table", "BFS"]
+  },
+  {
+    "id": 82,
+    "title": "Bottom View of Binary Tree",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/",
+    "topics": ["Tree", "Hash Table", "BFS"]
+  },
+  {
+    "id": 83,
+    "title": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/",
+    "topics": ["Tree", "Recursion"]
+  },
+  {
+    "id": 84,
+    "title": "Check for BST",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/check-for-bst/",
+    "topics": ["Tree", "BST", "Inorder"]
+  },
+  {
+    "id": 85,
+    "title": "Binary Tree from Inorder Preorder",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/construct-tree-1/",
+    "topics": ["Tree", "Recursion", "Hash Table"]
+  },
+  {
+    "id": 86,
+    "title": "Sum Tree",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/sum-tree/",
+    "topics": ["Tree", "Recursion"]
+  },
+  {
+    "id": 87,
+    "title": "Balanced Binary Tree",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/",
+    "topics": ["Tree", "Recursion", "Height"]
+  },
+  {
+    "id": 88,
+    "title": "Maximum Path Sum Any to Any",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-path-sum-from-any-node/",
+    "topics": ["Tree", "Recursion", "Dynamic Programming"]
+  },
+  {
+    "id": 89,
+    "title": "Children Sum Parent",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/children-sum-parent/",
+    "topics": ["Tree", "Traversal"]
+  },
+  {
+    "id": 90,
+    "title": "Duplicate Subtrees",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/duplicate-subtree-in-binary-tree/",
+    "topics": ["Tree", "Hash Table", "String"]
+  },
+  {
+    "id": 91,
+    "title": "BFS Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/",
+    "topics": ["Graph", "BFS", "Queue"]
+  },
+  {
+    "id": 92,
+    "title": "DFS Traversal",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/",
+    "topics": ["Graph", "DFS", "Recursion"]
+  },
+  {
+    "id": 93,
+    "title": "Detect Cycle in Undirected Graph",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/",
+    "topics": ["Graph", "DFS", "Union Find"]
+  },
+  {
+    "id": 94,
+    "title": "Detect Cycle in Directed Graph",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/",
+    "topics": ["Graph", "DFS", "Topological Sort"]
+  },
+  {
+    "id": 95,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/",
+    "topics": ["Graph", "DFS", "BFS", "Matrix"]
+  },
+  {
+    "id": 96,
+    "title": "Bipartite Graph",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/bipartite-graph/",
+    "topics": ["Graph", "BFS", "DFS", "Coloring"]
+  },
+  {
+    "id": 97,
+    "title": "Dijkstra Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/",
+    "topics": ["Graph", "Shortest Path", "Priority Queue"]
+  },
+  {
+    "id": 98,
+    "title": "Bellman Ford Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/",
+    "topics": ["Graph", "Shortest Path", "Negative Weights"]
+  },
+  {
+    "id": 99,
+    "title": "Floyd Warshall Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall/",
+    "topics": ["Graph", "All Pairs Shortest Path", "Dynamic Programming"]
+  },
+  {
+    "id": 100,
+    "title": "Minimum Steps by Knight",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/steps-by-knight/",
+    "topics": ["Graph", "BFS", "Chess"]
+  },
+  {
+    "id": 101,
+    "title": "Clone Graph",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/clone-graph/",
+    "topics": ["Graph", "DFS", "Hash Table"]
+  },
+  {
+    "id": 102,
+    "title": "Word Ladder",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/word-ladder/",
+    "topics": ["Graph", "BFS", "String"]
+  },
+  {
+    "id": 103,
+    "title": "Minimum Cost to Connect Cities",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/connecting-the-graph/",
+    "topics": ["Graph", "MST", "Union Find"]
+  },
+  {
+    "id": 104,
+    "title": "Critical Connections",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/critical-connections/",
+    "topics": ["Graph", "Tarjan's Algorithm", "Bridges"]
+  },
+  {
+    "id": 105,
+    "title": "Eulerian Path and Circuit",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/eulerian-path-in-an-undirected-graph/",
+    "topics": ["Graph", "Eulerian Path", "DFS"]
+  },
+  {
+    "id": 106,
+    "title": "Minimum Deletions Palindrome",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-number-of-deletions-to-make-a-string-palindrome/",
+    "topics": ["String", "Dynamic Programming", "LCS"]
+  },
+  {
+    "id": 107,
+    "title": "Count Palindromic Subsequences",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/",
+    "topics": ["String", "Dynamic Programming"]
+  },
+  {
+    "id": 108,
+    "title": "Longest Common Substring",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/longest-common-substring/",
+    "topics": ["String", "Dynamic Programming"]
+  },
+  {
+    "id": 109,
+    "title": "KMP Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/search-pattern-kmp-algorithm/",
+    "topics": ["String", "KMP", "Pattern Matching"]
+  },
+  {
+    "id": 110,
+    "title": "Rabin Karp Algorithm",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/search-pattern-rabin-karp-algorithm/",
+    "topics": ["String", "Rolling Hash", "Pattern Matching"]
+  },
+  {
+    "id": 111,
+    "title": "Anagram Check",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Paytm"],
+    "url": "https://practice.geeksforgeeks.org/problems/anagram/",
+    "topics": ["String", "Hash Table", "Sorting"]
+  },
+  {
+    "id": 112,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/print-anagrams-together/",
+    "topics": ["String", "Hash Table", "Sorting"]
+  },
+  {
+    "id": 113,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring/",
+    "topics": ["String", "Sliding Window", "Hash Table"]
+  },
+  {
+    "id": 114,
+    "title": "Smallest Window in String",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/",
+    "topics": ["String", "Sliding Window", "Hash Table"]
+  },
+  {
+    "id": 115,
+    "title": "Wildcard Pattern Matching",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/wildcard-pattern-matching/",
+    "topics": ["String", "Dynamic Programming", "Recursion"]
+  },
+  {
+    "id": 116,
+    "title": "0-1 Knapsack Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem/",
+    "topics": ["Dynamic Programming", "Knapsack"]
+  },
+  {
+    "id": 117,
+    "title": "Unbounded Knapsack",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items/",
+    "topics": ["Dynamic Programming", "Knapsack"]
+  },
+  {
+    "id": 118,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung", "Adobe"],
+    "url": "https://practice.geeksforgeeks.org/problems/count-ways-to-reach-the-nth-stair/",
+    "topics": ["Dynamic Programming", "Fibonacci"]
+  },
+  {
+    "id": 119,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/stickler-theif/",
+    "topics": ["Dynamic Programming", "Array"]
+  },
+  {
+    "id": 120,
+    "title": "Maximum Sum Rectangle",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/",
+    "topics": ["Dynamic Programming", "Matrix", "Kadane's Algorithm"]
+  },
+  {
+    "id": 121,
+    "title": "Optimal Binary Search Tree",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/optimal-binary-search-tree/",
+    "topics": ["Dynamic Programming", "BST"]
+  },
+  {
+    "id": 122,
+    "title": "Palindrome Partitioning DP",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning/",
+    "topics": ["Dynamic Programming", "String", "Palindrome"]
+  },
+  {
+    "id": 123,
+    "title": "Word Wrap Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/word-wrap/",
+    "topics": ["Dynamic Programming", "String"]
+  },
+  {
+    "id": 124,
+    "title": "Box Stacking Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/box-stacking/",
+    "topics": ["Dynamic Programming", "LIS"]
+  },
+  {
+    "id": 125,
+    "title": "Building Bridges",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/building-bridges/",
+    "topics": ["Dynamic Programming", "LIS", "Sorting"]
+  },
+  {
+    "id": 126,
+    "title": "Maximum Length Chain",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/max-length-chain/",
+    "topics": ["Dynamic Programming", "LIS", "Greedy"]
+  },
+  {
+    "id": 127,
+    "title": "Largest Square in Matrix",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/",
+    "topics": ["Dynamic Programming", "Matrix"]
+  },
+  {
+    "id": 128,
+    "title": "Count BSTs",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/total-number-of-bst/",
+    "topics": ["Dynamic Programming", "BST", "Catalan Numbers"]
+  },
+  {
+    "id": 129,
+    "title": "Friends Pairing Problem",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/friends-pairing-problem/",
+    "topics": ["Dynamic Programming", "Recursion"]
+  },
+  {
+    "id": 130,
+    "title": "Gold Mine Problem",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Samsung"],
+    "url": "https://practice.geeksforgeeks.org/problems/gold-mine-problem/",
+    "topics": ["Dynamic Programming", "Matrix"]
+  }
+]
