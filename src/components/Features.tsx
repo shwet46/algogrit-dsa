@@ -80,15 +80,14 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
 
   return (
     <section 
-      className="relative min-h-screen py-20 bg-white dark:bg-black overflow-hidden"
+      className="relative min-h-screen py-20 bg-black overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       <div
         className={cn(
           "absolute inset-0 transition-all duration-300 ease-out",
           "[background-size:25px_25px]",
-          "[background-image:radial-gradient(circle,#e4e4e7_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(circle,#262626_1px,transparent_1px)]",
+          "[background-image:radial-gradient(circle,#262626_1px,transparent_1px)]",
         )}
         style={{
           transform: `translate(${mousePosition.x * -0.005}px, ${mousePosition.y * -0.005}px)`
@@ -103,7 +102,7 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 md:px-16">
         <div className="text-center mb-16">
-          <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-300 max-w-2xl mx-auto">
             Everything you need to master data structures, algorithms, and ace your coding interviews
           </p>
         </div>
@@ -122,8 +121,8 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
                 viewport={{ once: true }}
                 className={cn(
                   "group relative p-8 rounded-2xl border w-full md:w-4/5 transition-all duration-300 cursor-pointer",
-                  "bg-white/50 dark:bg-black/50 backdrop-blur-sm",
-                  "border-neutral-200 dark:border-neutral-800",
+                  "bg-black/50 backdrop-blur-sm",
+                  "border-neutral-800",
                   "hover:border-[#7c8bd2]/30 hover:shadow-xl hover:shadow-[#7c8bd2]/10",
                   "hover:-translate-y-2",
                   isEven ? "self-start" : "self-end"
@@ -136,7 +135,7 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
                   `bg-gradient-to-br ${feature.gradient}`,
                   "p-[1px]"
                 )}>
-                  <div className="w-full h-full rounded-2xl bg-white dark:bg-black"></div>
+                  <div className="w-full h-full rounded-2xl bg-black"></div>
                 </div>
 
                 <div className="relative z-10">
@@ -152,11 +151,11 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
                     {feature.stats}
                   </div>
 
-                  <h3 className="text-xl font-bold mb-3 text-neutral-900 dark:text-white group-hover:text-[#7c8bd2] transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#7c8bd2] transition-colors">
                     {feature.title}
                   </h3>
 
-                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                  <p className="text-neutral-400 leading-relaxed mb-4">
                     {feature.description}
                   </p>
 

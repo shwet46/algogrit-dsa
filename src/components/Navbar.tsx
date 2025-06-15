@@ -32,7 +32,7 @@ export function Navbar() {
       icon: <IconTarget className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Code-ide",
+      name: "Code-IDE",
       link: "/code-ide",
       icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },

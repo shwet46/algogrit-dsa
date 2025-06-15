@@ -39,19 +39,18 @@ function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-white dark:bg-black">
+    <div className="relative min-h-screen w-full flex items-center justify-center bg-black">
       {/* Dotted Background */}
       <div
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(circle,#e4e4e7_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(circle,#262626_1px,transparent_1px)]",
+          "[background-image:radial-gradient(circle,#262626_1px,transparent_1px)]",
         )}
       />
       
       {/* Radial gradient for the container to give a faded look */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
              
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-10 md:px-16 pt-28 pb-20 z-10 relative">
         {/* Main Hero Section */}
@@ -68,7 +67,7 @@ function Hero() {
             ></span>
           </h1>
            
-          <p className="text-base md:text-xl font-normal text-neutral-600 dark:text-neutral-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl font-normal text-neutral-300 mb-8 max-w-3xl mx-auto">
             Master Data Structures & Algorithms with problems from all major platforms! Practice LeetCode, Codeforces, AtCoder, and more in one place. Track your progress, compete with peers, and ace your coding interviews.
           </p>
            
@@ -76,7 +75,7 @@ function Hero() {
             <Link href="/auth/signin">
               <button className="p-[3px] relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-lg" />
-                <div className="px-8 py-3 bg-white dark:bg-slate-900 rounded-[6px] relative transition duration-200 text-slate-900 dark:text-white hover:bg-transparent flex items-center space-x-2">
+                <div className="px-8 py-3 bg-slate-900 rounded-[6px] relative transition duration-200 text-white hover:bg-transparent flex items-center space-x-2">
                   <span>Start Practicing</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -85,7 +84,7 @@ function Hero() {
           </div>
            
           {/* Key Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             <div className="flex items-center space-x-1">
               <CheckCircle size={16} className="text-[#7c8bd2]" />
               <span>Problems from all platforms</span>
