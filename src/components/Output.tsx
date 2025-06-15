@@ -115,22 +115,21 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
 
   return (
     <div className="h-full flex flex-col">
-      {/* Header */}
-      <div className="flex justify-between items-center px-4 py-2 rounded-t-md bg-muted/30 border-b">
-        <div className="flex items-center space-x-3">
+      <div className="flex justify-between items-center px-4 py-3 rounded-t-xl bg-muted/30 border-b">
+        <div className="flex items-center space-x-4">
           <div className="flex items-center">
             <Terminal className={cn("h-4 w-4 mr-2", getStatusColor())} />
-            <div className="font-medium">
+            <div className="font-semibold text-sm">
               Console
               {error && (
-                <Badge variant="destructive" className="ml-2 text-xs py-0 px-1.5">
+                <Badge variant="destructive" className="ml-2 text-xs px-2 py-0.5">
                   Error
                 </Badge>
               )}
               {output && !error && executionTime !== null && (
                 <Badge
                   variant="outline"
-                  className="ml-2 text-xs py-0 px-1.5 bg-green-500/10 text-green-700 border-green-200"
+                  className="ml-2 text-xs px-2 py-0.5 bg-green-100 text-green-700 border-green-200"
                 >
                   Success
                 </Badge>
@@ -161,7 +160,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     size="sm"
                     onClick={copyToClipboard}
                     className="h-8"
@@ -195,17 +194,17 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
                   size="sm"
                   className={cn(
                     "h-8 font-medium",
-                    !isExecuting && "bg-green-600 hover:bg-green-700"
+                    !isExecuting && "bg-green-600 hover:bg-green-700 text-white"
                   )}
                 >
                   {isExecuting ? (
                     <>
-                      <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" />
+                      <Loader2 className="mr-1.5 h-4 w-4 animate-spin" />
                       Running
                     </>
                   ) : (
                     <>
-                      <Play className="mr-1.5 h-3.5 w-3.5 fill-current" />
+                      <Play className="mr-1.5 h-4 w-4" />
                       Run Code
                     </>
                   )}
@@ -219,13 +218,12 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
         </div>
       </div>
 
-      {/* Output Display */}
-      <Card className="flex-1 overflow-hidden flex flex-col border-t-0 rounded-t-none shadow-sm">
+      <Card className="flex-1 overflow-hidden flex flex-col border-t-0 rounded-t-none">
         <ScrollArea className="flex-1">
           {error ? (
             <Alert
               variant="destructive"
-              className="m-3 border rounded-md bg-red-50 dark:bg-red-950/30"
+              className="m-4 border rounded-md bg-red-50 dark:bg-red-950/30"
             >
               <AlertCircle className="h-4 w-4" />
               <AlertTitle className="text-sm font-semibold">Error</AlertTitle>
@@ -235,13 +233,13 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
             </Alert>
           ) : output ? (
             <div className="p-4">
-              <pre className="font-mono text-sm whitespace-pre-wrap rounded-md bg-muted/30 p-4 overflow-auto">
+              <pre className="font-mono text-sm whitespace-pre-wrap rounded-lg bg-muted/20 p-4 border shadow-inner">
                 {output}
               </pre>
             </div>
           ) : (
             <div className="text-muted-foreground flex flex-col items-center justify-center h-full p-8 text-center">
-              <Terminal className="h-12 w-12 mb-3 opacity-20" />
+              <Terminal className="h-10 w-10 mb-3 opacity-20" />
               <p className="font-medium mb-1">No output to display</p>
               <span className="text-xs opacity-70">
                 Run your code to see the results here

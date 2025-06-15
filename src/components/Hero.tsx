@@ -72,7 +72,7 @@ function Hero() {
           </p>
            
           <div className="flex justify-center mb-8">
-            <Link href="/auth/signin">
+            <Link href="/problems">
               <button className="p-[3px] relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-lg" />
                 <div className="px-8 py-3 bg-slate-900 rounded-[6px] relative transition duration-200 text-white hover:bg-transparent flex items-center space-x-2">
