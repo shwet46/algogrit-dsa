@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
     <main className="min-h-screen antialiased">
-        <h1>problems section</h1>
+        <h1 className="text-2xl font-bold text-center mt-50 mx-4">problems loading soon.....</h1>
     </main>
     </>
   );

@@ -1,19 +1,10 @@
 "use client";
 import React from "react";
-import { Github, Linkedin, Mail, Youtube, Terminal } from "lucide-react";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { VscTerminal } from "react-icons/vsc";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-
-// Twitter X Icon (SVG)
-const TwitterXIcon = ({ size = 18 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height={size}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
-    <path d="M17.067 3H20.6l-5.922 6.76L22 21h-6.786l-4.713-6.801L5.78 21H2.233l6.478-7.396L2 3h6.933l4.293 6.223L17.067 3zm-1.1 16.286h1.88L8.09 4.572H6.09l9.878 14.714z" />
-  </svg>
-);
 
 const Footer = () => {
   return (
@@ -25,7 +16,7 @@ const Footer = () => {
         {/* Brand Column */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <Terminal className="text-[#60a5fa]" size={26} />
+            <VscTerminal className="text-[#60a5fa]" size={26} />
             <h2
               className="text-2xl font-bold bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#2563eb] bg-clip-text text-transparent"
               style={{ fontFamily: "'Fira Code', monospace" }}
@@ -56,19 +47,19 @@ const Footer = () => {
           <h4 className="text-lg font-semibold text-white">Connect</h4>
           <div className="flex items-center gap-4">
             <a href="https://github.com/shwet46" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <Github size={18} />
+              <FaGithub size={18} />
             </a>
             <a href="https://x.com/shwet46" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <TwitterXIcon size={18} />
+              <FaXTwitter size={18} />
             </a>
             <a href="https://youtube.com/@shwet-46?si=reMyEQ0_el_OfpSv" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <Youtube size={18} />
+              <FaYoutube size={18} />
             </a>
             <a href="https://www.linkedin.com/in/shweta-behera/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <Linkedin size={18} />
+              <FaLinkedin size={18} />
             </a>
             <a href="mailto:shwetabehera444@gmail.com" className="hover:text-blue-400 transition-colors">
-              <Mail size={18} />
+              <MdEmail size={18} />
             </a>
           </div>
           <p className="text-xs text-neutral-500 pt-4">

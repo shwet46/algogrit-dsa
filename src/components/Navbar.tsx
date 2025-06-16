@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import {
   IconHome,
   IconCode,
-  IconBulb,
   IconTarget,
-  IconLayoutDashboard,
 } from "@tabler/icons-react";
 import { FloatingNav } from "./ui/floating-navbar";
 

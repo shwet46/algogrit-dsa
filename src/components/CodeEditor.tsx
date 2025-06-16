@@ -31,8 +31,6 @@ const THEME_OPTIONS = {
   "hc-light": "High Contrast Light",
 } as const;
 
-type ThemeOption = keyof typeof THEME_OPTIONS;
-
 const CUSTOM_THEMES = {
   "github-dark": {
     base: "vs-dark" as const,
@@ -131,7 +129,7 @@ const ALL_THEMES = {
 type AllThemes = keyof typeof ALL_THEMES;
 
 const CodeEditor: React.FC = () => {
-  const editorRef = useRef<any>(null);
+  const editorRef = useRef<import("monaco-editor").editor.IStandaloneCodeEditor | null>(null);
   const [value, setValue] = useState<string>("");
   const [language, setLanguage] = useState<SupportedLanguage>("javascript");
   const [theme, setTheme] = useState<AllThemes>("vs-dark");

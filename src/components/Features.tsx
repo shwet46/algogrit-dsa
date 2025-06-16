@@ -5,23 +5,9 @@ import { Globe, Filter, Code, Bot, StickyNote } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 function Features() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-interface MousePosition {
-    x: number;
-    y: number;
-}
 
-interface Feature {
-    id: number;
-    icon: React.ElementType;
-    title: string;
-    description: string;
-    gradient: string;
-    stats: string;
-    platforms: string[];
-}
 
 const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     setMousePosition({
@@ -127,8 +113,6 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
                   "hover:-translate-y-2",
                   isEven ? "self-start" : "self-end"
                 )}
-                onMouseEnter={() => setHoveredCard(feature.id)}
-                onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className={cn(
                   "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300",
@@ -187,12 +171,6 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
               </motion.div>
             );
           })}
-        </div>
-
-        <div className="text-center mt-20">
-          <div className="inline-block px-6 py-2 rounded-full text-sm font-mono bg-gradient-to-r from-[#7c8bd2]/10 to-[#5d6bb7]/10 text-[#7c8bd2] border border-[#7c8bd2]/20">
-            // All-in-one platform for competitive programming
-          </div>
         </div>
       </div>
     </section>
