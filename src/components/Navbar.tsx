@@ -34,6 +34,11 @@ export function Navbar() {
       link: "/code-ide",
       icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
+      {
+      name: "Notes",
+      link: "/notes",
+      icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
+    },
   ];
 
   return (
