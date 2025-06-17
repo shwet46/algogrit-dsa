@@ -68,89 +68,99 @@ export default function SignupPage() {
   }
 
   return (
-    <WavyBackground containerClassName="min-h-screen w-full flex items-center justify-center bg-black overflow-hidden">
-      <div className="w-full max-w-md mx-auto px-6 py-12 z-10 relative">
-        <div className="bg-zinc-900/90 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
-          {/* Gradient Accents */}
-          <div className="absolute -top-8 -left-8 w-40 h-40 bg-gradient-to-br from-[#7c8bd2]/40 via-[#5d6bb7]/30 to-[#3f4b9c]/0 rounded-full blur-2xl z-0" />
-          <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-tr from-[#3f4b9c]/40 via-[#5d6bb7]/30 to-[#7c8bd2]/0 rounded-full blur-2xl z-0" />
-
-          <h2
-            className="text-3xl md:text-4xl font-extrabold text-center mb-6 relative z-10"
-            style={{
-              fontFamily: "'Fira Code', monospace",
-              background: "linear-gradient(135deg, #7c8bd2, #5d6bb7, #3f4b9c)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text"
-            }}
+    <WavyBackground containerClassName="min-h-screen w-full flex items-center justify-center bg-black">
+      <div className="w-full max-w-sm mx-auto px-6 py-12 z-10 relative">
+        
+        {/* Company Title */}
+        <div className="text-center mb-12">
+          <h1
+            className="text-4xl md:text-5xl text-indigo-300 font-black mb-3 tracking-tight"
           >
-            Create Account
-          </h2>
+            AlgoGrit DSA
+          </h1>
+          <p className="text-zinc-400 text-lg font-medium">Create your account</p>
+        </div>
 
-          {/* Username */}
-          <div className="flex items-center bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 mb-3">
-            <UserIcon className="h-5 w-5 text-zinc-400 mr-2" />
+        <div className="space-y-5">
+          {/* Username Input */}
+          <div className="group relative">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+              <UserIcon className="h-5 w-5 text-zinc-300 group-focus-within:text-indigo-300 transition-colors duration-200" />
+            </div>
             <input
               type="text"
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full bg-transparent outline-none text-white placeholder:text-zinc-400 text-sm"
+              className="w-full pl-12 pr-4 py-4 bg-zinc-900/60 backdrop-blur-sm border border-zinc-700/50 rounded-lg focus:border-indigo-400/50 focus:bg-zinc-800/80 outline-none text-white placeholder:text-zinc-400 text-base font-medium transition-all duration-300"
             />
           </div>
 
-          {/* Email */}
-          <div className="flex items-center bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 mb-3">
-            <EnvelopeIcon className="h-5 w-5 text-zinc-400 mr-2" />
+          {/* Email Input */}
+          <div className="group relative">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+              <EnvelopeIcon className="h-5 w-5 text-zinc-300 group-focus-within:text-indigo-300 transition-colors duration-200" />
+            </div>
             <input
               type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-transparent outline-none text-white placeholder:text-zinc-400 text-sm"
+              className="w-full pl-12 pr-4 py-4 bg-zinc-900/60 backdrop-blur-sm border border-zinc-700/50 rounded-lg focus:border-indigo-400/50 focus:bg-zinc-800/80 outline-none text-white placeholder:text-zinc-400 text-base font-medium transition-all duration-300"
             />
           </div>
 
-          {/* Password */}
-          <div className="flex items-center bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 mb-6">
-            <LockClosedIcon className="h-5 w-5 text-zinc-400 mr-2" />
+          {/* Password Input */}
+          <div className="group relative">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+              <LockClosedIcon className="h-5 w-5 text-zinc-300 group-focus-within:text-indigo-300 transition-colors duration-200" />
+            </div>
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-transparent outline-none text-white placeholder:text-zinc-400 text-sm"
+              className="w-full pl-12 pr-4 py-4 bg-zinc-900/60 backdrop-blur-sm border border-zinc-700/50 rounded-lg focus:border-indigo-400/50 focus:bg-zinc-800/80 outline-none text-white placeholder:text-zinc-400 text-base font-medium transition-all duration-300"
             />
           </div>
+        </div>
 
-          {/* Signup Button */}
-          <button
-            onClick={handleSignup}
-            disabled={loading || !username || !email || !password}
-            className="relative group w-full rounded-md z-10 overflow-hidden focus:outline-none border border-white/10 transition-all duration-700 disabled:opacity-50"
-            type="submit"
-            style={{ opacity: (loading || !username || !email || !password) ? 0.6 : 1, cursor: (loading || !username || !email || !password) ? 'not-allowed' : 'pointer' }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-md group-hover:opacity-90 transition-opacity duration-700" />
-            <div className="relative px-8 py-2.5 bg-zinc-900 rounded-md text-white font-semibold text-lg group-hover:bg-transparent flex items-center justify-center transition-all duration-700">
-              {loading ? 'Creating...' : 'Sign Up'}
-            </div>
-          </button>
+        {/* Error Message */}
+        {error && (
+          <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+            <p className="text-red-400 text-sm font-medium text-center">{error}</p>
+          </div>
+        )}
 
-          {error && (
-            <p className="text-red-500 text-sm text-center mt-2 z-10">{error}</p>
-          )}
+        {/* Signup Button */}
+        <button
+          onClick={handleSignup}
+          disabled={loading || !username || !email || !password}
+          className="w-full mt-8 relative group overflow-hidden rounded-lg py-4 px-8 bg-white text-black font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-500/25 disabled:opacity-40 disabled:hover:scale-100 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-indigo-400/50 focus:ring-offset-2 focus:ring-offset-black transform active:scale-[0.98]"
+        >
+          <span className="relative z-10 transition-all duration-300 group-hover:tracking-wide group-hover:text-white">
+            {loading ? 'Creating Account...' : 'Create Account'}
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500" />
+        </button>
 
-          {/* Redirect to Login */}
-          <p className="text-center text-sm text-zinc-400 mt-4 z-20 relative">
+        {/* Login Link */}
+        <div className="mt-8 text-center">
+          <p className="text-zinc-400 text-base">
             Already have an account?{' '}
             <a
               href="/login"
-              className="text-[#7c8bd2] hover:underline font-medium cursor-pointer"
+              className="text-white font-semibold hover:underline transition-all duration-200 hover:text-zinc-200"
             >
-              Login
+              Sign in
             </a>
+          </p>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 text-center">
+          <p className="text-zinc-600 text-sm font-medium">
+            © 2025 AlgoGrit DSA. All rights reserved.
           </p>
         </div>
       </div>

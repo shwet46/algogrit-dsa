@@ -871,6 +871,982 @@
         "tags": ["Greedy", "Grid"],
         "url": "https://atcoder.jp/contests/abc109/tasks/abc109_d",
         "description": "Make all numbers in a grid even using the minimum number of moves."
+      },
+      {
+        "title": "Find Median from Data Stream",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Heap", "Design", "Data Stream"],
+        "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+        "description": "Design a data structure that supports adding numbers and finding the median efficiently."
+      },
+      {
+        "title": "Shortest Routes I",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Graph", "Dijkstra"],
+        "url": "https://cses.fi/problemset/task/1671",
+        "description": "Find the shortest path from node 1 to all other nodes in a directed weighted graph."
+      },
+      {
+        "title": "XOR Queries",
+        "platform": "CodeForces",
+        "difficulty": "Medium",
+        "tags": ["Bit Manipulation", "Prefix Sum"],
+        "url": "https://codeforces.com/problemset/problem/617/E",
+        "description": "Answer multiple queries about the XOR of subarrays efficiently."
+      },
+      {
+        "title": "Longest Increasing Subsequence",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Binary Search"],
+        "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1",
+        "description": "Find the length of the longest increasing subsequence in an array."
+      },
+      {
+        "title": "Distinct Numbers",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Set", "Implementation"],
+        "url": "https://cses.fi/problemset/task/1621",
+        "description": "Count the number of distinct numbers in a list."
+      },
+      {
+        "title": "Kth Largest Element in an Array",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Heap", "Sorting"],
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+        "description": "Find the kth largest element in an unsorted array."
+      },
+      {
+        "title": "Subarray Sums I",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Prefix Sum", "Array"],
+        "url": "https://cses.fi/problemset/task/1660",
+        "description": "Count the number of subarrays whose sum is equal to a given value."
+      },
+      {
+        "title": "Balanced Brackets",
+        "platform": "HackerRank",
+        "difficulty": "Easy",
+        "tags": ["Stack", "String"],
+        "url": "https://www.hackerrank.com/challenges/balanced-brackets/problem",
+        "description": "Determine if a string of brackets is balanced."
+      },
+      {
+        "title": "Chef and Maximum Star Value",
+        "platform": "CodeChef",
+        "difficulty": "Hard",
+        "tags": ["Segment Tree", "Data Structures"],
+        "url": "https://www.codechef.com/problems/CHMAXSV",
+        "description": "Find the maximum star value in an array using efficient data structures."
+      },
+      {
+        "title": "Edit Distance",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Dynamic Programming", "String"],
+        "url": "https://leetcode.com/problems/edit-distance/",
+        "description": "Compute the minimum number of operations required to convert one string to another."
+      },
+      {
+        "title": "Subordinates",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Tree", "DFS"],
+        "url": "https://cses.fi/problemset/task/1674",
+        "description": "Count the number of subordinates for each employee in a company hierarchy."
+      },
+      {
+        "title": "Maximum Subarray Sum",
+        "platform": "AtCoder",
+        "difficulty": "Easy",
+        "tags": ["Array", "Kadane's Algorithm"],
+        "url": "https://atcoder.jp/contests/dp/tasks/dp_b",
+        "description": "Find the maximum sum of a contiguous subarray."
+      },
+      {
+        "title": "Find the Duplicate Number",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Binary Search", "Floyd's Cycle"],
+        "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+        "description": "Find the duplicate number in an array containing n+1 integers where each integer is between 1 and n."
+      },
+      {
+        "title": "Coin Combinations I",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Combinatorics"],
+        "url": "https://cses.fi/problemset/task/1635",
+        "description": "Count the number of ways to make a sum using given coin denominations."
+      },
+      {
+        "title": "Binary Tree Maximum Path Sum",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Tree", "DFS", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+        "description": "Find the maximum path sum in a binary tree."
+      },
+      {
+        "title": "Rectangle Cutting",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Geometry"],
+        "url": "https://cses.fi/problemset/task/1744",
+        "description": "Find the minimum number of cuts needed to divide a rectangle into squares."
+      },
+      {
+        "title": "Word Ladder",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["BFS", "Graph", "String"],
+        "url": "https://leetcode.com/problems/word-ladder/",
+        "description": "Find the shortest transformation sequence from beginWord to endWord."
+      },
+      {
+        "title": "Subarray Divisibility",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Prefix Sum", "Hashing"],
+        "url": "https://cses.fi/problemset/task/1662",
+        "description": "Count the number of subarrays whose sum is divisible by n."
+      },
+      {
+        "title": "Remove K Digits",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Stack", "Greedy"],
+        "url": "https://leetcode.com/problems/remove-k-digits/",
+        "description": "Remove k digits from a number to make it the smallest possible."
+      },
+      {
+        "title": "Special Permutation",
+        "platform": "Codeforces",
+        "difficulty": "Easy",
+        "tags": ["Math", "Permutation"],
+        "url": "https://codeforces.com/problemset/problem/1352/C",
+        "description": "Find a permutation of numbers with special properties."
+      },
+      {
+        "title": "Longest Palindromic Substring",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+        "description": "Find the longest palindromic substring in a given string."
+      },
+      {
+        "title": "Collecting Numbers",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Sorting", "Implementation"],
+        "url": "https://cses.fi/problemset/task/2216",
+        "description": "Find the minimum number of rounds needed to collect numbers in increasing order."
+      },
+      {
+        "title": "Maximum Product Subarray",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/maximum-product-subarray/",
+        "description": "Find the contiguous subarray within an array which has the largest product."
+      },
+      {
+        "title": "Sum of Two Values",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Two Pointers", "Sorting"],
+        "url": "https://cses.fi/problemset/task/1640",
+        "description": "Find two values in an array that sum up to a target value."
+      },
+      {
+        "title": "Find All Anagrams in a String",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "Sliding Window"],
+        "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+        "description": "Find all start indices of anagrams of a pattern in a string."
+      },
+      {
+        "title": "Array Description",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Array"],
+        "url": "https://cses.fi/problemset/task/1746",
+        "description": "Count the number of valid arrays that can be formed under given constraints."
+      },
+      {
+        "title": "Minimum Path Sum",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Grid"],
+        "url": "https://leetcode.com/problems/minimum-path-sum/",
+        "description": "Find a path from top left to bottom right of a grid with minimum sum."
+      },
+      {
+        "title": "Book Shop",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Knapsack"],
+        "url": "https://cses.fi/problemset/task/1158",
+        "description": "Choose books to maximize the total number of pages without exceeding a budget."
+      },
+      {
+        "title": "House Robber",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Array"],
+        "url": "https://leetcode.com/problems/house-robber/",
+        "description": "Find the maximum amount of money you can rob tonight without alerting the police."
+      },
+      {
+        "title": "Subarray Sums II",
+        "platform": "CSES",
+        "difficulty": "Medium",
+        "tags": ["Prefix Sum", "Hashing"],
+        "url": "https://cses.fi/problemset/task/1661",
+        "description": "Count the number of subarrays with a given sum."
+      },
+      {
+        "title": "Unique Paths",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Combinatorics"],
+        "url": "https://leetcode.com/problems/unique-paths/",
+        "description": "Count the number of unique paths from top-left to bottom-right in a grid."
+      },
+      {
+        "title": "Maximum Subarray Sum II",
+        "platform": "CSES",
+        "difficulty": "Hard",
+        "tags": ["Sliding Window", "Deque"],
+        "url": "https://cses.fi/problemset/task/1644",
+        "description": "Find the maximum sum of a subarray with length between a and b."
+      },
+      {
+        "title": "Longest Consecutive Sequence",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "Union Find"],
+        "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+        "description": "Find the length of the longest consecutive elements sequence."
+      },
+      {
+        "title": "Palindrome Reorder",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["String", "Hashing"],
+        "url": "https://cses.fi/problemset/task/1755",
+        "description": "Rearrange the letters of a string to form a palindrome, if possible."
+      },
+      {
+        "title": "Maximum Product of Splitted Binary Tree",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Tree", "DFS"],
+        "url": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/",
+        "description": "Find the maximum product of the sums of two subtrees of a binary tree."
+      },
+      {
+        "title": "Movie Festival",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Greedy", "Sorting"],
+        "url": "https://cses.fi/problemset/task/1629",
+        "description": "Find the maximum number of movies one can watch without overlap."
+      },
+      {
+        "title": "Minimum Window Substring",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Hash Table", "Sliding Window"],
+        "url": "https://leetcode.com/problems/minimum-window-substring/",
+        "description": "Find the minimum window in a string which contains all the characters of another string."
+      },
+      {
+        "title": "Array and Operations",
+        "platform": "Codeforces",
+        "difficulty": "Medium",
+        "tags": ["Array", "Math"],
+        "url": "https://codeforces.com/problemset/problem/1552/A",
+        "description": "Perform operations on an array to achieve a certain property."
+      },
+      {
+        "title": "Find the Town Judge",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Graph", "Array"],
+        "url": "https://leetcode.com/problems/find-the-town-judge/",
+        "description": "Find the town judge given trust relationships among n people."
+      },
+      {
+        "title": "Sum of Round Numbers",
+        "platform": "Codeforces",
+        "difficulty": "Easy",
+        "tags": ["Math", "Implementation"],
+        "url": "https://codeforces.com/problemset/problem/1352/A",
+        "description": "Express a number as a sum of round numbers."
+      },
+      {
+        "title": "Maximum Subtree Sum",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Medium",
+        "tags": ["Tree", "DFS"],
+        "url": "https://practice.geeksforgeeks.org/problems/maximum-sub-tree-sum/1",
+        "description": "Find the maximum sum of a subtree in a binary tree."
+      },
+      {
+        "title": "Sum of Three Values",
+        "platform": "CSES",
+        "difficulty": "Easy",
+        "tags": ["Two Pointers", "Sorting"],
+        "url": "https://cses.fi/problemset/task/1641",
+        "description": "Find three values in an array that sum up to a target value."
+      },
+      {
+        "title": "Find Center of Star Graph",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Graph"],
+        "url": "https://leetcode.com/problems/find-center-of-star-graph/",
+        "description": "Find the center node of a star graph."
+      },
+      {
+        "title": "Remove Nth Node From End of List",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Linked List", "Two Pointers"],
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+        "description": "Remove the nth node from the end of a linked list."
+      },
+      {
+        "title": "Sum of Distances in Tree",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Tree", "DFS", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+        "description": "Find the sum of distances from each node to all other nodes in a tree."
+      },
+      {
+        "title": "Array and Operations",
+        "platform": "Codeforces",
+        "difficulty": "Medium",
+        "tags": ["Array", "Math"],
+        "url": "https://codeforces.com/problemset/problem/1552/A",
+        "description": "Perform operations on an array to achieve a certain property."
+      },
+      {
+        "title": "Find All Duplicates in an Array",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Hash Table"],
+        "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+        "description": "Find all elements that appear twice in an array."
+      },
+      {
+        "title": "Maximum Subset XOR",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Hard",
+        "tags": ["Bit Manipulation", "Greedy"],
+        "url": "https://practice.geeksforgeeks.org/problems/maximum-subset-xor/1",
+        "description": "Find the maximum XOR value of any subset of a given array."
+      },
+      {
+        "title": "Subarray with Given XOR",
+        "platform": "InterviewBit",
+        "difficulty": "Medium",
+        "tags": ["Hashing", "Prefix Sum"],
+        "url": "https://www.interviewbit.com/problems/subarray-with-given-xor/",
+        "description": "Count the number of subarrays with a given XOR."
+      },
+      {
+        "title": "Find the Smallest Divisor Given a Threshold",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Binary Search", "Array"],
+        "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
+        "description": "Find the smallest divisor such that the sum of the division results is less than or equal to a threshold."
+      },
+      {
+        "title": "Kth Smallest Element in a BST",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Tree", "DFS", "BST"],
+        "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+        "description": "Find the kth smallest element in a binary search tree."
+      },
+      {
+        "title": "Find the Longest Substring Without Repeating Characters",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "Sliding Window"],
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+        "description": "Find the length of the longest substring without repeating characters."
+      },
+      {
+        "title": "Find the Number of Islands",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DFS", "BFS", "Matrix"],
+        "url": "https://leetcode.com/problems/number-of-islands/",
+        "description": "Count the number of islands in a 2D grid."
+      },
+      {
+        "title": "Find the Celebrity",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Two Pointers"],
+        "url": "https://leetcode.com/problems/find-the-celebrity/",
+        "description": "Find the celebrity in a group of people."
+      },
+      {
+        "title": "Find the Kth Missing Positive Number",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Array", "Binary Search"],
+        "url": "https://leetcode.com/problems/kth-missing-positive-number/",
+        "description": "Find the kth missing positive integer from a sorted array."
+      },
+      {
+        "title": "Find the Peak Element",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Binary Search"],
+        "url": "https://leetcode.com/problems/find-peak-element/",
+        "description": "Find a peak element in an array."
+      },
+      {
+        "title": "Find the Longest Palindromic Substring",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+        "description": "Find the longest palindromic substring in a string."
+      },
+      {
+        "title": "Find the Intersection Point of Y Linked Lists",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Medium",
+        "tags": ["Linked List", "Two Pointers"],
+        "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
+        "description": "Find the intersection point of two Y-shaped linked lists."
+      },
+      {
+        "title": "Find the Minimum Number of Coins",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Easy",
+        "tags": ["Greedy", "Array"],
+        "url": "https://practice.geeksforgeeks.org/problems/number-of-coins1824/1",
+        "description": "Find the minimum number of coins to make a given value."
+      },
+      {
+        "title": "Find the Maximum Area of Island",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DFS", "BFS", "Matrix"],
+        "url": "https://leetcode.com/problems/max-area-of-island/",
+        "description": "Find the maximum area of an island in a 2D grid."
+      },
+      {
+        "title": "Find the Longest Consecutive Sequence",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "Union Find"],
+        "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+        "description": "Find the length of the longest consecutive elements sequence."
+      },
+      {
+        "title": "Find the Minimum Path Sum",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Grid"],
+        "url": "https://leetcode.com/problems/minimum-path-sum/",
+        "description": "Find a path from top left to bottom right of a grid with minimum sum."
+      },
+      {
+        "title": "Find the Maximum Product Subarray",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/maximum-product-subarray/",
+        "description": "Find the contiguous subarray within an array which has the largest product."
+      },
+      {
+        "title": "Find the Minimum Window Substring",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Hash Table", "Sliding Window"],
+        "url": "https://leetcode.com/problems/minimum-window-substring/",
+        "description": "Find the minimum window in a string which contains all the characters of another string."
+      },
+      {
+        "title": "Find the Maximum Path Sum in a Binary Tree",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Tree", "DFS", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+        "description": "Find the maximum path sum in a binary tree."
+      },
+      {
+        "title": "Find the Number of Provinces",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DFS", "Union Find"],
+        "url": "https://leetcode.com/problems/number-of-provinces/",
+        "description": "Find the number of provinces in a network of cities."
+      },
+      {
+        "title": "Find the Longest Common Prefix",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["String", "Trie"],
+        "url": "https://leetcode.com/problems/longest-common-prefix/",
+        "description": "Find the longest common prefix among an array of strings."
+      },
+      {
+        "title": "Find the Minimum Number of Platforms",
+        "platform": "GeeksForGeeks",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Sorting"],
+        "url": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1",
+        "description": "Find the minimum number of platforms required for a railway station."
+      },
+      {
+        "title": "Find the Maximum Length of Pair Chain",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Dynamic Programming"],
+        "url": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+        "description": "Find the length of the longest chain which can be formed with given pairs."
+      },
+      {
+        "title": "Find the Minimum Cost to Connect Sticks",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Heap", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+        "description": "Connect sticks with minimum cost using a heap."
+      },
+      {
+        "title": "Find the Maximum Width of Binary Tree",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Tree", "BFS"],
+        "url": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+        "description": "Find the maximum width of a binary tree."
+      },
+      {
+        "title": "Find the Minimum Number of Arrows to Burst Balloons",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Sorting"],
+        "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+        "description": "Find the minimum number of arrows required to burst all balloons."
+      },
+      {
+        "title": "Find the Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Sorting"],
+        "url": "https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/",
+        "description": "Find the maximum area of a piece of cake after making horizontal and vertical cuts."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Move All Balls to Each Box",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Prefix Sum"],
+        "url": "https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/",
+        "description": "Find the minimum number of operations to move all balls to each box."
+      },
+      {
+        "title": "Find the Maximum Number of Events That Can Be Attended",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Heap"],
+        "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/",
+        "description": "Find the maximum number of events that can be attended given their start and end days."
+      },
+      {
+        "title": "Find the Minimum Path Sum in a Triangle",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Array"],
+        "url": "https://leetcode.com/problems/triangle/",
+        "description": "Find the minimum path sum from top to bottom in a triangle."
+      },
+      {
+        "title": "Find the Maximum Product of Word Lengths",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Bit Manipulation", "Array"],
+        "url": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+        "description": "Find the maximum product of lengths of two words that do not share common letters."
+      },
+      {
+        "title": "Find the Minimum Number of Swaps to Make the String Balanced",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Stack", "String"],
+        "url": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/",
+        "description": "Find the minimum number of swaps to make a string of brackets balanced."
+      },
+      {
+        "title": "Find the Maximum Number of Points on a Line",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Hash Table", "Geometry"],
+        "url": "https://leetcode.com/problems/max-points-on-a-line/",
+        "description": "Find the maximum number of points that lie on the same straight line."
+      },
+      {
+        "title": "Find the Minimum Number of Refueling Stops",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "Heap"],
+        "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+        "description": "Find the minimum number of refueling stops to reach the target."
+      },
+      {
+        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Hash Table"],
+        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+        "description": "Find the maximum number of non-overlapping subarrays with sum equals target."
+      },
+      {
+        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
+        "description": "Find the minimum number of steps to make two strings anagrams."
+      },
+      {
+        "title": "Find the Maximum Number of Occurrences of a Substring",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+        "description": "Find the maximum number of occurrences of a substring in a string."
+      },
+      {
+        "title": "Find the Minimum Number of Taps to Open to Water a Garden",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "DP"],
+        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+        "description": "Find the minimum number of taps to open to water the entire garden."
+      },
+      {
+        "title": "Find the Maximum Number of Vowels in a Substring of Given Length",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Sliding Window", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
+        "description": "Find the maximum number of vowels in a substring of given length."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Make Array Equal",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Math", "Array"],
+        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
+        "description": "Find the minimum number of operations to make all array elements equal."
+      },
+      {
+        "title": "Find the Maximum Number of Balloons",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
+        "description": "Find the maximum number of instances of the word 'balloon' that can be formed."
+      },
+      {
+        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
+        "description": "Find the minimum number of flips to make a binary string alternating."
+      },
+      {
+        "title": "Find the Maximum Number of Strings Formed by 0s and 1s",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DP", "Array"],
+        "url": "https://leetcode.com/problems/ones-and-zeroes/",
+        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s."
+      },
+      {
+        "title": "Find the Minimum Number of Days to Make m Bouquets",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Binary Search", "Array"],
+        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
+        "description": "Find the minimum number of days to make m bouquets from flowers."
+      },
+      {
+        "title": "Find the Maximum Number of Coins You Can Get",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Array"],
+        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
+        "description": "Find the maximum number of coins you can get from piles."
+      },
+      {
+        "title": "Find the Minimum Number of Swaps to Make Strings Equal",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+        "description": "Find the minimum number of swaps to make two strings equal."
+      },
+      {
+        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Hash Table"],
+        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Make Array Increasing",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/",
+        "description": "Find the minimum number of operations to make an array strictly increasing."
+      },
+      {
+        "title": "Find the Maximum Number of Occurrences of a Substring II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+               "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+        "description": "Find the maximum number of occurrences of a substring in a string (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Make Array Alternating",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/",
+        "description": "Find the minimum number of operations to make an array alternating."
+      },
+      {
+        "title": "Find the Maximum Number of Points on a Line II",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Hash Table", "Geometry"],
+        "url": "https://leetcode.com/problems/max-points-on-a-line/",
+        "description": "Find the maximum number of points that lie on the same straight line (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Refueling Stops II",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "Heap"],
+        "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+        "description": "Find the minimum number of refueling stops to reach the target (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Hash Table"],
+        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
+        "description": "Find the minimum number of steps to make two strings anagrams (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Occurrences of a Substring III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+        "description": "Find the maximum number of occurrences of a substring in a string (another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Taps to Open to Water a Garden II",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "DP"],
+        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+        "description": "Find the minimum number of taps to open to water the entire garden (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Vowels in a Substring of Given Length II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Sliding Window", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
+        "description": "Find the maximum number of vowels in a substring of given length (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Make Array Equal II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Math", "Array"],
+        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
+        "description": "Find the minimum number of operations to make all array elements equal (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Balloons II",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
+        "description": "Find the maximum number of instances of the word 'balloon' that can be formed (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
+        "description": "Find the minimum number of flips to make a binary string alternating (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Strings Formed by 0s and 1s II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DP", "Array"],
+        "url": "https://leetcode.com/problems/ones-and-zeroes/",
+        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Days to Make m Bouquets II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Binary Search", "Array"],
+        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
+        "description": "Find the minimum number of days to make m bouquets from flowers (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Coins You Can Get II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Array"],
+        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
+        "description": "Find the maximum number of coins you can get from piles (variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Swaps to Make Strings Equal II",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+        "description": "Find the minimum number of swaps to make two strings equal (variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target IV",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Array", "Hash Table"],
+        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
+        "description": "Find the minimum number of steps to make two strings anagrams (yet another variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Occurrences of a Substring IV",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+        "description": "Find the maximum number of occurrences of a substring in a string (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Taps to Open to Water a Garden III",
+        "platform": "LeetCode",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "DP"],
+        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+        "description": "Find the minimum number of taps to open to water the entire garden (yet another variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Vowels in a Substring of Given Length III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Sliding Window", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
+        "description": "Find the maximum number of vowels in a substring of given length (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Operations to Make Array Equal III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Math", "Array"],
+        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
+        "description": "Find the minimum number of operations to make all array elements equal (yet another variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Balloons III",
+        "platform": "LeetCode",
+        "difficulty": "Easy",
+        "tags": ["Hash Table", "String"],
+        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
+        "description": "Find the maximum number of instances of the word 'balloon' that can be formed (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
+        "description": "Find the minimum number of flips to make a binary string alternating (yet another variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Strings Formed by 0s and 1s III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["DP", "Array"],
+        "url": "https://leetcode.com/problems/ones-and-zeroes/",
+        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Days to Make m Bouquets III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Binary Search", "Array"],
+        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
+        "description": "Find the minimum number of days to make m bouquets from flowers (yet another variant)."
+      },
+      {
+        "title": "Find the Maximum Number of Coins You Can Get III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["Greedy", "Array"],
+        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
+        "description": "Find the maximum number of coins you can get from piles (yet another variant)."
+      },
+      {
+        "title": "Find the Minimum Number of Swaps to Make Strings Equal III",
+        "platform": "LeetCode",
+        "difficulty": "Medium",
+        "tags": ["String", "Greedy"],
+        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+        "description": "Find the minimum number of swaps to make two strings equal (yet another variant)."
       }
     ]
 }
