@@ -1,37 +1,52 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import CodeAssistant from "@/components/CodeAssistant";
+import { AuthProvider } from "@/lib/authContext";
+import LayoutContent from "./LayoutContent";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "AlgoGrit",
-  description: "Developed by SB",
+  description: "Master coding with smart tools — developed by SB",
+  keywords: ["DSA", "Coding", "AlgoGrit", "LeetCode", "Programming", "Interview Prep"],
+  authors: [{ name: "SB" }],
+  openGraph: {
+    title: "AlgoGrit",
+    description: "Master coding with smart tools — developed by SB",
+    url: "https://yourdomain.com", // Replace with your actual domain
+    siteName: "AlgoGrit",
+    type: "website",
+    locale: "en_US",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black text-white`}
       >
-        <Navbar />
-        {children}
-        <CodeAssistant />
+        <AuthProvider>
+          <LayoutContent>{children}</LayoutContent>
+        </AuthProvider>
       </body>
     </html>
   );
