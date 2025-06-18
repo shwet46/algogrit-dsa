@@ -1,20 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   IconHome,
   IconCode,
   IconTarget,
 } from "@tabler/icons-react";
 import { FloatingNav } from "./ui/floating-navbar";
+import { useAuth } from "@/lib/authContext";
+import { signOut } from "firebase/auth";
+import { auth } from "@/firebase/config";
 
 export function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleSignInOut = () => {
-    setIsLoggedIn(!isLoggedIn);
-    if (!isLoggedIn) {
-      console.log("User signed in");
+  const { user } = useAuth();
+
+  const handleSignInOut = async () => {
+    if (user) {
+      await signOut(auth);
     } else {
-      console.log("User signed out");
+      window.location.href = "/signup";
     }
   };
 
@@ -34,7 +37,7 @@ export function Navbar() {
       link: "/code-ide",
       icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
-      {
+    {
       name: "Notes",
       link: "/notes",
       icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
@@ -44,7 +47,7 @@ export function Navbar() {
   return (
     <FloatingNav
       navItems={navItems}
-      isLoggedIn={isLoggedIn}
+      isLoggedIn={!!user}
       onSignInOut={handleSignInOut}
     />
   );

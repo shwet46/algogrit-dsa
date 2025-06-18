@@ -115,7 +115,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
 
   return (
     <div className="h-full flex flex-col">
-      <div className="flex justify-between items-center px-4 py-3 rounded-t-xl bg-muted/30 border-b">
+      <div className="flex justify-between border-transparent items-center px-4 py-3 rounded-t-xl bg-muted/30 border-b">
         <div className="flex items-center space-x-4">
           <div className="flex items-center">
             <Terminal className={cn("h-4 w-4 mr-2", getStatusColor())} />
@@ -218,7 +218,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
         </div>
       </div>
 
-      <Card className="flex-1 overflow-hidden flex flex-col border-t-0 rounded-t-none">
+      <Card className="flex-1 overflow-hidden flex border-transparent flex-col border-t-0 rounded-t-none">
         <ScrollArea className="flex-1">
           {error ? (
             <Alert

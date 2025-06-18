@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { IconLogin, IconLogout } from "@tabler/icons-react";
+import { useRouter } from "next/navigation"; // Import router
 
 import type { JSX } from "react";
 
@@ -26,6 +27,16 @@ export const FloatingNav = ({
   onSignInOut: () => void;
   themeToggle?: React.ReactNode;
 }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (!isLoggedIn) {
+      router.push("/signup"); 
+    } else {
+      onSignInOut(); 
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -48,16 +59,13 @@ export const FloatingNav = ({
       ))}
 
       {/* Theme Toggle Button */}
-      {themeToggle && (
-        <div className="flex items-center">
-          {themeToggle}
-        </div>
-      )}
+      {themeToggle && <div className="flex items-center">{themeToggle}</div>}
 
       {/* Sign In/Out Button */}
       <button
-        onClick={onSignInOut}
+        onClick={handleClick}
         className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full flex items-center space-x-2"
+        type="button"
       >
         {isLoggedIn ? (
           <>
