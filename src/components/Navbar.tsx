@@ -6,7 +6,7 @@ import {
   IconTarget,
 } from "@tabler/icons-react";
 import { FloatingNav } from "./ui/floating-navbar";
-import { useAuth } from "@/lib/authContext";
+import { useAuth } from "@/context/authContext";
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase/config";
 
