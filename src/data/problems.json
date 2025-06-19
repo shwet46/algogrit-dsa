@@ -10,7 +10,7 @@
       },
       {
         "title": "Watermelon",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Math", "Brute Force"],
         "url": "https://codeforces.com/problemset/problem/4/A",
@@ -50,7 +50,7 @@
       },
       {
         "title": "Theatre Square",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Math"],
         "url": "https://codeforces.com/problemset/problem/1/A",
@@ -90,7 +90,7 @@
       },
       {
         "title": "Way Too Long Words",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["String", "Implementation"],
         "url": "https://codeforces.com/problemset/problem/71/A",
@@ -130,7 +130,7 @@
       },
       {
         "title": "Beautiful Matrix",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Math"],
         "url": "https://codeforces.com/problemset/problem/263/A",
@@ -170,7 +170,7 @@
       },
       {
         "title": "Petya and Strings",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Strings"],
         "url": "https://codeforces.com/problemset/problem/112/A",
@@ -210,7 +210,7 @@
       },
       {
         "title": "Bit++",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation"],
         "url": "https://codeforces.com/problemset/problem/282/A",
@@ -250,7 +250,7 @@
       },
       {
         "title": "Team",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Greedy", "Implementation"],
         "url": "https://codeforces.com/problemset/problem/231/A",
@@ -290,7 +290,7 @@
       },
       {
         "title": "Domino Piling",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Math", "Greedy"],
         "url": "https://codeforces.com/problemset/problem/50/A",
@@ -330,7 +330,7 @@
       },
       {
         "title": "Next Round",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation"],
         "url": "https://codeforces.com/problemset/problem/158/A",
@@ -370,7 +370,7 @@
       },
       {
         "title": "String Task",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Strings"],
         "url": "https://codeforces.com/problemset/problem/118/A",
@@ -410,7 +410,7 @@
       },
       {
         "title": "Helpful Maths",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Sorting", "Strings"],
         "url": "https://codeforces.com/problemset/problem/339/A",
@@ -450,7 +450,7 @@
       },
       {
         "title": "Stones on the Table",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation"],
         "url": "https://codeforces.com/problemset/problem/266/A",
@@ -490,7 +490,7 @@
       },
       {
         "title": "Boy or Girl",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Strings", "Implementation"],
         "url": "https://codeforces.com/problemset/problem/236/A",
@@ -530,7 +530,7 @@
       },
       {
         "title": "Word Capitalization",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Strings"],
         "url": "https://codeforces.com/problemset/problem/281/A",
@@ -570,7 +570,7 @@
       },
       {
         "title": "Bear and Big Brother",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Implementation", "Math"],
         "url": "https://codeforces.com/problemset/problem/791/A",
@@ -610,7 +610,7 @@
       },
       {
         "title": "Sum of Digits",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Easy",
         "tags": ["Math", "Implementation"],
         "url": "https://codeforces.com/problemset/problem/102/B",
@@ -890,7 +890,7 @@
       },
       {
         "title": "XOR Queries",
-        "platform": "CodeForces",
+        "platform": "Codeforces",
         "difficulty": "Medium",
         "tags": ["Bit Manipulation", "Prefix Sum"],
         "url": "https://codeforces.com/problemset/problem/617/E",
@@ -1847,6 +1847,438 @@
         "tags": ["String", "Greedy"],
         "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
         "description": "Find the minimum number of swaps to make two strings equal (yet another variant)."
-      }
+      },
+      {
+    "title": "Maximum Sum Path in Binary Tree",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["Tree", "Dynamic Programming", "Recursion"],
+    "url": "https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/",
+    "description": "Find the maximum sum of any path from any node to any other node in a binary tree."
+  },
+  {
+    "title": "Rotate Matrix",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Array", "Matrix"],
+    "url": "https://www.interviewbit.com/problems/rotate-matrix/",
+    "description": "Rotate an NxN matrix by 90 degrees clockwise in-place."
+  },
+  {
+    "title": "Valid Sudoku",
+    "platform": "InterviewBit",
+    "difficulty": "Easy",
+    "tags": ["Array", "Hash Table"],
+    "url": "https://www.interviewbit.com/problems/valid-sudoku/",
+    "description": "Determine if a partially filled 9x9 Sudoku board is valid."
+  },
+  {
+    "title": "Longest Substring Without Repeating Characters",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["String", "Sliding Window", "Hash Table"],
+    "url": "https://www.interviewbit.com/problems/longest-substring-without-repeat/",
+    "description": "Find the length of the longest substring without repeating characters."
+  },
+  {
+    "title": "Generate Parentheses",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Backtracking", "String", "Recursion"],
+    "url": "https://www.interviewbit.com/problems/generate-all-parentheses/",
+    "description": "Generate all combinations of well-formed parentheses for n pairs."
+  },
+  {
+    "title": "Merge K Sorted Lists",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["Linked List", "Heap", "Divide and Conquer"],
+    "url": "https://www.interviewbit.com/problems/merge-k-sorted-lists/",
+    "description": "Merge k sorted linked lists and return it as one sorted list."
+  },
+  {
+    "title": "Word Ladder",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["BFS", "String", "Graph"],
+    "url": "https://www.interviewbit.com/problems/word-ladder-i/",
+    "description": "Find the shortest transformation sequence from beginWord to endWord."
+  },
+  {
+    "title": "Add Two Numbers as Lists",
+    "platform": "InterviewBit",
+    "difficulty": "Easy",
+    "tags": ["Linked List", "Math"],
+    "url": "https://www.interviewbit.com/problems/add-two-numbers-as-lists/",
+    "description": "Add two numbers represented as linked lists and return the sum as a linked list."
+  },
+  {
+    "title": "Container With Most Water",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Array", "Two Pointers"],
+    "url": "https://www.interviewbit.com/problems/container-with-most-water/",
+    "description": "Find two lines that together with the x-axis forms a container that holds the most water."
+  },
+  {
+    "title": "Word Break",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Dynamic Programming", "String"],
+    "url": "https://www.interviewbit.com/problems/word-break/",
+    "description": "Determine if a string can be segmented into a space-separated sequence of dictionary words."
+  },
+  {
+    "title": "Minimum Window Substring",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["String", "Sliding Window", "Hash Table"],
+    "url": "https://www.interviewbit.com/problems/window-string/",
+    "description": "Find the minimum window in string S that contains all characters of string T."
+  },
+  {
+    "title": "Palindrome Partitioning",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Backtracking", "String", "Dynamic Programming"],
+    "url": "https://www.interviewbit.com/problems/palindrome-partitioning/",
+    "description": "Partition a string such that every substring is a palindrome."
+  },
+  {
+    "title": "First Missing Positive",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["Array", "Hash Table"],
+    "url": "https://www.interviewbit.com/problems/first-missing-positive/",
+    "description": "Find the smallest missing positive integer in an unsorted integer array."
+  },
+  {
+    "title": "Edit Distance",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["Dynamic Programming", "String"],
+    "url": "https://www.interviewbit.com/problems/edit-distance/",
+    "description": "Find the minimum number of operations to convert one string to another."
+  },
+  {
+    "title": "Kth Largest Element",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Array", "Heap", "Quick Select"],
+    "url": "https://www.interviewbit.com/problems/kth-largest-element/",
+    "description": "Find the kth largest element in an unsorted array."
+  },
+  {
+    "title": "Spiral Order Matrix",
+    "platform": "InterviewBit",
+    "difficulty": "Easy",
+    "tags": ["Array", "Matrix"],
+    "url": "https://www.interviewbit.com/problems/spiral-order-matrix-i/",
+    "description": "Return the elements of an NxM matrix in spiral order."
+  },
+  {
+    "title": "Subset Sum Problem",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Dynamic Programming", "Array"],
+    "url": "https://www.interviewbit.com/problems/subset-sum-problem/",
+    "description": "Determine if there exists a subset with sum equal to given target."
+  },
+  {
+    "title": "Clone Graph",
+    "platform": "InterviewBit",
+    "difficulty": "Medium",
+    "tags": ["Graph", "DFS", "BFS", "Hash Table"],
+    "url": "https://www.interviewbit.com/problems/clone-graph/",
+    "description": "Return a deep copy of an undirected graph."
+  },
+  {
+    "title": "Largest Rectangle in Histogram",
+    "platform": "InterviewBit",
+    "difficulty": "Hard",
+    "tags": ["Stack", "Array"],
+    "url": "https://www.interviewbit.com/problems/largest-rectangle-in-histogram/",
+    "description": "Find the area of the largest rectangle that can be formed in a histogram."
+  },
+  {
+    "title": "Valid Binary Search Tree",
+    "platform": "InterviewBit",
+    "difficulty": "Easy",
+    "tags": ["Tree", "Binary Search Tree", "Recursion"],
+    "url": "https://www.interviewbit.com/problems/valid-binary-search-tree/",
+    "description": "Determine if a binary tree is a valid binary search tree."
+  },
+   {
+    "title": "Building Roads",
+    "platform": "CSES",
+    "difficulty": "Easy",
+    "tags": ["Graph", "Connected Components", "Union Find"],
+    "url": "https://cses.fi/problemset/task/1666",
+    "description": "Find the minimum number of roads needed to connect all cities in a country."
+  },
+  {
+    "title": "Message Route",
+    "platform": "CSES",
+    "difficulty": "Easy",
+    "tags": ["Graph", "BFS", "Shortest Path"],
+    "url": "https://cses.fi/problemset/task/1667",
+    "description": "Find the shortest path between two nodes in an unweighted graph using BFS."
+  },
+  {
+    "title": "Building Teams",
+    "platform": "CSES",
+    "difficulty": "Easy",
+    "tags": ["Graph", "Bipartite", "DFS", "Coloring"],
+    "url": "https://cses.fi/problemset/task/1668",
+    "description": "Determine if a graph is bipartite and assign nodes to two teams."
+  },
+  {
+    "title": "Round Trip",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Cycle Detection", "DFS"],
+    "url": "https://cses.fi/problemset/task/1669",
+    "description": "Find a cycle in an undirected graph and output the nodes in the cycle."
+  },
+  {
+    "title": "Monsters",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "BFS", "Multi-source BFS", "Grid"],
+    "url": "https://cses.fi/problemset/task/1194",
+    "description": "Find if you can escape from monsters in a grid maze using multi-source BFS."
+  },
+  {
+    "title": "Shortest Routes I",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Dijkstra", "Shortest Path", "Priority Queue"],
+    "url": "https://cses.fi/problemset/task/1671",
+    "description": "Find shortest distances from a source node to all other nodes using Dijkstra's algorithm."
+  },
+  {
+    "title": "Shortest Routes II",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Floyd Warshall", "All Pairs Shortest Path"],
+    "url": "https://cses.fi/problemset/task/1672",
+    "description": "Process queries for shortest distance between any two nodes using Floyd-Warshall."
+  },
+  {
+    "title": "High Score",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Bellman Ford", "Negative Cycles", "Longest Path"],
+    "url": "https://cses.fi/problemset/task/1673",
+    "description": "Find the maximum score path in a graph, handling negative cycles."
+  },
+  {
+    "title": "Flight Discount",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Dijkstra", "Modified Shortest Path"],
+    "url": "https://cses.fi/problemset/task/1195",
+    "description": "Find shortest path with option to use one discounted flight."
+  },
+  {
+    "title": "Cycle Finding",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Cycle Detection", "Bellman Ford"],
+    "url": "https://cses.fi/problemset/task/1197",
+    "description": "Find a negative cycle in a directed graph using Bellman-Ford algorithm."
+  },
+  {
+    "title": "Flight Routes",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "K Shortest Paths", "Dijkstra", "Priority Queue"],
+    "url": "https://cses.fi/problemset/task/1196",
+    "description": "Find the k shortest paths from source to destination."
+  },
+  {
+    "title": "Round Trip II",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Cycle Detection", "DFS", "Directed Graph"],
+    "url": "https://cses.fi/problemset/task/1678",
+    "description": "Find a cycle in a directed graph and output the cycle."
+  },
+  {
+    "title": "Course Schedule",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Topological Sort", "DFS", "Cycle Detection"],
+    "url": "https://cses.fi/problemset/task/1679",
+    "description": "Determine a valid order to complete courses with prerequisites (topological sort)."
+  },
+  {
+    "title": "Longest Flight Route",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "DAG", "Longest Path", "Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1680",
+    "description": "Find the longest path in a directed acyclic graph (DAG)."
+  },
+  {
+    "title": "Game Routes",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "DAG", "Dynamic Programming", "Path Counting"],
+    "url": "https://cses.fi/problemset/task/1681",
+    "description": "Count the number of paths from start to end in a DAG."
+  },
+  {
+    "title": "Investigation",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Dijkstra", "Path Counting", "Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1202",
+    "description": "Find shortest routes and count paths, minimum/maximum flights on shortest routes."
+  },
+  {
+    "title": "Planets Queries I",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Binary Lifting", "Functional Graph"],
+    "url": "https://cses.fi/problemset/task/1750",
+    "description": "Process queries on a functional graph using binary lifting technique."
+  },
+  {
+    "title": "Planets Queries II",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Functional Graph", "Cycle Detection", "Binary Lifting"],
+    "url": "https://cses.fi/problemset/task/1751",
+    "description": "Advanced queries on functional graphs with cycle detection."
+  },
+  {
+    "title": "Planets Cycles",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Functional Graph", "Cycle Detection"],
+    "url": "https://cses.fi/problemset/task/1179",
+    "description": "Find cycle information in a functional graph for each starting node."
+  },
+  {
+    "title": "Road Reparation",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "MST", "Kruskal", "Union Find"],
+    "url": "https://cses.fi/problemset/task/1675",
+    "description": "Find minimum spanning tree to connect all cities with minimum cost."
+  },
+  {
+    "title": "Road Construction",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "Union Find", "Connected Components"],
+    "url": "https://cses.fi/problemset/task/1676",
+    "description": "Process road construction queries and track connected components."
+  },
+  {
+    "title": "Flight Routes Check",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "SCC", "Strongly Connected Components", "DFS"],
+    "url": "https://cses.fi/problemset/task/1682",
+    "description": "Check if you can travel between any two cities (strongly connected components)."
+  },
+  {
+    "title": "Planets and Kingdoms",
+    "platform": "CSES",
+    "difficulty": "Medium",
+    "tags": ["Graph", "SCC", "Kosaraju", "Tarjan"],
+    "url": "https://cses.fi/problemset/task/1683",
+    "description": "Find strongly connected components and assign kingdom numbers."
+  },
+  {
+    "title": "Giant Pizza",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "2-SAT", "SCC", "Boolean Satisfiability"],
+    "url": "https://cses.fi/problemset/task/1684",
+    "description": "Solve 2-SAT problem to determine pizza toppings that satisfy all friends."
+  },
+  {
+    "title": "Coin Collector",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "SCC", "DAG", "Dynamic Programming"],
+    "url": "https://cses.fi/problemset/task/1686",
+    "description": "Collect maximum coins in a graph by condensing SCCs and solving on DAG."
+  },
+  {
+    "title": "Mail Delivery",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Eulerian Path", "Hierholzer"],
+    "url": "https://cses.fi/problemset/task/1691",
+    "description": "Find Eulerian path in a graph (visit every edge exactly once)."
+  },
+  {
+    "title": "De Bruijn Sequence",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Eulerian Path", "De Bruijn", "String"],
+    "url": "https://cses.fi/problemset/task/1692",
+    "description": "Construct De Bruijn sequence using Eulerian path in De Bruijn graph."
+  },
+  {
+    "title": "Teleporters Path",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Eulerian Path", "Directed Graph"],
+    "url": "https://cses.fi/problemset/task/1693",
+    "description": "Find Eulerian path in a directed graph from node 1 to node n."
+  },
+  {
+    "title": "Hamiltonian Flights",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Hamiltonian Path", "Bitmask DP", "TSP"],
+    "url": "https://cses.fi/problemset/task/1690",
+    "description": "Count Hamiltonian paths from node 1 to node n using bitmask DP."
+  },
+  {
+    "title": "Knight's Tour",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Hamiltonian Path", "Backtracking", "Chess"],
+    "url": "https://cses.fi/problemset/task/1689",
+    "description": "Find a knight's tour on a chessboard (visit each square exactly once)."
+  },
+  {
+    "title": "Download Speed",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Max Flow", "Ford Fulkerson", "Network Flow"],
+    "url": "https://cses.fi/problemset/task/1694",
+    "description": "Find maximum flow in a network from source to sink."
+  },
+  {
+    "title": "Police Chase",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Min Cut", "Max Flow", "Network Flow"],
+    "url": "https://cses.fi/problemset/task/1695",
+    "description": "Find minimum cut in a network (minimum edges to remove to disconnect source and sink)."
+  },
+  {
+    "title": "School Dance",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Bipartite Matching", "Maximum Matching"],
+    "url": "https://cses.fi/problemset/task/1696",
+    "description": "Find maximum matching in a bipartite graph (maximum number of dance pairs)."
+  },
+  {
+    "title": "Distinct Routes",
+    "platform": "CSES",
+    "difficulty": "Hard",
+    "tags": ["Graph", "Max Flow", "Edge Disjoint Paths"],
+    "url": "https://cses.fi/problemset/task/1711",
+    "description": "Find maximum number of edge-disjoint paths from source to sink."
+  }
     ]
 }

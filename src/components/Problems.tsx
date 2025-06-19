@@ -236,7 +236,7 @@ export default function Problems() {
                       : "bg-zinc-800/50 text-zinc-300 border-zinc-700/50 hover:border-[#7c8bd2]/50 hover:text-[#7c8bd2]"
                   )}
                 >
-                  #{tag}
+                  {tag}
                 </button>
               );
             })}
@@ -322,7 +322,7 @@ export default function Problems() {
                             key={tag}
                             className="inline-flex items-center text-xs px-2.5 py-1 bg-zinc-800/50 text-zinc-300 rounded-full font-mono border border-zinc-700/50 hover:border-[#7c8bd2]/50 transition-colors"
                           >
-                            #{tag}
+                            {tag}
                           </span>
                         ))}
                         {problem.tags.length > 3 && (
