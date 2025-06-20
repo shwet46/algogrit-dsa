@@ -10,7 +10,6 @@ A modern web application for mastering Data Structures and Algorithms (DSA) with
 - 🔒 User authentication (signup/login) with Firebase Auth
 - ☁️ Data persistence using Firestore
 - 💻 Code editor with code execution so that you can just test your code, download it and upload it for platforms like cses, codeforces etc.
-- Responsive, modern UI with custom themes
 
 ## Getting Started
 
@@ -68,6 +67,4 @@ service cloud.firestore {
   }
 }
 ```
-
-## License
-[MIT](LICENSE)
+---
