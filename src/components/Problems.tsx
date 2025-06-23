@@ -285,6 +285,11 @@ export default function Problems() {
           startIndex={startIndex}
           toggleCheck={toggleCheck}
           loading={loading}
+          getSolvedProblemWithTimestamp={problemIndex => {
+            const visibleProblem = visibleProblems.find((p, i) => startIndex + i === problemIndex);
+            if (!visibleProblem) return undefined;
+            return solvedProblemsDetails.find(detail => detail.index === problemIndex && detail.title === visibleProblem.title);
+          }}
         />
 
         {totalPages > 1 && (
