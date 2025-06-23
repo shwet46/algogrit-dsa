@@ -35,12 +35,24 @@ type Problem = {
   description: string;
 };
 
+type SolvedProblemDetail = {
+  title: string;
+  platform: string;
+  difficulty: string;
+  tags: string[];
+  url: string;
+  description: string;
+  index: number;
+  solvedAt: string;
+};
+
 const ITEMS_PER_PAGE = 10;
 
 export default function Problems() {
   const [user, setUser] = useState<FirebaseUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [checked, setChecked] = useState<number[]>([]);
+  const [solvedProblemsDetails, setSolvedProblemsDetails] = useState<SolvedProblemDetail[]>([]);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [difficultyFilter, setDifficultyFilter] = useState("All");
@@ -57,6 +69,7 @@ export default function Problems() {
         await loadUserProgress(user.uid);
       } else {
         setChecked([]);
+        setSolvedProblemsDetails([]);
       }
       setLoading(false);
     });
@@ -70,39 +83,74 @@ export default function Problems() {
       if (userDoc.exists()) {
         const userData = userDoc.data();
         setChecked(userData.solvedProblems || []);
+        setSolvedProblemsDetails(userData.solvedProblemsDetails || []);
       }
     } catch (error) {
       console.error("Error loading user progress:", error);
     }
   };
 
+  const getProblemDetails = (problemIndex: number): SolvedProblemDetail | null => {
+    const problem = problems.problems[problemIndex];
+    if (!problem) return null;
+    return {
+      ...problem,
+      index: problemIndex,
+      solvedAt: new Date().toISOString(),
+    };
+  };
+
   const saveUserProgress = async (problemIndex: number, isSolved: boolean) => {
     if (!user) return;
-
+    
+    const userRef = doc(db, "users", user.uid);
+    
     try {
-      const userRef = doc(db, "users", user.uid);
-      
       if (isSolved) {
+        const problemDetails = getProblemDetails(problemIndex);
+        if (!problemDetails) return;
+
         await updateDoc(userRef, {
           solvedProblems: arrayUnion(problemIndex),
-          lastUpdated: new Date().toISOString()
+          solvedProblemsDetails: arrayUnion(problemDetails),
+          lastUpdated: new Date().toISOString(),
         });
+        
+        // Update local state
+        setSolvedProblemsDetails(prev => [...prev, problemDetails]);
       } else {
-        await updateDoc(userRef, {
-          solvedProblems: arrayRemove(problemIndex),
-          lastUpdated: new Date().toISOString()
-        });
+        // Find the specific problem detail to remove
+        const problemDetailToRemove = solvedProblemsDetails.find(detail => detail.index === problemIndex);
+        
+        if (problemDetailToRemove) {
+          await updateDoc(userRef, {
+            solvedProblems: arrayRemove(problemIndex),
+            solvedProblemsDetails: arrayRemove(problemDetailToRemove),
+            lastUpdated: new Date().toISOString(),
+          });
+          
+          // Update local state
+          setSolvedProblemsDetails(prev => prev.filter(detail => detail.index !== problemIndex));
+        }
       }
     } catch (error) {
       if (typeof error === "object" && error !== null && "code" in error && (error as { code?: string }).code === 'not-found') {
-        const userRef = doc(db, "users", user.uid);
+        // Create new user document
+        const problemDetails = isSolved ? getProblemDetails(problemIndex) : null;
+        
         await setDoc(userRef, {
           email: user.email,
           displayName: user.displayName,
           solvedProblems: isSolved ? [problemIndex] : [],
+          solvedProblemsDetails: isSolved && problemDetails ? [problemDetails] : [],
           createdAt: new Date().toISOString(),
-          lastUpdated: new Date().toISOString()
+          lastUpdated: new Date().toISOString(),
         });
+        
+        // Update local state
+        if (isSolved && problemDetails) {
+          setSolvedProblemsDetails([problemDetails]);
+        }
       } else {
         console.error("Error saving user progress:", error);
       }
@@ -236,6 +284,7 @@ export default function Problems() {
           checked={checked}
           startIndex={startIndex}
           toggleCheck={toggleCheck}
+          loading={loading}
         />
 
         {totalPages > 1 && (

@@ -14,14 +14,27 @@ type Problem = {
   description: string;
 };
 
+type SolvedProblemDetail = {
+  title: string;
+  platform: string;
+  difficulty: string;
+  tags: string[];
+  url: string;
+  description: string;
+  index: number;
+  solvedAt: string;
+};
+
 type ProblemsTableProps = {
   visibleProblems: Problem[];
   checked: number[];
   startIndex: number;
   toggleCheck: (id: number) => void;
+  loading?: boolean;
+  getSolvedProblemWithTimestamp?: (problemIndex: number) => SolvedProblemDetail | undefined;
 };
 
-const ProblemsTable: React.FC<ProblemsTableProps> = ({ visibleProblems, checked, startIndex, toggleCheck }) => {
+const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({ visibleProblems, checked, startIndex, toggleCheck, loading, getSolvedProblemWithTimestamp }) => {
   const { user } = useAuth();
   const [showPrompt, setShowPrompt] = useState(false);
 
@@ -32,6 +45,14 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ visibleProblems, checked,
     }
     toggleCheck(id);
   };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[200px]">
+        <div className="w-10 h-10 border-4 border-[#7c8bd2] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -57,7 +78,6 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ visibleProblems, checked,
         <table className="min-w-full divide-y divide-[#7c8bd2]/20 text-xs sm:text-sm">
           <thead className="hidden md:table-header-group">
             <tr className="bg-gradient-to-r from-[#7c8bd2]/20 to-[#5d6bb7]/20">
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">#</th>
               <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Status</th>
               <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Problem</th>
               <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Platform</th>
@@ -69,16 +89,19 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ visibleProblems, checked,
           <tbody className="divide-y divide-[#7c8bd2]/10">
             {visibleProblems.map((problem, idx) => {
               const globalIndex = startIndex + idx;
-              const isSolved = checked.includes(globalIndex);
+              const isSolved = getSolvedProblemWithTimestamp
+                ? Boolean(getSolvedProblemWithTimestamp(globalIndex))
+                : checked.includes(globalIndex);
               return (
                 <tr key={globalIndex} className={cn(
                   "transition-all duration-300 hover:bg-gradient-to-r hover:from-[#7c8bd2]/10 hover:to-[#5d6bb7]/10 group block md:table-row w-full mb-4 md:mb-0 rounded-xl md:rounded-none bg-zinc-900/60 md:bg-transparent p-4 md:p-0",
                   isSolved && "bg-gradient-to-r from-green-500/10 to-emerald-500/10"
                 )}>
-                  <td colSpan={7} className="block md:hidden p-0">
+                  <td colSpan={6} className="block md:hidden p-0">
                     <div className="flex flex-col gap-2 p-4 rounded-xl border border-[#7c8bd2]/20 bg-zinc-900/80">
+                      {/* Removed # from mobile view */}
                       <div className="flex items-center justify-between">
-                        <span className="font-mono text-lg font-bold text-[#7c8bd2]">{String(globalIndex + 1).padStart(3, '0')}</span>
+                        <span></span>
                         <button
                           onClick={() => handleTick(globalIndex)}
                           className={cn(
@@ -139,9 +162,10 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ visibleProblems, checked,
                       </Link>
                     </div>
                   </td>
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell text-[#7c8bd2] font-mono text-lg font-bold">
+                  {/* Removed # column from desktop view */}
+                  {/* <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell text-[#7c8bd2] font-mono text-lg font-bold">
                     {String(globalIndex + 1).padStart(3, '0')}
-                  </td>
+                  </td> */}
                   <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
                     <button
                       onClick={() => handleTick(globalIndex)}
