@@ -4,6 +4,7 @@ import {
   IconHome,
   IconCode,
   IconTarget,
+  IconNotebook,
 } from "@tabler/icons-react";
 import { FloatingNav } from "./ui/floating-navbar";
 import { useAuth } from "@/context/authContext";
@@ -40,7 +41,7 @@ export function Navbar() {
     {
       name: "Notes",
       link: "/notes",
-      icon: <IconCode className="h-5 w-5 text-neutral-500 dark:text-white" />,
+      icon: <IconNotebook className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
   ];
 
@@ -49,6 +50,7 @@ export function Navbar() {
       navItems={navItems}
       isLoggedIn={!!user}
       onSignInOut={handleSignInOut}
+      user={user}
     />
   );
 }

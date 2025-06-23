@@ -16,9 +16,9 @@ const ProblemsSignInPrompt: React.FC<ProblemsSignInPromptProps> = ({ onSignIn })
     </p>
     <button
       onClick={onSignIn}
-      className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+      className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-600 hover:from-indigo-500 hover:to-indigo-700 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
     >
-      Get Started - Sign In
+      Get Started - Sign up
     </button>
   </div>
 );

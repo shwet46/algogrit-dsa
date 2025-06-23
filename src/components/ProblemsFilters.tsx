@@ -114,7 +114,7 @@ const ProblemsFilters: React.FC<ProblemsFiltersProps> = ({
     </div>
     <div className="w-full mb-8 sm:mb-10">
       <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-        <span className="text-sm sm:text-base md:text-lg font-semibold text-[#7c8bd2]">Filter by tags:</span>
+        <span className="text-sm sm:text-base md:text-lg font-semibold text-[#7c8bd2]">Filter by topics:</span>
         {selectedTags.length > 0 && (
           <button
             onClick={() => {

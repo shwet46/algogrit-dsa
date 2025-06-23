@@ -2,10 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@/context/authContext";
+import { useRouter } from "next/navigation";
 
 function Hero() {
+  const { user } = useAuth();
+  const router = useRouter();
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -72,15 +75,22 @@ function Hero() {
           </p>
            
           <div className="flex justify-center mb-8">
-            <Link href="/signup">
-              <button className="p-[3px] relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-lg" />
-                <div className="px-8 py-3 bg-slate-900 rounded-[6px] relative transition duration-200 text-white hover:bg-transparent flex items-center space-x-2">
-                  <span>Start Practicing</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </button>
-            </Link>
+            <button
+              className="p-[3px] relative group"
+              onClick={() => {
+                if (user) {
+                  router.push("/problems");
+                } else {
+                  router.push("/signup");
+                }
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] rounded-lg" />
+              <div className="px-8 py-3 bg-slate-900 rounded-[6px] relative transition duration-200 text-white hover:bg-transparent flex items-center space-x-2">
+                <span>Start Practicing</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </button>
           </div>
            
           {/* Key Benefits */}

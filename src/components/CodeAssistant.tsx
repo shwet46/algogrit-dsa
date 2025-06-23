@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Bot, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { useAuth } from "@/context/authContext";
 
 type Message = {
   sender: "user" | "bot";
@@ -10,6 +11,7 @@ type Message = {
 };
 
 export default function CodeAssistant() {
+  const { user } = useAuth();
   const [open, setOpen] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
@@ -64,7 +66,13 @@ export default function CodeAssistant() {
       {/* Floating button */}
       <div className="fixed bottom-5 right-5 z-50">
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => {
+            if (!user) {
+              window.location.href = "/signup";
+              return;
+            }
+            setOpen(!open);
+          }}
           className="relative p-4 bg-gradient-to-br from-[#7c8bd2] via-[#5d6bb7] to-[#3f4b9c] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2] via-[#5d6bb7] to-[#3f4b9c] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full animate-pulse"></div>
@@ -77,8 +85,8 @@ export default function CodeAssistant() {
       </div>
 
       {/* Chat window */}
-      {open && (
-        <div className="fixed bottom-24 right-4 w-[90vw] sm:w-[500px] md:w-[560px] max-h-[80vh] z-50 bg-zinc-900/90 backdrop-blur-lg border border-[#5d6bb7]/40 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      {open && user && (
+        <div className="fixed bottom-24 right-2 w-[96vw] sm:w-[420px] md:w-[520px] lg:w-[600px] xl:w-[700px] max-h-[90vh] z-50 bg-zinc-900/90 backdrop-blur-lg border border-[#5d6bb7]/40 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           <div className="bg-gradient-to-r from-[#7c8bd2] via-[#5d6bb7] to-[#3f4b9c] text-white px-5 py-4 font-semibold text-lg flex items-center gap-2 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#7c8bd2]/20 to-[#3f4b9c]/20 animate-pulse"></div>
             <Bot className="text-white relative z-10" />
@@ -102,8 +110,9 @@ export default function CodeAssistant() {
                   className={`px-4 py-2 max-w-[80%] rounded-lg whitespace-pre-wrap text-sm ${
                     msg.sender === "user"
                       ? "bg-gradient-to-r from-zinc-800 to-zinc-700 text-white rounded-br-none border border-[#5d6bb7]/20"
-                      : "bg-gradient-to-r from-[#5d6bb7]/10 to-[#3f4b9c]/10 text-zinc-300 border border-[#5d6bb7]/30 rounded-bl-none"
+                      : "bg-gradient-to-r from-[#5d6bb7]/10 to-[#3f4b9c]/10 text-zinc-300 border border-[#5d6bb7]/30 rounded-bl-none max-h-[350px] overflow-y-auto"
                   }`}
+                  style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                 >
                   {msg.sender === "bot" ? (
                     <ReactMarkdown
@@ -116,6 +125,9 @@ export default function CodeAssistant() {
                         ),
                         code: (props) => (
                           <code className="bg-zinc-800 px-1 py-0.5 rounded text-[#7c8bd2] font-mono break-words whitespace-pre-wrap inline-block max-w-full overflow-x-auto" {...props} />
+                        ),
+                        pre: (props) => (
+                          <pre className="bg-zinc-900 rounded p-2 my-2 overflow-x-auto text-xs" style={{ maxWidth: '100%' }} {...props} />
                         ),
                         ul: (props) => <ul className="list-disc ml-5" {...props} />,
                         ol: (props) => <ol className="list-decimal ml-5" {...props} />,

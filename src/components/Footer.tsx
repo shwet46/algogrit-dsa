@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 bg-black px-6 sm:px-10 md:px-16 py-12 overflow-hidden">
+    <footer className="relative z-10 bg-black mt-10 px-6 sm:px-10 md:px-16 py-12 overflow-hidden">
       {/* Blue corner gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] via-transparent to-transparent opacity-30 pointer-events-none" />
 

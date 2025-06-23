@@ -1,15 +1,15 @@
 # AlgoGrit DSA
 
-A modern web application for mastering Data Structures and Algorithms (DSA) with smart tools, code execution, notes, and problem tracking. Built with Next.js, Firebase, and a beautiful custom UI.
+A  web application for mastering Data Structures and Algorithms (DSA) with smart tools, code execution, notes, and problem tracking. Built with Next.js, Firebase, and a beautiful custom UI.
 
 ## Features
 
 - 🚀 DSA Problems dashboard with filters, search, and progress tracking
-- 📝 Personal Notes with tags, search, and CRUD operations
-- 🤖 AI bot to help you with your queries
+- 📝 Personal Notes with topics, search, and CRUD operations
+- 🤖 AI chatbot assistant (requires login) to help you with your DSA queries
 - 🔒 User authentication (signup/login) with Firebase Auth
-- ☁️ Data persistence using Firestore
 - 💻 Code editor with code execution so that you can just test your code, download it and upload it for platforms like cses, codeforces etc.
+- 📱 Fully responsive UI and mobile-friendly navigation
 
 ## Getting Started
 
@@ -38,6 +38,7 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
 ```
 
 ### 4. Run the development server
@@ -67,4 +68,5 @@ service cloud.firestore {
   }
 }
 ```
+
 ---
