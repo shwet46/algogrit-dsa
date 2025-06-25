@@ -1241,6 +1241,70 @@
         "description": "Perform operations on an array to achieve a certain property."
       },
       {
+        "title": "Cool Partition",
+        "platform": "Codeforces",
+        "difficulty": "Medium", 
+        "tags": ["Greedy", "Sorting"],
+        "url": "https://codeforces.com/problemset/problem/2117/C",
+        "description": "Yousef has an array a of size n. He wants to partition the array into one or more contiguous segments such that each element ai belongs to exactly one segment."
+      },
+      {
+        "title": "Retaliation",
+        "platform": "Codeforces",
+        "difficulty": "Medium",
+        "tags": ["Binary Search", "Math"],
+        "url": "https://codeforces.com/problemset/problem/2117/D",
+        "description": "Yousef wants to explode an array a1,a2,…,an. An array gets exploded when all of its elements become equal to zero."
+      },
+      {
+        "title": "Omg Graph",
+        "platform": "Codeforces",
+        "difficulty": "Hard",
+        "tags": ["Graph", "DFS", "BFS","Union Find"],
+        "url": "https://codeforces.com/problemset/problem/2117/G",
+        "description": "Find the minimum possible value of (maximum edge weight + minimum edge weight) among all paths from vertex 1 to n in a weighted undirected connected graph."
+      },
+      {
+        "title": "Incessant Rain",
+        "platform": "Codeforces",
+        "difficulty": "Hard",
+        "tags": ["Divide and Conquer","Sorting"],
+        "url": "https://codeforces.com/problemset/problem/2117/H",  
+        "description": "After each array update, determine the largest k such that some element is a k-majority in some subarray, meaning it appears at least ⌊(subarray length+1)/2⌋+k times."
+      },
+      {
+        "title": "Build an Array",
+        "platform":"Codeforces",
+        "difficulty": "Hard",
+        "tags": ["Greedy", "Math"],
+        "url": "https://codeforces.com/problemset/problem/2114/G",
+        "description": "Given a target array a of length n and an operation count k, determine if a can be formed from an empty array by exactly k operations, where an operation involves adding an integer to either end, followed by merging any adjacent identical elements by summing them."
+      },
+      {
+        "title": "Two Arrays",
+        "platform": "Codeforces",
+        "difficulty": "Hard",
+        "tags": ["Graph", "DFS", "Math"],
+        "url": "https://codeforces.com/problemset/problem/2113/F",
+        "description": "Given two arrays a and b of length n, we can swap ai and bi for any index i. The goal is to maximize f(a)+f(b), where f(c) is the number of distinct elements in array c, and then output the modified arrays."
+      },
+      {
+        "title": "Fibonacci Cubes",
+        "platform": "Codeforces",
+        "difficulty": "Medium",
+        "tags": ["Dynamic Programming", "Math"],
+        "url": "https://codeforces.com/problemset/problem/2111/B",
+        "description": "Given n Fibonacci cubes and m boxes, determine for each box if all cubes can fit, following rules: aligned with box, no empty space below, and no larger cube on smaller."
+      },
+      {
+        "title": "D/D/D",
+        "platform": "Codeforces",
+        "difficulty": "Hard",
+        "tags": ["Graph", "DFS","Greedy"],  
+        "url": "https://codeforces.com/problemset/problem/2109/D",
+        "description": "You are given a graph, a multiset A of lengths, and a starting vertex (1). For each vertex i, determine if it's possible to reach i by repeatedly: 1) choosing a length k from A and removing it, and 2) traversing a walk of exactly k edges. Each check for a vertex i is independent."
+      },
+      {
         "title": "Find All Duplicates in an Array",
         "platform": "LeetCode",
         "difficulty": "Medium",

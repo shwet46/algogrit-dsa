@@ -9,16 +9,14 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="relative z-10 bg-black mt-10 px-6 sm:px-10 md:px-16 py-12 overflow-hidden">
-      {/* Blue corner gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] via-transparent to-transparent opacity-30 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-sm text-neutral-400">
-        {/* Brand Column */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <VscTerminal className="text-[#60a5fa]" size={26} />
             <h2
-              className="text-2xl font-bold bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#2563eb] bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-[#567fb1] via-[#3d64a2] to-[#1c46a2] bg-clip-text text-transparent"
               style={{ fontFamily: "'Fira Code', monospace" }}
             >
               AlgoGrit
@@ -31,7 +29,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Links */}
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-white">Quick Links</h4>
           <ul className="space-y-2">
@@ -41,7 +38,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Socials */}
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-white">Connect</h4>
           <div className="flex items-center gap-4">
@@ -62,7 +58,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-xs text-neutral-500 pt-4">
-            Made with 💙 by <span className="font-semibold text-blue-400">SB</span>
+            Made with <span className="text-indigo-500 text-md">♥</span> by <span className="font-semibold text-indigo-400">SB</span>
           </p>
         </div>
       </div>

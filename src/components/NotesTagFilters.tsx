@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Filter, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +13,10 @@ export default function NotesTagFilters({
   toggleTag: (tag: string) => void;
   clearTags: () => void;
 }) {
+  const [showAll, setShowAll] = useState(false);
+
+  const tagsToShow = showAll ? allTags : allTags.slice(0, 20);
+
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 text-sm text-zinc-400">
@@ -28,8 +32,9 @@ export default function NotesTagFilters({
           </button>
         )}
       </div>
+
       <div className="flex flex-wrap gap-2">
-        {allTags.slice(0, 20).map((tag) => {
+        {tagsToShow.map((tag) => {
           const sel = selectedTags.includes(tag);
           return (
             <button
@@ -46,12 +51,16 @@ export default function NotesTagFilters({
             </button>
           );
         })}
-        {allTags.length > 20 && (
-          <span className="text-sm text-zinc-400 px-3 py-1.5">
-            + {allTags.length - 20} more topics available
-          </span>
-        )}
       </div>
+
+      {allTags.length > 20 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-sm text-indigo-400 hover:underline"
+        >
+          {showAll ? "Show less" : `Show all (${allTags.length})`}
+        </button>
+      )}
     </div>
   );
 }
