@@ -47,10 +47,9 @@ export default function SignupPage() {
           username,
           createdAt: new Date()
         })
-      } catch (docError) {
-        // If document creation fails, clean up the auth user
+      } catch (error) {
         await user.delete()
-        throw new Error('Failed to create user profile. Please try again.')
+        throw new Error('Failed to create user profile: ' + (error instanceof Error ? error.message : 'Please try again.'))
       }
 
       await signOut(auth)

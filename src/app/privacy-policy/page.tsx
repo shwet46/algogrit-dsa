@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Agreement to Terms</h2>
               <p className="text-zinc-300 leading-relaxed mb-4">
-                By accessing and using AlgoGrit DSA ("the Platform"), you accept and agree to be bound by the terms 
+                By accessing and using AlgoGrit DSA (&quot;the Platform&quot;), you accept and agree to be bound by the terms 
                 and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -132,7 +132,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Limitation of Liability</h2>
               <p className="text-zinc-300 leading-relaxed mb-4">
-                AlgoGrit DSA is provided "as is" without warranties of any kind. We are not liable for any 
+                AlgoGrit DSA is provided &quot;as is&quot; without warranties of any kind. We are not liable for any 
                 direct, indirect, incidental, or consequential damages resulting from your use of the platform. 
                 Your use of the service is at your own risk.
               </p>
@@ -151,7 +151,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-semibold text-white mb-4">Changes to Terms</h2>
               <p className="text-zinc-300 leading-relaxed mb-4">
                 We may update these terms of service from time to time. We will notify users of any significant 
-                changes by posting the updated terms on this page and updating the "Last updated" date. 
+                changes by posting the updated terms on this page and updating the &quot;Last updated&quot; date. 
                 Continued use of the platform after changes constitutes acceptance of the new terms.
               </p>
             </section>
