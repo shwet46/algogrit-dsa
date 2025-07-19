@@ -1,15 +1,15 @@
-# AlgoGrit DSA
+# AlgoGrit DSA 👩🏻‍💻
 
 A  web application for mastering Data Structures and Algorithms (DSA) with smart tools, code execution, notes, and problem tracking. Built with Next.js, Firebase, and a beautiful custom UI.
 
 ## Features
 
-- 🚀 DSA Problems dashboard with filters, search, and progress tracking
-- 📝 Personal Notes with topics, search, and CRUD operations
-- 🤖 AI chatbot assistant (requires login) to help you with your DSA queries
-- 🔒 User authentication (signup/login) with Firebase Auth
-- 💻 Code editor with code execution so that you can just test your code, download it and upload it for platforms like cses, codeforces etc.
-- 📱 Fully responsive UI and mobile-friendly navigation
+* **DSA Problems Dashboard**: Easily track your progress with an intuitive dashboard featuring filters, search functionality, and real-time progress updates.
+* **Personal Notes**: Organize your thoughts and solutions with a dedicated notes section. It supports custom topics, search, and full **CRUD (Create, Read, Update, Delete)** operations for efficient management.
+* **AI Chatbot Assistant**: Get instant, intelligent assistance with your DSA queries from our integrated AI chatbot (login required).
+* **User Authentication**: Securely access your personalized learning environment with **Firebase Auth** for straightforward signup and login.
+* **Code Editor with Execution**: Test your code directly within the application. You can easily download your code and prepare it for submission to popular platforms like CSES and Codeforces.
+* **Responsive UI**: Enjoy a consistent and optimized experience across all your devices, thanks to a fully responsive design and mobile-friendly navigation.
 
 ## Getting Started
 
@@ -47,26 +47,5 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
-
-## Firestore Security Rules Example
-```
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-      match /{subcollection=**} {
-        allow read, write: if request.auth != null && request.auth.uid == userId;
-      }
-    }
-    match /notes/{userId}/notes/{noteId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    match /{document=**} {
-      allow read, write: if false;
-    }
-  }
-}
-```
 
 ---
