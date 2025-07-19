@@ -1,4 +1,4 @@
-import Problems from '@/components/Problems';
+import Problems from '@/components/Problems/Problems';
 import Footer from '@/components/Footer';
 import React from 'react';
 

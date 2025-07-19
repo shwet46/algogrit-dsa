@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <footer className="relative z-10 bg-black mt-10 px-6 sm:px-10 md:px-16 py-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] via-transparent to-transparent opacity-30 pointer-events-none" />
-
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-sm text-neutral-400">
+      
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-neutral-400">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <VscTerminal className="text-[#60a5fa]" size={26} />
@@ -35,6 +35,14 @@ const Footer = () => {
             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
             <li><Link href="/problems" className="hover:text-blue-400 transition-colors">Problems</Link></li>
             <li><Link href="/code-ide" className="hover:text-blue-400 transition-colors">Code-IDE</Link></li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h4 className="text-lg font-semibold text-white">Legal</h4>
+          <ul className="space-y-2">
+            <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
           </ul>
         </div>
 

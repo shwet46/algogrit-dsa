@@ -1,17 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import { useNotes } from "@/context/notesContext";
-import { AddNoteForm } from "@/components/AddNoteForm";
-import NotesHeader from "@/components/NotesHeader";
-import NotesSearchAdd from "@/components/NotesSearchAdd";
-import NotesTagFilters from "@/components/NotesTagFilters";
-import NotesEmptyState from "@/components/NotesEmptyState";
-import NotesFilteredInfo from "@/components/NotesFilteredInfo";
-import NotesPagination from "@/components/NotesPagination";
+import { AddNoteForm } from "@/components/Notes/AddNoteForm";
+import NotesHeader from "@/components/Notes/NotesHeader";
+import NotesSearchAdd from "@/components/Notes/NotesSearchAdd";
+import NotesTagFilters from "@/components/Notes/NotesTagFilters";
+import NotesEmptyState from "@/components/Notes/NotesEmptyState";
+import NotesFilteredInfo from "@/components/Notes/NotesFilteredInfo";
+import NotesPagination from "@/components/Notes/NotesPagination";
 import problems from "@/data/problems.json";
 import { useAuth } from "@/context/authContext";
-import NoteFullView from "@/components/NoteFullView";
-import NoteEditForm, { Note } from "@/components/NoteEditForm";
+import NoteFullView from "@/components/Notes/NoteFullView";
+import NoteEditForm, { Note } from "@/components/Notes/NoteEditForm";
 import Footer from "@/components/Footer";
 
 export default function NotesDashboard() {

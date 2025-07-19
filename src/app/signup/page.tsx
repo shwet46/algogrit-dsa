@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { auth, db } from '@/firebase/config'
 import { createUserWithEmailAndPassword, signOut } from 'firebase/auth'
-import { setDoc, doc, collection, query, where, getDocs } from 'firebase/firestore'
+import { setDoc, doc } from 'firebase/firestore'
 
 import { z } from 'zod'
 import { WavyBackground } from '@/components/ui/wavy-background'
@@ -35,23 +35,23 @@ export default function SignupPage() {
 
     setLoading(true)
     try {
-      // Check if username already exists
-      const usernameQuery = query(collection(db, 'users'), where('username', '==', username))
-      const usernameSnapshot = await getDocs(usernameQuery)
-      if (!usernameSnapshot.empty) {
-        setError('Username is already taken.')
-        setLoading(false)
-        return
-      }
-
+      // Create the user first
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
       const user = userCredential.user
 
-      await setDoc(doc(db, 'users', user.uid), {
-        uid: user.uid,
-        email: user.email,
-        username
-      })
+      // Now create the user document (user is authenticated)
+      try {
+        await setDoc(doc(db, 'users', user.uid), {
+          uid: user.uid,
+          email: user.email,
+          username,
+          createdAt: new Date()
+        })
+      } catch (docError) {
+        // If document creation fails, clean up the auth user
+        await user.delete()
+        throw new Error('Failed to create user profile. Please try again.')
+      }
 
       await signOut(auth)
       router.push('/login')
@@ -67,6 +67,8 @@ export default function SignupPage() {
             : code === 'auth/weak-password'
             ? 'Password should be at least 6 characters.'
             : 'Signup failed. Please try again.'
+      } else if (err instanceof Error) {
+        message = err.message
       }
 
       setError(message)

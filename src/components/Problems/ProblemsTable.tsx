@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { CheckCircle, Circle, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../../context/authContext";
 import ProblemsSignInPrompt from "./ProblemsSignInPrompt";
 
 type Problem = {
