@@ -83,25 +83,52 @@ export const FloatingNav = ({
           <div className="relative">
             <button
               onClick={() => setDropdownOpen((v) => !v)}
-              className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-700 hover:bg-zinc-600 border border-[#7c8bd2] focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]"
+              className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 transition-all duration-200 group"
               aria-label="User menu"
             >
-              <IconUser className="h-5 w-5 text-blue-300" />
+              <IconUser className="h-5 w-5 text-zinc-300 group-hover:text-zinc-200 transition-colors" />
             </button>
             {dropdownOpen && (
-              <div ref={dropdownRef} className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-2 w-56 bg-gradient-to-br from-[#23243a] via-[#2e3261] to-[#5d6bb7] border border-[#7c8bd2] rounded-xl shadow-lg z-50 p-4 flex flex-col items-center animate-fade-in">
-                <div className="text-sm text-white mb-2 text-center">
-                  Hello, <span className="font-semibold text-blue-200">{user?.email ? user.email.split("@", 1)[0] : "User"}</span>!<br />
-                  <span className="text-xs text-blue-100">have a nice day and stay focused.</span>
+              <div ref={dropdownRef} className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-3 w-64 bg-zinc-900/95 backdrop-blur-lg border border-zinc-700/50 rounded-2xl shadow-2xl z-50 overflow-hidden animate-in slide-in-from-top-2 duration-200">
+                {/* Header with gradient accent */}
+                <div className="bg-gradient-to-r from-zinc-800 to-zinc-700 px-4 py-3 border-b border-zinc-700/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-700 flex items-center justify-center ring-2 ring-zinc-500/30">
+                      <IconUser className="h-5 w-5 text-zinc-300" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-zinc-100 truncate">
+                        {user?.email ? user.email.split("@")[0] : "User"}
+                      </p>
+                      <p className="text-xs text-zinc-400 truncate">
+                        {user?.email || "Welcome back!"}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <button
-                  onClick={handleClick}
-                  className="mt-2 w-full border text-sm font-medium border-[#7c8bd2] text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 bg-zinc-800/80 hover:bg-[#2e3261] transition"
-                  type="button"
-                >
-                  <IconLogout className="h-4 w-4 mr-2 text-blue-300" />
-                  <span>Sign Out</span>
-                </button>
+
+                {/* Content */}
+                <div className="p-4">
+                  <div className="text-center mb-4">
+                    <p className="text-sm text-zinc-300 leading-relaxed">
+                      Ready to tackle some algorithms? 
+                      <span className="block text-xs text-zinc-400 mt-1">Keep up the great work!</span>
+                    </p>
+                  </div>
+
+                  {/* Sign out button */}
+                  <button
+                    onClick={handleClick}
+                    className="w-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 text-zinc-200 px-4 py-2.5 rounded-lg flex items-center justify-center space-x-2 transition-all duration-200 group hover:shadow-lg"
+                    type="button"
+                  >
+                    <IconLogout className="h-4 w-4 text-zinc-400 group-hover:text-zinc-300 transition-colors" />
+                    <span className="text-sm font-medium">Sign Out</span>
+                  </button>
+                </div>
+
+                {/* Bottom accent */}
+                <div className="h-1 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700"></div>
               </div>
             )}
           </div>

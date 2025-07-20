@@ -27,30 +27,30 @@ export default function CodeAssistant() {
     setLoading(true);
 
     try {
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: userMessage }] }],
-          }),
-        }
-      );
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userMessage,
+        }),
+      });
 
       const data = await res.json();
-      const botReply =
-        data.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "Sorry, I couldn't generate a response.";
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to get response");
+      }
+
+      const botReply = data.reply || "Sorry, I couldn't generate a response.";
 
       setMessages((prev) => [...prev, { sender: "bot", text: botReply }]);
     } catch (err) {
-      console.error("Gemini API error:", err);
+      console.error("API error:", err);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Failed to get response from Gemini API." },
+        { sender: "bot", text: "Failed to get response from AI assistant." },
       ]);
     } finally {
       setLoading(false);
