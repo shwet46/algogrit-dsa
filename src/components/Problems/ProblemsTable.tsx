@@ -34,16 +34,44 @@ type ProblemsTableProps = {
   getSolvedProblemWithTimestamp?: (problemIndex: number) => SolvedProblemDetail | undefined;
 };
 
-const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({ visibleProblems, checked, startIndex, toggleCheck, loading, getSolvedProblemWithTimestamp }) => {
+const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({
+  visibleProblems,
+  checked,
+  startIndex,
+  toggleCheck,
+  loading,
+  getSolvedProblemWithTimestamp,
+}) => {
   const { user } = useAuth();
   const [showPrompt, setShowPrompt] = useState(false);
+
+  const saveUserSolvedProblem = async (problemIndex: number, solved: boolean) => {
+    if (!user) return;
+    try {
+      await fetch("/api/user/solved-problems", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userId: user.uid,
+          problemIndex,
+          solved,
+        }),
+      });
+    } catch (err) {
+      console.error("Failed to save solved problem:", err);
+    }
+  };
 
   const handleTick = (id: number) => {
     if (!user) {
       setShowPrompt(true);
       return;
     }
+    const isCurrentlySolved = checked.includes(id);
     toggleCheck(id);
+    saveUserSolvedProblem(id, !isCurrentlySolved);
   };
 
   if (loading) {

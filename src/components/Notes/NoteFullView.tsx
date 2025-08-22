@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import type { Note } from "./NoteEditForm";
 
 interface NoteFullViewProps {
@@ -9,6 +10,21 @@ interface NoteFullViewProps {
 
 export default function NoteFullView({ note, onClose, onEdit }: NoteFullViewProps) {
   if (!note) return null;
+
+  let createdAtStr = "";
+  if (
+    note.createdAt &&
+    typeof note.createdAt === "object" &&
+    note.createdAt !== null &&
+    typeof (note.createdAt as { toDate?: unknown }).toDate === "function"
+  ) {
+    createdAtStr = ((note.createdAt as unknown) as { toDate: () => Date }).toDate().toLocaleString();
+  } else if (note.createdAt instanceof Date) {
+    createdAtStr = note.createdAt.toLocaleString();
+  } else if (typeof note.createdAt === "string" || typeof note.createdAt === "number") {
+    createdAtStr = String(note.createdAt);
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
       <div className="relative max-w-2xl w-full bg-zinc-900 rounded-2xl shadow-2xl p-8 border-2 border-[#7c8bd2] text-zinc-100">
@@ -20,14 +36,10 @@ export default function NoteFullView({ note, onClose, onEdit }: NoteFullViewProp
           ×
         </button>
         <h2 className="text-3xl font-bold mb-4 text-[#7c8bd2]">{note.title}</h2>
-        <div className="mb-2 text-xs text-zinc-400">
-          {typeof note.createdAt === "object" && note.createdAt !== null && "toDate" in note.createdAt
-            ? note.createdAt.toDate().toLocaleString()
-            : note.createdAt instanceof Date
-            ? note.createdAt.toLocaleString()
-            : note.createdAt}
+        <div className="mb-2 text-xs text-zinc-400">{createdAtStr}</div>
+        <div className="prose prose-invert max-w-none mt-6 mb-4">
+          <ReactMarkdown>{note.content}</ReactMarkdown>
         </div>
-        <div className="mb-6 whitespace-pre-line text-lg leading-relaxed">{note.content}</div>
         {note.tags?.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
             {note.tags.map((tag: string) => (

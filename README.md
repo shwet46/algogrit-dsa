@@ -9,7 +9,6 @@ A  web application for mastering Data Structures and Algorithms (DSA) with smart
 * **AI Chatbot Assistant**: Get instant, intelligent assistance with your DSA queries from our integrated AI chatbot (login required).
 * **User Authentication**: Securely access your personalized learning environment with **Firebase Auth** for straightforward signup and login.
 * **Code Editor with Execution**: Test your code directly within the application. You can easily download your code and prepare it for submission to popular platforms like CSES and Codeforces.
-* **Responsive UI**: Enjoy a consistent and optimized experience across all your devices, thanks to a fully responsive design and mobile-friendly navigation.
 
 ## Getting Started
 

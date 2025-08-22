@@ -63,6 +63,26 @@ export default function CodeAssistant() {
 
   return (
     <>
+      {/* Custom Scrollbar Styles */}
+      <style>
+        {`
+          .algogrit-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: #7c8bd2 #23272f;
+          }
+          .algogrit-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            background: #23272f;
+          }
+          .algogrit-scrollbar::-webkit-scrollbar-thumb {
+            background: #7c8bd2;
+            border-radius: 8px;
+          }
+          .algogrit-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #6a79c4;
+          }
+        `}
+      </style>
       {/* Floating button */}
       <div className="fixed bottom-5 right-5 z-50">
         <button
@@ -93,7 +113,7 @@ export default function CodeAssistant() {
             <span className="relative z-10">AlgoGrit DSA Assistant</span>
           </div>
 
-          <div className="flex-1 px-4 py-3 overflow-y-auto text-sm scrollbar-thin scrollbar-thumb-[#5d6bb7]/60 scrollbar-track-transparent">
+          <div className="flex-1 px-4 py-3 overflow-y-auto text-sm algogrit-scrollbar">
             {messages.length === 0 && (
               <div className="text-zinc-400 italic mt-4 text-center">
                 Ask me about recursion, graphs, DP, or any DSA topic.

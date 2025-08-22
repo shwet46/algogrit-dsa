@@ -13,6 +13,7 @@ import { useAuth } from "@/context/authContext";
 import NoteFullView from "@/components/Notes/NoteFullView";
 import NoteEditForm, { Note } from "@/components/Notes/NoteEditForm";
 import Footer from "@/components/Footer";
+import ReactMarkdown from "react-markdown";
 
 export default function NotesDashboard() {
   const { user } = useAuth();
@@ -116,39 +117,57 @@ export default function NotesDashboard() {
         {!loading && notes.length > 0 && (
           <>
             <div className="grid gap-6 mb-8">
-              {visible.map((n) => (
-                <div
-                  key={n.id}
-                  className="group p-6 bg-zinc-900 border border-zinc-700 rounded-xl hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-200 hover:transform hover:scale-[1.02] hover:shadow-xl cursor-pointer"
-                  onClick={() => setSelectedNote(n)}
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-semibold text-zinc-100 group-hover:text-[#7c8bd2] transition-colors duration-200">
-                      {n.title}
-                    </h3>
-                    <span className="text-xs text-zinc-400 bg-zinc-800 px-2 py-1 rounded-full">
-                      {n.createdAt.toDate().toLocaleDateString()}
-                    </span>
-                  </div>
-
-                  <p className="text-zinc-300 mb-4 line-clamp-3 leading-relaxed">
-                    {n.content}
-                  </p>
-
-                  {n.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                      {n.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs rounded-md hover:bg-zinc-700 transition-colors duration-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+              {visible.map((n) => {
+                
+                const noteForEdit: Note = {
+                  ...n,
+                  createdAt:
+                    n.createdAt instanceof Date
+                      ? n.createdAt
+                      : typeof n.createdAt?.toDate === "function"
+                        ? n.createdAt.toDate()
+                        : (typeof n.createdAt === "string" || typeof n.createdAt === "number"
+                            ? new Date(n.createdAt)
+                            : new Date()),
+                };
+                return (
+                  <div
+                    key={n.id}
+                    className="group p-6 bg-zinc-900 border border-zinc-700 rounded-xl hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-200 hover:transform hover:scale-[1.02] hover:shadow-xl cursor-pointer"
+                    onClick={() => setSelectedNote(noteForEdit)}
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-semibold text-zinc-100 group-hover:text-[#7c8bd2] transition-colors duration-200">
+                        {n.title}
+                      </h3>
+                      <span className="text-xs text-zinc-400 bg-zinc-800 px-2 py-1 rounded-full">
+                        {typeof n.createdAt?.toDate === "function"
+                          ? n.createdAt.toDate().toLocaleDateString()
+                          : (typeof n.createdAt === "string" || typeof n.createdAt === "number"
+                              ? new Date(n.createdAt).toLocaleDateString()
+                              : "")}
+                      </span>
                     </div>
-                  )}
-                </div>
-              ))}
+
+                    <div className="text-zinc-300 mb-4 line-clamp-3 leading-relaxed prose prose-invert prose-sm max-w-none overflow-hidden">
+                      <ReactMarkdown>{n.content}</ReactMarkdown>
+                    </div>
+
+                    {n.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {n.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs rounded-md hover:bg-zinc-700 transition-colors duration-200"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
             {/* Pagination */}
             {totalPages > 1 && (
