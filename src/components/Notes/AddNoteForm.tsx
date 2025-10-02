@@ -1,6 +1,9 @@
 'use client';
 import React, { useState, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useNotes } from '@/context/notesContext';
 import problems from '@/data/problems.json';
 import {
@@ -32,6 +35,9 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [showCodePanel, setShowCodePanel] = useState(false);
+  const [codeLang, setCodeLang] = useState('');
+  const [codeBlock, setCodeBlock] = useState('');
 
   // Markdown toolbar handlers
   const insertMarkdown = (
@@ -83,6 +89,28 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
       } else if (syntax === 'clear') {
         textarea.setSelectionRange(start, start + insert.length);
       }
+    }, 0);
+  };
+
+  const insertCodeBlock = () => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const before = content.substring(0, start);
+    const after = content.substring(end);
+    const lang = codeLang.trim();
+    const code = codeBlock.length ? codeBlock : 'code';
+    const block = `\n\n\`\`\`${lang ? lang : ''}\n${code}\n\`\`\`\n\n`;
+    const newContent = before + block + after;
+    setContent(newContent);
+    setShowCodePanel(false);
+    setCodeLang('');
+    setCodeBlock('');
+    setTimeout(() => {
+      textarea.focus();
+      const caret = start + block.length;
+      textarea.setSelectionRange(caret, caret);
     }, 0);
   };
 
@@ -143,10 +171,10 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
       </style>
       <div className="bg-zinc-900 border border-zinc-700/50 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-zinc-700/50 bg-gradient-to-r from-zinc-900 to-zinc-800">
+        <div className="flex items-center justify-between p-5 border-b border-zinc-700/50 bg-zinc-900/80 backdrop-blur">
           <div>
-            <h3 className="text-2xl font-bold text-white">Create New Note</h3>
-            <p className="text-zinc-400 text-sm mt-1">
+            <h3 className="text-xl font-semibold text-white">Create New Note</h3>
+            <p className="text-zinc-400 text-xs mt-1">
               Organize your thoughts with markdown support
             </p>
           </div>
@@ -154,7 +182,7 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
             type="button"
             onClick={onClose}
             disabled={isSubmitting}
-            className="p-2 rounded-lg hover:bg-zinc-700 transition-colors disabled:opacity-50 text-zinc-400 hover:text-white"
+            className="p-2 rounded-md hover:bg-zinc-800 transition-colors disabled:opacity-50 text-zinc-400 hover:text-white border border-transparent hover:border-zinc-700"
           >
             <X size={20} />
           </button>
@@ -197,69 +225,118 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
               </button>
             </div>
 
-            {/* Markdown Toolbar */}
-            <div className="flex flex-wrap gap-2 p-3 bg-zinc-800 rounded-lg border border-zinc-700">
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
-                title="Bold"
-                onClick={() => insertMarkdown('bold')}
-                disabled={isSubmitting}
-              >
-                <Bold size={14} />
-                <span className="text-xs">Bold</span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
-                title="Italic"
-                onClick={() => insertMarkdown('italic')}
-                disabled={isSubmitting}
-              >
-                <Italic size={14} />
-                <span className="text-xs">Italic</span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
-                title="Link"
-                onClick={() => insertMarkdown('link')}
-                disabled={isSubmitting}
-              >
-                <Link size={14} />
-                <span className="text-xs">Link</span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
-                title="Code Block"
-                onClick={() => insertMarkdown('code')}
-                disabled={isSubmitting}
-              >
-                <Code size={14} />
-                <span className="text-xs">Code</span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
-                title="Heading"
-                onClick={() => insertMarkdown('heading')}
-                disabled={isSubmitting}
-              >
-                <Heading1 size={14} />
-                <span className="text-xs">Heading</span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-red-700 text-white hover:bg-red-600 transition-colors disabled:opacity-50"
-                title="Clear Formatting"
-                onClick={() => insertMarkdown('clear')}
-                disabled={isSubmitting}
-              >
-                <Eraser size={14} />
-                <span className="text-xs">Clear</span>
-              </button>
-            </div>
+            {/* Markdown Toolbar - professional icon-only with tooltips */}
+            <TooltipProvider>
+              <div className="flex flex-wrap items-center gap-1 p-2 bg-zinc-900/70 rounded-lg border border-zinc-700">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-[#7c8bd2] text-white hover:bg-[#6a79c4] border border-[#7c8bd2] disabled:opacity-50" onClick={() => setShowCodePanel((v) => !v)} disabled={isSubmitting} aria-label="Code Block">
+                      <Code size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Code Block</TooltipContent>
+                </Tooltip>
+
+                <div className="h-6 w-px bg-zinc-700 mx-1" />
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700 disabled:opacity-50" onClick={() => insertMarkdown('bold')} disabled={isSubmitting} aria-label="Bold">
+                      <Bold size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Bold</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700 disabled:opacity-50" onClick={() => insertMarkdown('italic')} disabled={isSubmitting} aria-label="Italic">
+                      <Italic size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Italic</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700 disabled:opacity-50" onClick={() => insertMarkdown('link')} disabled={isSubmitting} aria-label="Link">
+                      <Link size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Link</TooltipContent>
+                </Tooltip>
+
+                <div className="h-6 w-px bg-zinc-700 mx-1" />
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700 disabled:opacity-50" onClick={() => insertMarkdown('heading')} disabled={isSubmitting} aria-label="Heading 1">
+                      <Heading1 size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Heading 1</TooltipContent>
+                </Tooltip>
+
+                <div className="h-6 w-px bg-zinc-700 mx-1" />
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button type="button" className="h-8 w-8 grid place-items-center rounded-md bg-red-700/80 text-white hover:bg-red-600 border border-red-700 disabled:opacity-50" onClick={() => insertMarkdown('clear')} disabled={isSubmitting} aria-label="Clear formatting">
+                      <Eraser size={16} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>Clear formatting</TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
+
+            {showCodePanel && (
+              <div className="mt-3 rounded-lg border border-zinc-700 bg-zinc-900/70 p-3 space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                  <div className="sm:col-span-1">
+                    <label className="block text-xs text-zinc-400 mb-1">Language (optional)</label>
+                    <input
+                      type="text"
+                      value={codeLang}
+                      onChange={(e) => setCodeLang(e.target.value)}
+                      placeholder="e.g., javascript"
+                      className="w-full px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]/50 focus:border-[#7c8bd2]"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="sm:col-span-3">
+                    <label className="block text-xs text-zinc-400 mb-1">Code</label>
+                    <textarea
+                      value={codeBlock}
+                      onChange={(e) => setCodeBlock(e.target.value)}
+                      placeholder="Paste or type your code here..."
+                      className="w-full h-28 rounded-md bg-zinc-900 border border-zinc-700 px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]/50 focus:border-[#7c8bd2] resize-none algogrit-scrollbar font-mono text-sm"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    className="px-4 py-1.5 rounded-md bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-700"
+                    onClick={() => {
+                      setShowCodePanel(false);
+                      setCodeLang('');
+                      setCodeBlock('');
+                    }}
+                    disabled={isSubmitting}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-1.5 rounded-md bg-[#7c8bd2] text-white hover:bg-[#6a79c4]"
+                    onClick={insertCodeBlock}
+                    disabled={isSubmitting}
+                  >
+                    Insert
+                  </button>
+                </div>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 gap-4">
               {/* Content Editor */}
@@ -281,7 +358,34 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
                     Preview
                   </div>
                   <div className="h-48 prose prose-invert prose-sm bg-zinc-800 border border-zinc-600 rounded-lg p-4 overflow-auto algogrit-scrollbar">
-                    <ReactMarkdown>{content}</ReactMarkdown>
+                    <style>{`.prose pre{background:#1f2937;border-radius:0.5rem;padding:0.75rem}.prose code{background:#111827;border-radius:0.375rem;padding:0.15rem 0.3rem}`}</style>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      rehypePlugins={[rehypeHighlight]}
+                      components={{
+                        code({ className, children, ...props }) {
+                          const match = /language-([^\s]+)/.exec(className || '');
+                          if (match) {
+                            const lang = match[1];
+                            return (
+                              <div className="relative">
+                                <div className="absolute top-0 right-0 m-2 rounded bg-zinc-700 text-zinc-300 text-[10px] px-2 py-0.5 border border-zinc-600">
+                                  {lang}
+                                </div>
+                                <pre className="bg-[#1f2937] rounded-lg p-3 overflow-x-auto">
+                                  <code className={className} {...props}>{children}</code>
+                                </pre>
+                              </div>
+                            );
+                          }
+                          return (
+                            <code className={className} {...props}>{children}</code>
+                          );
+                        },
+                      }}
+                    >
+                      {content}
+                    </ReactMarkdown>
                   </div>
                 </div>
               )}
@@ -356,14 +460,14 @@ export const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose }) => {
               type="button"
               onClick={onClose}
               disabled={isSubmitting}
-              className="px-6 py-2.5 bg-zinc-700 hover:bg-zinc-600 text-white rounded-lg transition-colors disabled:opacity-50 border border-zinc-600"
+              className="px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded-lg transition-colors disabled:opacity-50 border border-zinc-700"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting || !title.trim()}
-              className="px-6 py-2.5 bg-gradient-to-r from-[#7c8bd2] to-[#6a79c4] hover:from-[#5d6bb7] hover:to-[#5663a8] text-white rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105 font-medium"
+              className="px-5 py-2.5 bg-[#7c8bd2] hover:bg-[#6a79c4] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow"
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">

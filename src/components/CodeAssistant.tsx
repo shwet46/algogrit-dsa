@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bot, Send } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
 import { useAuth } from '@/context/authContext';
 
 type Message = {
@@ -135,47 +137,41 @@ export default function CodeAssistant() {
                   style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                 >
                   {msg.sender === 'bot' ? (
-                    <ReactMarkdown
-                      components={{
-                        strong: (props) => (
-                          <strong className="font-bold text-white" {...props} />
-                        ),
-                        em: (props) => (
-                          <em className="italic text-[#7c8bd2]" {...props} />
-                        ),
-                        code: (props) => (
-                          <code
-                            className="bg-zinc-800 px-1 py-0.5 rounded text-[#7c8bd2] font-mono break-words whitespace-pre-wrap inline-block max-w-full overflow-x-auto"
-                            {...props}
-                          />
-                        ),
-                        pre: (props) => (
-                          <pre
-                            className="bg-zinc-900 rounded p-2 my-2 overflow-x-auto text-xs"
-                            style={{ maxWidth: '100%' }}
-                            {...props}
-                          />
-                        ),
-                        ul: (props) => (
-                          <ul className="list-disc ml-5" {...props} />
-                        ),
-                        ol: (props) => (
-                          <ol className="list-decimal ml-5" {...props} />
-                        ),
-                        li: (props) => <li className="mb-1" {...props} />,
-                        a: (props) => (
-                          <a
-                            className="text-[#7c8bd2] underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            {...props}
-                          />
-                        ),
-                        p: (props) => <p className="mb-2" {...props} />,
-                      }}
-                    >
-                      {msg.text}
-                    </ReactMarkdown>
+                    <div className="prose prose-invert max-w-none break-words prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-li:text-muted-foreground text-sm">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeHighlight]}
+                        components={{
+                          code({ className, children, ...props }) {
+                            const match = /language-([^\s]+)/.exec(className || '');
+                            if (match) {
+                              const lang = match[1];
+                              return (
+                                <div className="relative my-3">
+                                  <span className="absolute top-2 right-2 z-10 rounded bg-background/80 text-muted-foreground text-[10px] px-2 py-0.5 border border-border font-mono">
+                                    {lang}
+                                  </span>
+                                  <pre className="bg-muted rounded-md p-3 pt-8 overflow-x-auto border border-border shadow-sm text-[12px]">
+                                    <code className={className} {...props}>{children}</code>
+                                  </pre>
+                                </div>
+                              );
+                            }
+                            // inline code
+                            return (
+                              <code className={`${className ?? ''} bg-muted border border-border rounded px-1 py-0.5`} {...props}>
+                                {children}
+                              </code>
+                            );
+                          },
+                          a: (props) => (
+                            <a className="text-primary underline underline-offset-4" target="_blank" rel="noopener noreferrer" {...props} />
+                          ),
+                        }}
+                      >
+                        {msg.text}
+                      </ReactMarkdown>
+                    </div>
                   ) : (
                     msg.text
                   )}
