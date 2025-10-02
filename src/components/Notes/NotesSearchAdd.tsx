@@ -1,7 +1,15 @@
-import React from "react";
-import { Search, Plus } from "lucide-react";
+import React from 'react';
+import { Search, Plus } from 'lucide-react';
 
-export default function NotesSearchAdd({ search, setSearch, setShowAdd }: { search: string, setSearch: (v: string) => void, setShowAdd: (v: boolean) => void }) {
+export default function NotesSearchAdd({
+  search,
+  setSearch,
+  setShowAdd,
+}: {
+  search: string;
+  setSearch: (v: string) => void;
+  setShowAdd: (v: boolean) => void;
+}) {
   return (
     <div className="flex flex-col sm:flex-row gap-4">
       <div className="relative flex-1 max-w-2xl">

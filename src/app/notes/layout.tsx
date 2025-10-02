@@ -1,7 +1,6 @@
+'use client';
 
-"use client";
-
-import { NotesProvider } from "@/context/notesContext";
+import { NotesProvider } from '@/context/notesContext';
 
 export default function NotesLayout({
   children,

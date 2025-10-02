@@ -5,10 +5,10 @@ import React from 'react';
 export default function Home() {
   return (
     <>
-    <main className="min-h-screen antialiased">
-        <Problems/>
-        <Footer/>
-    </main>
+      <main className="min-h-screen antialiased">
+        <Problems />
+        <Footer />
+      </main>
     </>
   );
 }

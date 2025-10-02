@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { IconLogin, IconLogout, IconUser } from "@tabler/icons-react";
-import { useRouter } from "next/navigation"; 
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { IconLogin, IconLogout, IconUser } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
 
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
 function cn(...inputs: (string | undefined | null | boolean)[]) {
-  return inputs.filter(Boolean).join(" ");
+  return inputs.filter(Boolean).join(' ');
 }
 
 export const FloatingNav = ({
@@ -35,23 +35,26 @@ export const FloatingNav = ({
 
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setDropdownOpen(false);
       }
     }
     if (dropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     } else {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownOpen]);
 
   const handleClick = () => {
     if (!isLoggedIn) {
-      router.push("/signup"); 
+      router.push('/signup');
     } else {
-      onSignInOut(); 
+      onSignInOut();
     }
   };
 
@@ -61,7 +64,7 @@ export const FloatingNav = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "flex max-w-fit fixed top-4 inset-x-0 mx-auto z-50 border border-zinc-600/[0.2] rounded-full bg-zinc-800/60 backdrop-blur-md shadow-md pr-4 pl-6 py-2 items-center justify-center space-x-4",
+        'flex max-w-fit fixed top-4 inset-x-0 mx-auto z-50 border border-zinc-600/[0.2] rounded-full bg-zinc-800/60 backdrop-blur-md shadow-md pr-4 pl-6 py-2 items-center justify-center space-x-4',
         className
       )}
     >
@@ -89,7 +92,10 @@ export const FloatingNav = ({
               <IconUser className="h-5 w-5 text-zinc-300 group-hover:text-zinc-200 transition-colors" />
             </button>
             {dropdownOpen && (
-              <div ref={dropdownRef} className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-3 w-64 bg-zinc-900/95 backdrop-blur-lg border border-zinc-700/50 rounded-2xl shadow-2xl z-50 overflow-hidden animate-in slide-in-from-top-2 duration-200">
+              <div
+                ref={dropdownRef}
+                className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-3 w-64 bg-zinc-900/95 backdrop-blur-lg border border-zinc-700/50 rounded-2xl shadow-2xl z-50 overflow-hidden animate-in slide-in-from-top-2 duration-200"
+              >
                 {/* Header with gradient accent */}
                 <div className="bg-gradient-to-r from-zinc-800 to-zinc-700 px-4 py-3 border-b border-zinc-700/50">
                   <div className="flex items-center space-x-3">
@@ -98,10 +104,10 @@ export const FloatingNav = ({
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-zinc-100 truncate">
-                        {user?.email ? user.email.split("@")[0] : "User"}
+                        {user?.email ? user.email.split('@')[0] : 'User'}
                       </p>
                       <p className="text-xs text-zinc-400 truncate">
-                        {user?.email || "Welcome back!"}
+                        {user?.email || 'Welcome back!'}
                       </p>
                     </div>
                   </div>
@@ -111,8 +117,10 @@ export const FloatingNav = ({
                 <div className="p-4">
                   <div className="text-center mb-4">
                     <p className="text-sm text-zinc-300 leading-relaxed">
-                      Ready to tackle some algorithms? 
-                      <span className="block text-xs text-zinc-400 mt-1">Keep up the great work!</span>
+                      Ready to tackle some algorithms?
+                      <span className="block text-xs text-zinc-400 mt-1">
+                        Keep up the great work!
+                      </span>
                     </p>
                   </div>
 

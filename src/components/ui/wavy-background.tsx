@@ -1,7 +1,7 @@
-"use client";
-import { cn } from "@/lib/utils";
-import React, { useEffect, useRef, useState } from "react";
-import { createNoise3D } from "simplex-noise";
+'use client';
+import { cn } from '@/lib/utils';
+import React, { useEffect, useRef, useState } from 'react';
+import { createNoise3D } from 'simplex-noise';
 
 export const WavyBackground = ({
   children,
@@ -11,7 +11,7 @@ export const WavyBackground = ({
   waveWidth,
   backgroundFill,
   blur = 10,
-  speed = "fast",
+  speed = 'fast',
   waveOpacity = 0.5,
   ...props
 }: {
@@ -22,7 +22,7 @@ export const WavyBackground = ({
   waveWidth?: number;
   backgroundFill?: string;
   blur?: number;
-  speed?: "slow" | "fast";
+  speed?: 'slow' | 'fast';
   waveOpacity?: number;
   [key: string]: unknown;
 }) => {
@@ -37,9 +37,9 @@ export const WavyBackground = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const getSpeed = () => {
     switch (speed) {
-      case "slow":
+      case 'slow':
         return 0.001;
-      case "fast":
+      case 'fast':
         return 0.002;
       default:
         return 0.001;
@@ -49,7 +49,7 @@ export const WavyBackground = ({
   const init = () => {
     canvas = canvasRef.current as HTMLCanvasElement;
     if (!canvas) return;
-    ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+    ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     if (!ctx) return;
     w = ctx.canvas.width = window.innerWidth;
     h = ctx.canvas.height = window.innerHeight;
@@ -64,12 +64,12 @@ export const WavyBackground = ({
   };
 
   const waveColors = colors ?? [
-    "#7c8bd2", 
-    "#5d6bb7", 
-    "#3f4b9c", 
-    "#232946", 
-    "#1a2238", 
-    "#0f172a"  
+    '#7c8bd2',
+    '#5d6bb7',
+    '#3f4b9c',
+    '#232946',
+    '#1a2238',
+    '#0f172a',
   ];
   const drawWave = (n: number) => {
     nt += getSpeed();
@@ -88,7 +88,7 @@ export const WavyBackground = ({
 
   let animationId: number;
   const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
+    ctx.fillStyle = backgroundFill || 'black';
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
     drawWave(5);
@@ -106,16 +106,16 @@ export const WavyBackground = ({
   useEffect(() => {
     // I'm sorry but i have got to support it on safari.
     setIsSafari(
-      typeof window !== "undefined" &&
-        navigator.userAgent.includes("Safari") &&
-        !navigator.userAgent.includes("Chrome")
+      typeof window !== 'undefined' &&
+        navigator.userAgent.includes('Safari') &&
+        !navigator.userAgent.includes('Chrome')
     );
   }, []);
 
   return (
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center",
+        'h-screen flex flex-col items-center justify-center',
         containerClassName
       )}
     >
@@ -127,7 +127,7 @@ export const WavyBackground = ({
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
-      <div className={cn("relative z-10", className)} {...props}>
+      <div className={cn('relative z-10', className)} {...props}>
         {children}
       </div>
     </div>

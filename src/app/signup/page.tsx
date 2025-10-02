@@ -1,81 +1,91 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { auth, db } from '@/firebase/config'
-import { createUserWithEmailAndPassword, signOut } from 'firebase/auth'
-import { setDoc, doc } from 'firebase/firestore'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { auth, db } from '@/firebase/config';
+import { createUserWithEmailAndPassword, signOut } from 'firebase/auth';
+import { setDoc, doc } from 'firebase/firestore';
 
-import { z } from 'zod'
-import { WavyBackground } from '@/components/ui/wavy-background'
-import { UserIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { z } from 'zod';
+import { WavyBackground } from '@/components/ui/wavy-background';
+import {
+  UserIcon,
+  EnvelopeIcon,
+  LockClosedIcon,
+} from '@heroicons/react/24/outline';
 
 const SignupSchema = z.object({
   username: z.string().min(3, 'Username must be at least 3 characters.'),
   email: z.string().email('Invalid email address.'),
-  password: z.string().min(6, 'Password must be at least 6 characters.')
-})
+  password: z.string().min(6, 'Password must be at least 6 characters.'),
+});
 
 export default function SignupPage() {
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const router = useRouter()
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleSignup = async () => {
-    setError('')
+    setError('');
 
-    const validation = SignupSchema.safeParse({ username, email, password })
+    const validation = SignupSchema.safeParse({ username, email, password });
     if (!validation.success) {
-      setError(validation.error.errors[0].message)
-      return
+      setError(validation.error.errors[0].message);
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
     try {
       // Create the user first
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-      const user = userCredential.user
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
 
-      // Now create the user document (user is authenticated)
       try {
         await setDoc(doc(db, 'users', user.uid), {
           uid: user.uid,
           email: user.email,
           username,
-          createdAt: new Date()
-        })
+          createdAt: new Date(),
+        });
       } catch (error) {
-        await user.delete()
-        throw new Error('Failed to create user profile: ' + (error instanceof Error ? error.message : 'Please try again.'))
+        await user.delete();
+        throw new Error(
+          'Failed to create user profile: ' +
+            (error instanceof Error ? error.message : 'Please try again.')
+        );
       }
 
-      await signOut(auth)
-      router.push('/login')
+      await signOut(auth);
+      router.push('/login');
     } catch (err: unknown) {
-      let message = 'Signup failed. Please try again.'
+      let message = 'Signup failed. Please try again.';
       if (err && typeof err === 'object' && 'code' in err) {
-        const code = (err as { code?: string }).code
+        const code = (err as { code?: string }).code;
         message =
           code === 'auth/email-already-in-use'
             ? 'Email is already in use.'
             : code === 'auth/invalid-email'
-            ? 'Invalid email address.'
-            : code === 'auth/weak-password'
-            ? 'Password should be at least 6 characters.'
-            : 'Signup failed. Please try again.'
+              ? 'Invalid email address.'
+              : code === 'auth/weak-password'
+                ? 'Password should be at least 6 characters.'
+                : 'Signup failed. Please try again.';
       } else if (err instanceof Error) {
-        message = err.message
+        message = err.message;
       }
 
-      setError(message)
-      console.error('Signup error:', err)
+      setError(message);
+      console.error('Signup error:', err);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <WavyBackground containerClassName="min-h-screen w-full flex items-center justify-center bg-black">
@@ -84,7 +94,9 @@ export default function SignupPage() {
           <h1 className="text-4xl md:text-5xl text-indigo-300 font-black mb-3 tracking-tight">
             AlgoGrit DSA
           </h1>
-          <p className="text-zinc-400 text-lg font-medium">Create your account</p>
+          <p className="text-zinc-400 text-lg font-medium">
+            Create your account
+          </p>
         </div>
 
         <div className="space-y-5">
@@ -113,7 +125,9 @@ export default function SignupPage() {
 
         {error && (
           <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-            <p className="text-red-400 text-sm font-medium text-center">{error}</p>
+            <p className="text-red-400 text-sm font-medium text-center">
+              {error}
+            </p>
           </div>
         )}
 
@@ -147,7 +161,7 @@ export default function SignupPage() {
         </div>
       </div>
     </WavyBackground>
-  )
+  );
 }
 
 function InputField({
@@ -155,13 +169,13 @@ function InputField({
   placeholder,
   type,
   value,
-  onChange
+  onChange,
 }: {
-  icon: React.ReactNode
-  placeholder: string
-  type: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  icon: React.ReactNode;
+  placeholder: string;
+  type: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <div className="group relative">
@@ -176,5 +190,5 @@ function InputField({
         className="w-full pl-12 pr-4 py-4 bg-zinc-900/60 backdrop-blur-sm border border-zinc-700/50 rounded-lg focus:border-indigo-400/50 focus:bg-zinc-800/80 outline-none text-white placeholder:text-zinc-400 text-base font-medium transition-all duration-300"
       />
     </div>
-  )
+  );
 }

@@ -1,2348 +1,2057 @@
 {
-    "problems": [
-      {
-        "title": "Two Sum",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/two-sum/",
-        "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target."
-      },
-      {
-        "title": "Watermelon",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math", "Brute Force"],
-        "url": "https://codeforces.com/problemset/problem/4/A",
-        "description": "Determine if a given weight of watermelon can be divided into two parts, each weighing an even number of kilos."
-      },
-      {
-        "title": "Weird Algorithm",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Math"],
-        "url": "https://cses.fi/problemset/task/1068",
-        "description": "Consider an algorithm that takes a positive integer n. If n is even, divide it by 2; if n is odd, multiply it by 3 and add 1. Repeat until n becomes 1."
-      },
-      {
-        "title": "Merge Sort",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Sorting", "Divide and Conquer"],
-        "url": "https://practice.geeksforgeeks.org/problems/merge-sort/1",
-        "description": "Implement merge sort algorithm to sort an array of integers in ascending order."
-      },
-      {
-        "title": "Trailing Zeroes",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Math", "Number Theory"],
-        "url": "https://lightoj.com/problem/trailing-zeroes-i",
-        "description": "Count the number of trailing zeroes in the factorial of a given number."
-      },
-      {
-        "title": "Valid Parentheses",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Stack", "String"],
-        "url": "https://leetcode.com/problems/valid-parentheses/",
-        "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid."
-      },
-      {
-        "title": "Theatre Square",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math"],
-        "url": "https://codeforces.com/problemset/problem/1/A",
-        "description": "Calculate the minimum number of square marble tiles needed to cover a rectangular theatre square."
-      },
-      {
-        "title": "Missing Number",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Array", "Math"],
-        "url": "https://cses.fi/problemset/task/1083",
-        "description": "Find the missing number in an array containing n-1 integers in the range 1 to n."
-      },
-      {
-        "title": "Kadane's Algorithm",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Array", "Dynamic Programming"],
-        "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1",
-        "description": "Find the maximum sum of a contiguous subarray within a one-dimensional array of numbers."
-      },
-      {
-        "title": "Binary Simulation",
-        "platform": "LightOJ",
-        "difficulty": "Hard",
-        "tags": ["Segment Tree", "Data Structures"],
-        "url": "https://lightoj.com/problem/binary-simulation",
-        "description": "Simulate operations on a binary string including flipping bits and querying the value at a specific position."
-      },
-      {
-        "title": "Add Two Numbers",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Linked List", "Math"],
-        "url": "https://leetcode.com/problems/add-two-numbers/",
-        "description": "Add two numbers represented by two linked lists where each node contains a single digit."
-      },
-      {
-        "title": "Way Too Long Words",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["String", "Implementation"],
-        "url": "https://codeforces.com/problemset/problem/71/A",
-        "description": "Abbreviate words that are too long by writing the first and last letter with the number of letters between them."
-      },
-      {
-        "title": "Repetitions",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["String", "Implementation"],
-        "url": "https://cses.fi/problemset/task/1069",
-        "description": "Find the longest repetition in a DNA sequence (a string consisting of characters A, C, G, and T)."
-      },
-      {
-        "title": "Subset Sum Problem",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Backtracking"],
-        "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1",
-        "description": "Determine if there is a subset of the given set with a sum equal to a given sum."
-      },
-      {
-        "title": "Opposite Task",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Math", "Ad-hoc"],
-        "url": "https://lightoj.com/problem/opposite-task",
-        "description": "Distribute n problems between two computers such that neither gets more than 10 problems."
-      },
-      {
-        "title": "LRU Cache",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "Linked List", "Design"],
-        "url": "https://leetcode.com/problems/lru-cache/",
-        "description": "Design and implement a data structure for Least Recently Used (LRU) cache."
-      },
-      {
-        "title": "Beautiful Matrix",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Math"],
-        "url": "https://codeforces.com/problemset/problem/263/A",
-        "description": "Calculate the minimum number of moves needed to make the matrix beautiful by moving the 1 to the center position."
-      },
-      {
-        "title": "Increasing Array",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Array", "Greedy"],
-        "url": "https://cses.fi/problemset/task/1094",
-        "description": "Find the minimum number of moves required to make an array strictly increasing."
-      },
-      {
-        "title": "N-Queen Problem",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Hard",
-        "tags": ["Backtracking", "Recursion"],
-        "url": "https://practice.geeksforgeeks.org/problems/n-queen-problem0315/1",
-        "description": "Place N queens on an N×N chessboard so that no two queens threaten each other."
-      },
-      {
-        "title": "Discovering Paths",
-        "platform": "LightOJ",
-        "difficulty": "Hard",
-        "tags": ["Graph Theory", "BFS", "DFS"],
-        "url": "https://lightoj.com/problem/discovering-paths-in-grid",
-        "description": "Find the number of paths from the top-left corner to the bottom-right corner of a grid."
-      },
-      {
-        "title": "Longest Substring Without Repeating Characters",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String", "Sliding Window"],
-        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-        "description": "Find the length of the longest substring without repeating characters."
-      },
-      {
-        "title": "Petya and Strings",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Strings"],
-        "url": "https://codeforces.com/problemset/problem/112/A",
-        "description": "Compare two strings lexicographically, ignoring case."
-      },
-      {
-        "title": "Permutations",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Constructive Algorithms", "Implementation"],
-        "url": "https://cses.fi/problemset/task/1070",
-        "description": "Construct a permutation of numbers 1,2,…,n such that there are no adjacent elements whose difference is 1."
-      },
-      {
-        "title": "0-1 Knapsack Problem",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming"],
-        "url": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1",
-        "description": "Select items to maximize value while keeping the total weight under capacity."
-      },
-      {
-        "title": "Hex-a-bonacci",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Math"],
-        "url": "https://lightoj.com/problem/hex-a-bonacci",
-        "description": "Calculate the nth term of the Hex-a-bonacci sequence using dynamic programming."
-      },
-      {
-        "title": "Median of Two Sorted Arrays",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Array", "Binary Search", "Divide and Conquer"],
-        "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
-        "description": "Find the median of the two sorted arrays in logarithmic time complexity."
-      },
-      {
-        "title": "Bit++",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation"],
-        "url": "https://codeforces.com/problemset/problem/282/A",
-        "description": "Track the value of a variable after a sequence of increment and decrement operations."
-      },
-      {
-        "title": "Number Spiral",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://cses.fi/problemset/task/1071",
-        "description": "Find the number at position (y,x) in an infinite spiral of numbers."
-      },
-      {
-        "title": "Minimum Platforms",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Array", "Greedy", "Sorting"],
-        "url": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1",
-        "description": "Find the minimum number of platforms required for a railway station so that no train is kept waiting."
-      },
-      {
-        "title": "How Cow",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Geometry", "Implementation"],
-        "url": "https://lightoj.com/problem/how-cow",
-        "description": "Determine if a cow is inside a rectangular fence."
-      },
-      {
-        "title": "Longest Palindromic Substring",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
-        "description": "Find the longest palindromic substring in a given string."
-      },
-      {
-        "title": "Team",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Greedy", "Implementation"],
-        "url": "https://codeforces.com/problemset/problem/231/A",
-        "description": "Count the number of problems a team will solve based on their confidence levels."
-      },
-      {
-        "title": "Two Knights",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Math", "Combinatorics"],
-        "url": "https://cses.fi/problemset/task/1072",
-        "description": "Count the number of ways to place two knights on an n×n chessboard so that they don't attack each other."
-      },
-      {
-        "title": "Egg Dropping Puzzle",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Hard",
-        "tags": ["Dynamic Programming", "Recursion"],
-        "url": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1",
-        "description": "Determine the minimum number of attempts needed to find the critical floor in the worst case."
-      },
-      {
-        "title": "Counting Triangles",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Geometry", "Math"],
-        "url": "https://lightoj.com/problem/counting-triangles",
-        "description": "Count the number of triangles that can be formed with sides of specific lengths."
-      },
-      {
-        "title": "Zigzag Conversion",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String"],
-        "url": "https://leetcode.com/problems/zigzag-conversion/",
-        "description": "Convert a string to a zigzag pattern and then read it line by line."
-      },
-      {
-        "title": "Domino Piling",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math", "Greedy"],
-        "url": "https://codeforces.com/problemset/problem/50/A",
-        "description": "Calculate the maximum number of dominoes that can fit on a rectangular board."
-      },
-      {
-        "title": "Two Sets",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Math", "Constructive Algorithms"],
-        "url": "https://cses.fi/problemset/task/1092",
-        "description": "Divide numbers 1,2,…,n into two sets of equal sum."
-      },
-      {
-        "title": "Coin Change",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Arrays"],
-        "url": "https://practice.geeksforgeeks.org/problems/coin-change2448/1",
-        "description": "Find the number of ways to make change for a given amount using a set of coins."
-      },
-      {
-        "title": "Brushes",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Greedy"],
-        "url": "https://lightoj.com/problem/brushes",
-        "description": "Calculate the minimum number of brushes needed to paint a given number of regions."
-      },
-      {
-        "title": "String to Integer (atoi)",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Math"],
-        "url": "https://leetcode.com/problems/string-to-integer-atoi/",
-        "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer."
-      },
-      {
-        "title": "Next Round",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation"],
-        "url": "https://codeforces.com/problemset/problem/158/A",
-        "description": "Determine how many contestants advance to the next round based on their scores."
-      },
-      {
-        "title": "Bit Strings",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Math", "Combinatorics"],
-        "url": "https://cses.fi/problemset/task/1617",
-        "description": "Calculate the number of bit strings of length n modulo 10^9+7."
-      },
-      {
-        "title": "Fractional Knapsack",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Greedy"],
-        "url": "https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
-        "description": "Maximize value of items put in a knapsack where items can be broken into smaller pieces."
-      },
-      {
-        "title": "Palindrome Numbers",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://lightoj.com/problem/palindrome-numbers",
-        "description": "Determine if a number is palindromic in both decimal and binary representations."
-      },
-      {
-        "title": "Palindrome Number",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Math"],
-        "url": "https://leetcode.com/problems/palindrome-number/",
-        "description": "Determine whether an integer is a palindrome without converting it to a string."
-      },
-      {
-        "title": "String Task",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Strings"],
-        "url": "https://codeforces.com/problemset/problem/118/A",
-        "description": "Transform a string by removing vowels and prefixing consonants with a period."
-      },
-      {
-        "title": "Trailing Zeros",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Math", "Number Theory"],
-        "url": "https://cses.fi/problemset/task/1618",
-        "description": "Calculate the number of trailing zeros in the factorial of n."
-      },
-      {
-        "title": "Job Sequencing Problem",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
-        "description": "Find the maximum profit by sequencing jobs with deadlines to maximize profit."
-      },
-      {
-        "title": "Nusrat's Treat",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://lightoj.com/problem/nusrats-treat",
-        "description": "Calculate the sum of the first n natural numbers."
-      },
-      {
-        "title": "Regular Expression Matching",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["String", "Dynamic Programming", "Recursion"],
-        "url": "https://leetcode.com/problems/regular-expression-matching/",
-        "description": "Implement regular expression matching with support for '.' and '*'."
-      },
-      {
-        "title": "Helpful Maths",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Sorting", "Strings"],
-        "url": "https://codeforces.com/problemset/problem/339/A",
-        "description": "Rearrange the terms in the sum to make it easier to calculate."
-      },
-      {
-        "title": "Coin Combinations I",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming"],
-        "url": "https://cses.fi/problemset/task/1635",
-        "description": "Count the number of ways to produce a sum using a set of coins."
-      },
-      {
-        "title": "Longest Common Subsequence",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "String"],
-        "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1",
-        "description": "Find the length of the longest subsequence present in both of the given sequences."
-      },
-      {
-        "title": "Wavio Sequence",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "LIS"],
-        "url": "https://lightoj.com/problem/wavio-sequence",
-        "description": "Find the longest wavio sequence in an array of integers."
-      },
-      {
-        "title": "Container With Most Water",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Two Pointers", "Greedy"],
-        "url": "https://leetcode.com/problems/container-with-most-water/",
-        "description": "Find two lines that together with the x-axis form a container that holds the most water."
-      },
-      {
-        "title": "Stones on the Table",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation"],
-        "url": "https://codeforces.com/problemset/problem/266/A",
-        "description": "Count the minimum number of stones to take from the table so that any two neighboring stones have different colors."
-      },
-      {
-        "title": "Coin Combinations II",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming"],
-        "url": "https://cses.fi/problemset/task/1636",
-        "description": "Count the ordered ways to produce a sum using a set of coins."
-      },
-      {
-        "title": "Edit Distance",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Strings"],
-        "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1",
-        "description": "Find the minimum number of operations required to convert one string to another."
-      },
-      {
-        "title": "Curious Robin Hood",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Data Structures", "Segment Tree"],
-        "url": "https://lightoj.com/problem/curious-robin-hood",
-        "description": "Perform operations on an array including updates and range sum queries."
-      },
-      {
-        "title": "Integer to Roman",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Math", "String"],
-        "url": "https://leetcode.com/problems/integer-to-roman/",
-        "description": "Convert an integer to a roman numeral."
-      },
-      {
-        "title": "Boy or Girl",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Strings", "Implementation"],
-        "url": "https://codeforces.com/problemset/problem/236/A",
-        "description": "Determine if a username belongs to a boy or a girl based on the number of distinct characters."
-      },
-      {
-        "title": "Removing Digits",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Dynamic Programming", "Greedy"],
-        "url": "https://cses.fi/problemset/task/1637",
-        "description": "Find the minimum number of operations to reduce a number to zero by subtracting one of its digits at a time."
-      },
-      {
-        "title": "Maximum Subarray Sum",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Arrays", "Dynamic Programming"],
-        "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1",
-        "description": "Find the sum of the contiguous subarray with the maximum sum."
-      },
-      {
-        "title": "Goldbach's Conjecture",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Math", "Number Theory"],
-        "url": "https://lightoj.com/problem/goldbach-conjecture",
-        "description": "Express an even number as the sum of two prime numbers."
-      },
-      {
-        "title": "3Sum",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Two Pointers", "Sorting"],
-        "url": "https://leetcode.com/problems/3sum/",
-        "description": "Find all unique triplets in the array which gives the sum of zero."
-      },
-      {
-        "title": "Word Capitalization",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Strings"],
-        "url": "https://codeforces.com/problemset/problem/281/A",
-        "description": "Capitalize the first letter of a word."
-      },
-      {
-        "title": "Grid Paths",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming"],
-        "url": "https://cses.fi/problemset/task/1638",
-        "description": "Count the number of paths from the top-left square to the bottom-right square in a grid."
-      },
-      {
-        "title": "Activity Selection",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Easy",
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://practice.geeksforgeeks.org/problems/activity-selection-1587115620/1",
-        "description": "Select the maximum number of activities that can be performed by a single person."
-      },
-      {
-        "title": "Pairs Forming LCM",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Math", "Number Theory"],
-        "url": "https://lightoj.com/problem/pairs-forming-lcm",
-        "description": "Count the number of pairs whose LCM equals a given number."
-      },
-      {
-        "title": "Letter Combinations of a Phone Number",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Backtracking", "Recursion"],
-        "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
-        "description": "Return all possible letter combinations that the number could represent on a phone keypad."
-      },
-      {
-        "title": "Bear and Big Brother",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Math"],
-        "url": "https://codeforces.com/problemset/problem/791/A",
-        "description": "Determine how many years it will take for Limak to become strictly larger than Bob."
-      },
-      {
-        "title": "Book Shop",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Knapsack"],
-        "url": "https://cses.fi/problemset/task/1158",
-        "description": "Maximize the number of pages to read given a budget constraint."
-      },
-      {
-        "title": "Dijkstra's Algorithm",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Graph", "Shortest Path", "Data Structures"],
-        "url": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
-        "description": "Implement Dijkstra's algorithm to find the shortest path from a source vertex to all other vertices."
-      },
-      {
-        "title": "Area of a Parallelogram",
-        "platform": "LightOJ",
-        "difficulty": "Easy",
-        "tags": ["Geometry", "Math"],
-        "url": "https://lightoj.com/problem/area-of-a-parallelogram",
-        "description": "Calculate the area of a parallelogram given its vertices."
-      },
-      {
-        "title": "Find Peak Element",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Binary Search"],
-        "url": "https://leetcode.com/problems/find-peak-element/",
-        "description": "Find a peak element in an array and return its index."
-      },
-      {
-        "title": "Sum of Digits",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://codeforces.com/problemset/problem/102/B",
-        "description": "Given a number, repeatedly sum its digits until a single digit remains."
-      },
-      {
-        "title": "Distinct Numbers",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Set", "Sorting"],
-        "url": "https://cses.fi/problemset/task/1621",
-        "description": "Count the number of distinct numbers in a list."
-      },
-      {
-        "title": "Find Median",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Easy",
-        "tags": ["Array", "Sorting"],
-        "url": "https://practice.geeksforgeeks.org/problems/find-median-1587115620/1",
-        "description": "Find the median of an unsorted array."
-      },
-      {
-        "title": "LightOJ Sample Problem",
-        "platform": "LightOJ",
-        "difficulty": "Medium",
-        "tags": ["Math", "Ad-hoc"],
-        "url": "https://lightoj.com/problem/sample-problem",
-        "description": "Solve a sample LightOJ problem."
-      },
-      {
-        "title": "Chef and Easy Problem",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://www.codechef.com/problems/EASYPROB",
-        "description": "Solve a simple math problem as described in the statement."
-      },
-      {
-        "title": "Chef and Maximum Subarray",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Array", "Dynamic Programming"],
-        "url": "https://www.codechef.com/problems/MAXSUBARR",
-        "description": "Find the maximum sum subarray in a given array."
-      },
-      {
-        "title": "Chef and Prime Numbers",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Math", "Sieve"],
-        "url": "https://www.codechef.com/problems/PRIMENUM",
-        "description": "Count the number of prime numbers in a given range."
-      },
-      {
-        "title": "Chef and Graph Paths",
-        "platform": "CodeChef",
-        "difficulty": "Hard",
-        "tags": ["Graph", "DFS", "BFS"],
-        "url": "https://www.codechef.com/problems/GRAPHPATH",
-        "description": "Find the number of paths between two nodes in a graph."
-      },
-      {
-        "title": "Chef and Binary String",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["String", "Implementation"],
-        "url": "https://www.codechef.com/problems/BINSTR",
-        "description": "Perform operations on a binary string as described in the problem."
-      },
-      {
-        "title": "Chef and Subset Sums",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Bitmask", "DP"],
-        "url": "https://www.codechef.com/problems/SUBSETSUM",
-        "description": "Count the number of subsets with a given sum."
-      },
-      {
-        "title": "Chef and Minimum Spanning Tree",
-        "platform": "CodeChef",
-        "difficulty": "Hard",
-        "tags": ["Graph", "MST"],
-        "url": "https://www.codechef.com/problems/MINSPT",
-        "description": "Find the minimum spanning tree of a weighted graph."
-      },
-      {
-        "title": "Chef and Palindromic Substrings",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["String", "Palindrome"],
-        "url": "https://www.codechef.com/problems/PALSUB",
-        "description": "Count the number of palindromic substrings in a string."
-      },
-      {
-        "title": "Chef and GCD",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Math", "GCD"],
-        "url": "https://www.codechef.com/problems/GCDPROB",
-        "description": "Find the GCD of two numbers."
-      },
-      {
-        "title": "Chef and Shortest Path",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Graph", "Dijkstra"],
-        "url": "https://www.codechef.com/problems/SHRTPATH",
-        "description": "Find the shortest path in a weighted graph."
-      },
-      {
-        "title": "Chef and Factorials",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Math", "Factorial"],
-        "url": "https://www.codechef.com/problems/FACTORIAL",
-        "description": "Calculate the factorial of a number."
-      },
-      {
-        "title": "Chef and Array Rotation",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Array", "Rotation"],
-        "url": "https://www.codechef.com/problems/ARRROT",
-        "description": "Rotate an array by k positions."
-      },
-      {
-        "title": "Chef and Subarrays",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Array", "Subarray"],
-        "url": "https://www.codechef.com/problems/SUBARR",
-        "description": "Count the number of subarrays with a given property."
-      },
-      {
-        "title": "Chef and Prime Factors",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Math", "Prime Factorization"],
-        "url": "https://www.codechef.com/problems/PRIMEFACT",
-        "description": "Find all prime factors of a number."
-      },
-      {
-        "title": "Chef and Tree Height",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Tree", "DFS"],
-        "url": "https://www.codechef.com/problems/TREEHT",
-        "description": "Find the height of a binary tree."
-      },
-      {
-        "title": "Chef and Matrix Multiplication",
-        "platform": "CodeChef",
-        "difficulty": "Hard",
-        "tags": ["Matrix", "Multiplication"],
-        "url": "https://www.codechef.com/problems/MATMULT",
-        "description": "Multiply two matrices."
-      },
-      {
-        "title": "Chef and Substring XOR",
-        "platform": "CodeChef",
-        "difficulty": "Medium",
-        "tags": ["Bit Manipulation", "XOR"],
-        "url": "https://www.codechef.com/problems/SUBXOR",
-        "description": "Find the number of subarrays with a given XOR."
-      },
-      {
-        "title": "Chef and Balanced Parentheses",
-        "platform": "CodeChef",
-        "difficulty": "Easy",
-        "tags": ["Stack", "Parentheses"],
-        "url": "https://www.codechef.com/problems/BALPAREN",
-        "description": "Check if a string of parentheses is balanced."
-      },
-      {
-        "title": "Chef and Longest Path",
-        "platform": "CodeChef",
-        "difficulty": "Hard",
-        "tags": ["Graph", "Tree", "DFS"],
-        "url": "https://www.codechef.com/problems/LONGPATH",
-        "description": "Find the longest path in a tree."
-      },
-      {
-        "title": "AtCoder Beginner Contest 100 A - Happy Birthday!",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://atcoder.jp/contests/abc100/tasks/abc100_a",
-        "description": "Check if two numbers are less than or equal to 8."
-      },
-      {
-        "title": "AtCoder Beginner Contest 101 B - Digit Sums",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Math", "String"],
-        "url": "https://atcoder.jp/contests/abc101/tasks/abc101_b",
-        "description": "Check if a number is divisible by the sum of its digits."
-      },
-      {
-        "title": "AtCoder Beginner Contest 102 B - Maximum Difference",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Array", "Sorting"],
-        "url": "https://atcoder.jp/contests/abc102/tasks/abc102_b",
-        "description": "Find the difference between the largest and smallest numbers in an array."
-      },
-      {
-        "title": "AtCoder Beginner Contest 103 C - Modulo Summation",
-        "platform": "AtCoder",
-        "difficulty": "Medium",
-        "tags": ["Math", "Greedy"],
-        "url": "https://atcoder.jp/contests/abc103/tasks/abc103_c",
-        "description": "Find the minimum sum of absolute differences modulo a given number."
-      },
-      {
-        "title": "AtCoder Beginner Contest 104 D - We Love ABC",
-        "platform": "AtCoder",
-        "difficulty": "Medium",
-        "tags": ["DP", "String"],
-        "url": "https://atcoder.jp/contests/abc104/tasks/abc104_d",
-        "description": "Count the number of ways to form 'ABC' as a subsequence."
-      },
-      {
-        "title": "AtCoder Beginner Contest 105 C - Base -2 Number",
-        "platform": "AtCoder",
-        "difficulty": "Medium",
-        "tags": ["Math", "Implementation"],
-        "url": "https://atcoder.jp/contests/abc105/tasks/abc105_c",
-        "description": "Convert a number to base -2."
-      },
-      {
-        "title": "AtCoder Beginner Contest 106 B - 105",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Math", "Divisors"],
-        "url": "https://atcoder.jp/contests/abc106/tasks/abc106_b",
-        "description": "Count numbers with exactly 8 divisors."
-      },
-      {
-        "title": "AtCoder Beginner Contest 107 B - Grid Compression",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Implementation", "Grid"],
-        "url": "https://atcoder.jp/contests/abc107/tasks/abc107_b",
-        "description": "Remove all rows and columns in a grid that are completely empty."
-      },
-      {
-        "title": "AtCoder Beginner Contest 108 C - Triangular Relationship",
-        "platform": "AtCoder",
-        "difficulty": "Medium",
-        "tags": ["Math", "Combinatorics"],
-        "url": "https://atcoder.jp/contests/abc108/tasks/abc108_c",
-        "description": "Count the number of ordered triples that satisfy a certain divisibility condition."
-      },
-      {
-        "title": "AtCoder Beginner Contest 109 D - Make Them Even",
-        "platform": "AtCoder",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Grid"],
-        "url": "https://atcoder.jp/contests/abc109/tasks/abc109_d",
-        "description": "Make all numbers in a grid even using the minimum number of moves."
-      },
-      {
-        "title": "Find Median from Data Stream",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Heap", "Design", "Data Stream"],
-        "url": "https://leetcode.com/problems/find-median-from-data-stream/",
-        "description": "Design a data structure that supports adding numbers and finding the median efficiently."
-      },
-      {
-        "title": "Shortest Routes I",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Graph", "Dijkstra"],
-        "url": "https://cses.fi/problemset/task/1671",
-        "description": "Find the shortest path from node 1 to all other nodes in a directed weighted graph."
-      },
-      {
-        "title": "XOR Queries",
-        "platform": "Codeforces",
-        "difficulty": "Medium",
-        "tags": ["Bit Manipulation", "Prefix Sum"],
-        "url": "https://codeforces.com/problemset/problem/617/E",
-        "description": "Answer multiple queries about the XOR of subarrays efficiently."
-      },
-      {
-        "title": "Longest Increasing Subsequence",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Binary Search"],
-        "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1",
-        "description": "Find the length of the longest increasing subsequence in an array."
-      },
-      {
-        "title": "Distinct Numbers",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Set", "Implementation"],
-        "url": "https://cses.fi/problemset/task/1621",
-        "description": "Count the number of distinct numbers in a list."
-      },
-      {
-        "title": "Kth Largest Element in an Array",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Heap", "Sorting"],
-        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-        "description": "Find the kth largest element in an unsorted array."
-      },
-      {
-        "title": "Subarray Sums I",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Prefix Sum", "Array"],
-        "url": "https://cses.fi/problemset/task/1660",
-        "description": "Count the number of subarrays whose sum is equal to a given value."
-      },
-      {
-        "title": "Balanced Brackets",
-        "platform": "HackerRank",
-        "difficulty": "Easy",
-        "tags": ["Stack", "String"],
-        "url": "https://www.hackerrank.com/challenges/balanced-brackets/problem",
-        "description": "Determine if a string of brackets is balanced."
-      },
-      {
-        "title": "Chef and Maximum Star Value",
-        "platform": "CodeChef",
-        "difficulty": "Hard",
-        "tags": ["Segment Tree", "Data Structures"],
-        "url": "https://www.codechef.com/problems/CHMAXSV",
-        "description": "Find the maximum star value in an array using efficient data structures."
-      },
-      {
-        "title": "Edit Distance",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Dynamic Programming", "String"],
-        "url": "https://leetcode.com/problems/edit-distance/",
-        "description": "Compute the minimum number of operations required to convert one string to another."
-      },
-      {
-        "title": "Subordinates",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Tree", "DFS"],
-        "url": "https://cses.fi/problemset/task/1674",
-        "description": "Count the number of subordinates for each employee in a company hierarchy."
-      },
-      {
-        "title": "Maximum Subarray Sum",
-        "platform": "AtCoder",
-        "difficulty": "Easy",
-        "tags": ["Array", "Kadane's Algorithm"],
-        "url": "https://atcoder.jp/contests/dp/tasks/dp_b",
-        "description": "Find the maximum sum of a contiguous subarray."
-      },
-      {
-        "title": "Find the Duplicate Number",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Binary Search", "Floyd's Cycle"],
-        "url": "https://leetcode.com/problems/find-the-duplicate-number/",
-        "description": "Find the duplicate number in an array containing n+1 integers where each integer is between 1 and n."
-      },
-      {
-        "title": "Coin Combinations I",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Combinatorics"],
-        "url": "https://cses.fi/problemset/task/1635",
-        "description": "Count the number of ways to make a sum using given coin denominations."
-      },
-      {
-        "title": "Binary Tree Maximum Path Sum",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Tree", "DFS", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
-        "description": "Find the maximum path sum in a binary tree."
-      },
-      {
-        "title": "Rectangle Cutting",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Geometry"],
-        "url": "https://cses.fi/problemset/task/1744",
-        "description": "Find the minimum number of cuts needed to divide a rectangle into squares."
-      },
-      {
-        "title": "Word Ladder",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["BFS", "Graph", "String"],
-        "url": "https://leetcode.com/problems/word-ladder/",
-        "description": "Find the shortest transformation sequence from beginWord to endWord."
-      },
-      {
-        "title": "Subarray Divisibility",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Prefix Sum", "Hashing"],
-        "url": "https://cses.fi/problemset/task/1662",
-        "description": "Count the number of subarrays whose sum is divisible by n."
-      },
-      {
-        "title": "Remove K Digits",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Stack", "Greedy"],
-        "url": "https://leetcode.com/problems/remove-k-digits/",
-        "description": "Remove k digits from a number to make it the smallest possible."
-      },
-      {
-        "title": "Special Permutation",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math", "Permutation"],
-        "url": "https://codeforces.com/problemset/problem/1352/C",
-        "description": "Find a permutation of numbers with special properties."
-      },
-      {
-        "title": "Longest Palindromic Substring",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
-        "description": "Find the longest palindromic substring in a given string."
-      },
-      {
-        "title": "Collecting Numbers",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Sorting", "Implementation"],
-        "url": "https://cses.fi/problemset/task/2216",
-        "description": "Find the minimum number of rounds needed to collect numbers in increasing order."
-      },
-      {
-        "title": "Maximum Product Subarray",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/maximum-product-subarray/",
-        "description": "Find the contiguous subarray within an array which has the largest product."
-      },
-      {
-        "title": "Sum of Two Values",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Two Pointers", "Sorting"],
-        "url": "https://cses.fi/problemset/task/1640",
-        "description": "Find two values in an array that sum up to a target value."
-      },
-      {
-        "title": "Find All Anagrams in a String",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "Sliding Window"],
-        "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
-        "description": "Find all start indices of anagrams of a pattern in a string."
-      },
-      {
-        "title": "Array Description",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Array"],
-        "url": "https://cses.fi/problemset/task/1746",
-        "description": "Count the number of valid arrays that can be formed under given constraints."
-      },
-      {
-        "title": "Minimum Path Sum",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Grid"],
-        "url": "https://leetcode.com/problems/minimum-path-sum/",
-        "description": "Find a path from top left to bottom right of a grid with minimum sum."
-      },
-      {
-        "title": "Book Shop",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Knapsack"],
-        "url": "https://cses.fi/problemset/task/1158",
-        "description": "Choose books to maximize the total number of pages without exceeding a budget."
-      },
-      {
-        "title": "House Robber",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Array"],
-        "url": "https://leetcode.com/problems/house-robber/",
-        "description": "Find the maximum amount of money you can rob tonight without alerting the police."
-      },
-      {
-        "title": "Subarray Sums II",
-        "platform": "CSES",
-        "difficulty": "Medium",
-        "tags": ["Prefix Sum", "Hashing"],
-        "url": "https://cses.fi/problemset/task/1661",
-        "description": "Count the number of subarrays with a given sum."
-      },
-      {
-        "title": "Unique Paths",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Combinatorics"],
-        "url": "https://leetcode.com/problems/unique-paths/",
-        "description": "Count the number of unique paths from top-left to bottom-right in a grid."
-      },
-      {
-        "title": "Maximum Subarray Sum II",
-        "platform": "CSES",
-        "difficulty": "Hard",
-        "tags": ["Sliding Window", "Deque"],
-        "url": "https://cses.fi/problemset/task/1644",
-        "description": "Find the maximum sum of a subarray with length between a and b."
-      },
-      {
-        "title": "Longest Consecutive Sequence",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "Union Find"],
-        "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
-        "description": "Find the length of the longest consecutive elements sequence."
-      },
-      {
-        "title": "Palindrome Reorder",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["String", "Hashing"],
-        "url": "https://cses.fi/problemset/task/1755",
-        "description": "Rearrange the letters of a string to form a palindrome, if possible."
-      },
-      {
-        "title": "Maximum Product of Splitted Binary Tree",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Tree", "DFS"],
-        "url": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/",
-        "description": "Find the maximum product of the sums of two subtrees of a binary tree."
-      },
-      {
-        "title": "Movie Festival",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://cses.fi/problemset/task/1629",
-        "description": "Find the maximum number of movies one can watch without overlap."
-      },
-      {
-        "title": "Minimum Window Substring",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Hash Table", "Sliding Window"],
-        "url": "https://leetcode.com/problems/minimum-window-substring/",
-        "description": "Find the minimum window in a string which contains all the characters of another string."
-      },
-      {
-        "title": "Array and Operations",
-        "platform": "Codeforces",
-        "difficulty": "Medium",
-        "tags": ["Array", "Math"],
-        "url": "https://codeforces.com/problemset/problem/1552/A",
-        "description": "Perform operations on an array to achieve a certain property."
-      },
-      {
-        "title": "Find the Town Judge",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Graph", "Array"],
-        "url": "https://leetcode.com/problems/find-the-town-judge/",
-        "description": "Find the town judge given trust relationships among n people."
-      },
-      {
-        "title": "Sum of Round Numbers",
-        "platform": "Codeforces",
-        "difficulty": "Easy",
-        "tags": ["Math", "Implementation"],
-        "url": "https://codeforces.com/problemset/problem/1352/A",
-        "description": "Express a number as a sum of round numbers."
-      },
-      {
-        "title": "Maximum Subtree Sum",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Tree", "DFS"],
-        "url": "https://practice.geeksforgeeks.org/problems/maximum-sub-tree-sum/1",
-        "description": "Find the maximum sum of a subtree in a binary tree."
-      },
-      {
-        "title": "Sum of Three Values",
-        "platform": "CSES",
-        "difficulty": "Easy",
-        "tags": ["Two Pointers", "Sorting"],
-        "url": "https://cses.fi/problemset/task/1641",
-        "description": "Find three values in an array that sum up to a target value."
-      },
-      {
-        "title": "Find Center of Star Graph",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Graph"],
-        "url": "https://leetcode.com/problems/find-center-of-star-graph/",
-        "description": "Find the center node of a star graph."
-      },
-      {
-        "title": "Remove Nth Node From End of List",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Linked List", "Two Pointers"],
-        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
-        "description": "Remove the nth node from the end of a linked list."
-      },
-      {
-        "title": "Sum of Distances in Tree",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Tree", "DFS", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/sum-of-distances-in-tree/",
-        "description": "Find the sum of distances from each node to all other nodes in a tree."
-      },
-      {
-        "title": "Array and Operations",
-        "platform": "Codeforces",
-        "difficulty": "Medium",
-        "tags": ["Array", "Math"],
-        "url": "https://codeforces.com/problemset/problem/1552/A",
-        "description": "Perform operations on an array to achieve a certain property."
-      },
-      {
-        "title": "Cool Partition",
-        "platform": "Codeforces",
-        "difficulty": "Medium", 
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://codeforces.com/problemset/problem/2117/C",
-        "description": "Yousef has an array a of size n. He wants to partition the array into one or more contiguous segments such that each element ai belongs to exactly one segment."
-      },
-      {
-        "title": "Retaliation",
-        "platform": "Codeforces",
-        "difficulty": "Medium",
-        "tags": ["Binary Search", "Math"],
-        "url": "https://codeforces.com/problemset/problem/2117/D",
-        "description": "Yousef wants to explode an array a1,a2,…,an. An array gets exploded when all of its elements become equal to zero."
-      },
-      {
-        "title": "Omg Graph",
-        "platform": "Codeforces",
-        "difficulty": "Hard",
-        "tags": ["Graph", "DFS", "BFS","Union Find"],
-        "url": "https://codeforces.com/problemset/problem/2117/G",
-        "description": "Find the minimum possible value of (maximum edge weight + minimum edge weight) among all paths from vertex 1 to n in a weighted undirected connected graph."
-      },
-      {
-        "title": "Incessant Rain",
-        "platform": "Codeforces",
-        "difficulty": "Hard",
-        "tags": ["Divide and Conquer","Sorting"],
-        "url": "https://codeforces.com/problemset/problem/2117/H",  
-        "description": "After each array update, determine the largest k such that some element is a k-majority in some subarray, meaning it appears at least ⌊(subarray length+1)/2⌋+k times."
-      },
-      {
-        "title": "Build an Array",
-        "platform":"Codeforces",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "Math"],
-        "url": "https://codeforces.com/problemset/problem/2114/G",
-        "description": "Given a target array a of length n and an operation count k, determine if a can be formed from an empty array by exactly k operations, where an operation involves adding an integer to either end, followed by merging any adjacent identical elements by summing them."
-      },
-      {
-        "title": "Two Arrays",
-        "platform": "Codeforces",
-        "difficulty": "Hard",
-        "tags": ["Graph", "DFS", "Math"],
-        "url": "https://codeforces.com/problemset/problem/2113/F",
-        "description": "Given two arrays a and b of length n, we can swap ai and bi for any index i. The goal is to maximize f(a)+f(b), where f(c) is the number of distinct elements in array c, and then output the modified arrays."
-      },
-      {
-        "title": "Fibonacci Cubes",
-        "platform": "Codeforces",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Math"],
-        "url": "https://codeforces.com/problemset/problem/2111/B",
-        "description": "Given n Fibonacci cubes and m boxes, determine for each box if all cubes can fit, following rules: aligned with box, no empty space below, and no larger cube on smaller."
-      },
-      {
-        "title": "D/D/D",
-        "platform": "Codeforces",
-        "difficulty": "Hard",
-        "tags": ["Graph", "DFS","Greedy"],  
-        "url": "https://codeforces.com/problemset/problem/2109/D",
-        "description": "You are given a graph, a multiset A of lengths, and a starting vertex (1). For each vertex i, determine if it's possible to reach i by repeatedly: 1) choosing a length k from A and removing it, and 2) traversing a walk of exactly k edges. Each check for a vertex i is independent."
-      },
-      {
-        "title": "Find All Duplicates in an Array",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
-        "description": "Find all elements that appear twice in an array."
-      },
-      {
-        "title": "Maximum Subset XOR",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Hard",
-        "tags": ["Bit Manipulation", "Greedy"],
-        "url": "https://practice.geeksforgeeks.org/problems/maximum-subset-xor/1",
-        "description": "Find the maximum XOR value of any subset of a given array."
-      },
-      {
-        "title": "Subarray with Given XOR",
-        "platform": "InterviewBit",
-        "difficulty": "Medium",
-        "tags": ["Hashing", "Prefix Sum"],
-        "url": "https://www.interviewbit.com/problems/subarray-with-given-xor/",
-        "description": "Count the number of subarrays with a given XOR."
-      },
-      {
-        "title": "Find the Smallest Divisor Given a Threshold",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Binary Search", "Array"],
-        "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
-        "description": "Find the smallest divisor such that the sum of the division results is less than or equal to a threshold."
-      },
-      {
-        "title": "Kth Smallest Element in a BST",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Tree", "DFS", "BST"],
-        "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
-        "description": "Find the kth smallest element in a binary search tree."
-      },
-      {
-        "title": "Find the Longest Substring Without Repeating Characters",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "Sliding Window"],
-        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-        "description": "Find the length of the longest substring without repeating characters."
-      },
-      {
-        "title": "Find the Number of Islands",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DFS", "BFS", "Matrix"],
-        "url": "https://leetcode.com/problems/number-of-islands/",
-        "description": "Count the number of islands in a 2D grid."
-      },
-      {
-        "title": "Find the Celebrity",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Two Pointers"],
-        "url": "https://leetcode.com/problems/find-the-celebrity/",
-        "description": "Find the celebrity in a group of people."
-      },
-      {
-        "title": "Find the Kth Missing Positive Number",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Array", "Binary Search"],
-        "url": "https://leetcode.com/problems/kth-missing-positive-number/",
-        "description": "Find the kth missing positive integer from a sorted array."
-      },
-      {
-        "title": "Find the Peak Element",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Binary Search"],
-        "url": "https://leetcode.com/problems/find-peak-element/",
-        "description": "Find a peak element in an array."
-      },
-      {
-        "title": "Find the Longest Palindromic Substring",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
-        "description": "Find the longest palindromic substring in a string."
-      },
-      {
-        "title": "Find the Intersection Point of Y Linked Lists",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Linked List", "Two Pointers"],
-        "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
-        "description": "Find the intersection point of two Y-shaped linked lists."
-      },
-      {
-        "title": "Find the Minimum Number of Coins",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Easy",
-        "tags": ["Greedy", "Array"],
-        "url": "https://practice.geeksforgeeks.org/problems/number-of-coins1824/1",
-        "description": "Find the minimum number of coins to make a given value."
-      },
-      {
-        "title": "Find the Maximum Area of Island",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DFS", "BFS", "Matrix"],
-        "url": "https://leetcode.com/problems/max-area-of-island/",
-        "description": "Find the maximum area of an island in a 2D grid."
-      },
-      {
-        "title": "Find the Longest Consecutive Sequence",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "Union Find"],
-        "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
-        "description": "Find the length of the longest consecutive elements sequence."
-      },
-      {
-        "title": "Find the Minimum Path Sum",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Grid"],
-        "url": "https://leetcode.com/problems/minimum-path-sum/",
-        "description": "Find a path from top left to bottom right of a grid with minimum sum."
-      },
-      {
-        "title": "Find the Maximum Product Subarray",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/maximum-product-subarray/",
-        "description": "Find the contiguous subarray within an array which has the largest product."
-      },
-      {
-        "title": "Find the Minimum Window Substring",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Hash Table", "Sliding Window"],
-        "url": "https://leetcode.com/problems/minimum-window-substring/",
-        "description": "Find the minimum window in a string which contains all the characters of another string."
-      },
-      {
-        "title": "Find the Maximum Path Sum in a Binary Tree",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Tree", "DFS", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
-        "description": "Find the maximum path sum in a binary tree."
-      },
-      {
-        "title": "Find the Number of Provinces",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DFS", "Union Find"],
-        "url": "https://leetcode.com/problems/number-of-provinces/",
-        "description": "Find the number of provinces in a network of cities."
-      },
-      {
-        "title": "Find the Longest Common Prefix",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["String", "Trie"],
-        "url": "https://leetcode.com/problems/longest-common-prefix/",
-        "description": "Find the longest common prefix among an array of strings."
-      },
-      {
-        "title": "Find the Minimum Number of Platforms",
-        "platform": "GeeksForGeeks",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1",
-        "description": "Find the minimum number of platforms required for a railway station."
-      },
-      {
-        "title": "Find the Maximum Length of Pair Chain",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Dynamic Programming"],
-        "url": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
-        "description": "Find the length of the longest chain which can be formed with given pairs."
-      },
-      {
-        "title": "Find the Minimum Cost to Connect Sticks",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Heap", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
-        "description": "Connect sticks with minimum cost using a heap."
-      },
-      {
-        "title": "Find the Maximum Width of Binary Tree",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Tree", "BFS"],
-        "url": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
-        "description": "Find the maximum width of a binary tree."
-      },
-      {
-        "title": "Find the Minimum Number of Arrows to Burst Balloons",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Sorting"],
-        "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
-        "description": "Find the minimum number of arrows required to burst all balloons."
-      },
-      {
-        "title": "Find the Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Sorting"],
-        "url": "https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/",
-        "description": "Find the maximum area of a piece of cake after making horizontal and vertical cuts."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Move All Balls to Each Box",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Prefix Sum"],
-        "url": "https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/",
-        "description": "Find the minimum number of operations to move all balls to each box."
-      },
-      {
-        "title": "Find the Maximum Number of Events That Can Be Attended",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Heap"],
-        "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/",
-        "description": "Find the maximum number of events that can be attended given their start and end days."
-      },
-      {
-        "title": "Find the Minimum Path Sum in a Triangle",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Dynamic Programming", "Array"],
-        "url": "https://leetcode.com/problems/triangle/",
-        "description": "Find the minimum path sum from top to bottom in a triangle."
-      },
-      {
-        "title": "Find the Maximum Product of Word Lengths",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Bit Manipulation", "Array"],
-        "url": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
-        "description": "Find the maximum product of lengths of two words that do not share common letters."
-      },
-      {
-        "title": "Find the Minimum Number of Swaps to Make the String Balanced",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Stack", "String"],
-        "url": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/",
-        "description": "Find the minimum number of swaps to make a string of brackets balanced."
-      },
-      {
-        "title": "Find the Maximum Number of Points on a Line",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Hash Table", "Geometry"],
-        "url": "https://leetcode.com/problems/max-points-on-a-line/",
-        "description": "Find the maximum number of points that lie on the same straight line."
-      },
-      {
-        "title": "Find the Minimum Number of Refueling Stops",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "Heap"],
-        "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
-        "description": "Find the minimum number of refueling stops to reach the target."
-      },
-      {
-        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
-        "description": "Find the maximum number of non-overlapping subarrays with sum equals target."
-      },
-      {
-        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
-        "description": "Find the minimum number of steps to make two strings anagrams."
-      },
-      {
-        "title": "Find the Maximum Number of Occurrences of a Substring",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
-        "description": "Find the maximum number of occurrences of a substring in a string."
-      },
-      {
-        "title": "Find the Minimum Number of Taps to Open to Water a Garden",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "DP"],
-        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
-        "description": "Find the minimum number of taps to open to water the entire garden."
-      },
-      {
-        "title": "Find the Maximum Number of Vowels in a Substring of Given Length",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Sliding Window", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
-        "description": "Find the maximum number of vowels in a substring of given length."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Make Array Equal",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Math", "Array"],
-        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
-        "description": "Find the minimum number of operations to make all array elements equal."
-      },
-      {
-        "title": "Find the Maximum Number of Balloons",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
-        "description": "Find the maximum number of instances of the word 'balloon' that can be formed."
-      },
-      {
-        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
-        "description": "Find the minimum number of flips to make a binary string alternating."
-      },
-      {
-        "title": "Find the Maximum Number of Strings Formed by 0s and 1s",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DP", "Array"],
-        "url": "https://leetcode.com/problems/ones-and-zeroes/",
-        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s."
-      },
-      {
-        "title": "Find the Minimum Number of Days to Make m Bouquets",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Binary Search", "Array"],
-        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
-        "description": "Find the minimum number of days to make m bouquets from flowers."
-      },
-      {
-        "title": "Find the Maximum Number of Coins You Can Get",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Array"],
-        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
-        "description": "Find the maximum number of coins you can get from piles."
-      },
-      {
-        "title": "Find the Minimum Number of Swaps to Make Strings Equal",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
-        "description": "Find the minimum number of swaps to make two strings equal."
-      },
-      {
-        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
-        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Make Array Increasing",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/",
-        "description": "Find the minimum number of operations to make an array strictly increasing."
-      },
-      {
-        "title": "Find the Maximum Number of Occurrences of a Substring II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-               "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
-        "description": "Find the maximum number of occurrences of a substring in a string (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Make Array Alternating",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/",
-        "description": "Find the minimum number of operations to make an array alternating."
-      },
-      {
-        "title": "Find the Maximum Number of Points on a Line II",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Hash Table", "Geometry"],
-        "url": "https://leetcode.com/problems/max-points-on-a-line/",
-        "description": "Find the maximum number of points that lie on the same straight line (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Refueling Stops II",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "Heap"],
-        "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
-        "description": "Find the minimum number of refueling stops to reach the target (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
-        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
-        "description": "Find the minimum number of steps to make two strings anagrams (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Occurrences of a Substring III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
-        "description": "Find the maximum number of occurrences of a substring in a string (another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Taps to Open to Water a Garden II",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "DP"],
-        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
-        "description": "Find the minimum number of taps to open to water the entire garden (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Vowels in a Substring of Given Length II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Sliding Window", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
-        "description": "Find the maximum number of vowels in a substring of given length (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Make Array Equal II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Math", "Array"],
-        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
-        "description": "Find the minimum number of operations to make all array elements equal (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Balloons II",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
-        "description": "Find the maximum number of instances of the word 'balloon' that can be formed (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
-        "description": "Find the minimum number of flips to make a binary string alternating (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Strings Formed by 0s and 1s II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DP", "Array"],
-        "url": "https://leetcode.com/problems/ones-and-zeroes/",
-        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Days to Make m Bouquets II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Binary Search", "Array"],
-        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
-        "description": "Find the minimum number of days to make m bouquets from flowers (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Coins You Can Get II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Array"],
-        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
-        "description": "Find the maximum number of coins you can get from piles (variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Swaps to Make Strings Equal II",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
-        "description": "Find the minimum number of swaps to make two strings equal (variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target IV",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Array", "Hash Table"],
-        "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
-        "description": "Find the maximum number of non-overlapping subarrays with sum equals target (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Steps to Make Two Strings Anagram III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
-        "description": "Find the minimum number of steps to make two strings anagrams (yet another variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Occurrences of a Substring IV",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
-        "description": "Find the maximum number of occurrences of a substring in a string (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Taps to Open to Water a Garden III",
-        "platform": "LeetCode",
-        "difficulty": "Hard",
-        "tags": ["Greedy", "DP"],
-        "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
-        "description": "Find the minimum number of taps to open to water the entire garden (yet another variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Vowels in a Substring of Given Length III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Sliding Window", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
-        "description": "Find the maximum number of vowels in a substring of given length (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Operations to Make Array Equal III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Math", "Array"],
-        "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
-        "description": "Find the minimum number of operations to make all array elements equal (yet another variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Balloons III",
-        "platform": "LeetCode",
-        "difficulty": "Easy",
-        "tags": ["Hash Table", "String"],
-        "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
-        "description": "Find the maximum number of instances of the word 'balloon' that can be formed (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Flips to Make a Binary String Alternating III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
-        "description": "Find the minimum number of flips to make a binary string alternating (yet another variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Strings Formed by 0s and 1s III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["DP", "Array"],
-        "url": "https://leetcode.com/problems/ones-and-zeroes/",
-        "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Days to Make m Bouquets III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Binary Search", "Array"],
-        "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
-        "description": "Find the minimum number of days to make m bouquets from flowers (yet another variant)."
-      },
-      {
-        "title": "Find the Maximum Number of Coins You Can Get III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["Greedy", "Array"],
-        "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
-        "description": "Find the maximum number of coins you can get from piles (yet another variant)."
-      },
-      {
-        "title": "Find the Minimum Number of Swaps to Make Strings Equal III",
-        "platform": "LeetCode",
-        "difficulty": "Medium",
-        "tags": ["String", "Greedy"],
-        "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
-        "description": "Find the minimum number of swaps to make two strings equal (yet another variant)."
-      },
-      {
-    "title": "Maximum Sum Path in Binary Tree",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["Tree", "Dynamic Programming", "Recursion"],
-    "url": "https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/",
-    "description": "Find the maximum sum of any path from any node to any other node in a binary tree."
-  },
-  {
-    "title": "Rotate Matrix",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Array", "Matrix"],
-    "url": "https://www.interviewbit.com/problems/rotate-matrix/",
-    "description": "Rotate an NxN matrix by 90 degrees clockwise in-place."
-  },
-  {
-    "title": "Valid Sudoku",
-    "platform": "InterviewBit",
-    "difficulty": "Easy",
-    "tags": ["Array", "Hash Table"],
-    "url": "https://www.interviewbit.com/problems/valid-sudoku/",
-    "description": "Determine if a partially filled 9x9 Sudoku board is valid."
-  },
-  {
-    "title": "Longest Substring Without Repeating Characters",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["String", "Sliding Window", "Hash Table"],
-    "url": "https://www.interviewbit.com/problems/longest-substring-without-repeat/",
-    "description": "Find the length of the longest substring without repeating characters."
-  },
-  {
-    "title": "Generate Parentheses",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Backtracking", "String", "Recursion"],
-    "url": "https://www.interviewbit.com/problems/generate-all-parentheses/",
-    "description": "Generate all combinations of well-formed parentheses for n pairs."
-  },
-  {
-    "title": "Merge K Sorted Lists",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["Linked List", "Heap", "Divide and Conquer"],
-    "url": "https://www.interviewbit.com/problems/merge-k-sorted-lists/",
-    "description": "Merge k sorted linked lists and return it as one sorted list."
-  },
-  {
-    "title": "Word Ladder",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["BFS", "String", "Graph"],
-    "url": "https://www.interviewbit.com/problems/word-ladder-i/",
-    "description": "Find the shortest transformation sequence from beginWord to endWord."
-  },
-  {
-    "title": "Add Two Numbers as Lists",
-    "platform": "InterviewBit",
-    "difficulty": "Easy",
-    "tags": ["Linked List", "Math"],
-    "url": "https://www.interviewbit.com/problems/add-two-numbers-as-lists/",
-    "description": "Add two numbers represented as linked lists and return the sum as a linked list."
-  },
-  {
-    "title": "Container With Most Water",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Array", "Two Pointers"],
-    "url": "https://www.interviewbit.com/problems/container-with-most-water/",
-    "description": "Find two lines that together with the x-axis forms a container that holds the most water."
-  },
-  {
-    "title": "Word Break",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Dynamic Programming", "String"],
-    "url": "https://www.interviewbit.com/problems/word-break/",
-    "description": "Determine if a string can be segmented into a space-separated sequence of dictionary words."
-  },
-  {
-    "title": "Minimum Window Substring",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["String", "Sliding Window", "Hash Table"],
-    "url": "https://www.interviewbit.com/problems/window-string/",
-    "description": "Find the minimum window in string S that contains all characters of string T."
-  },
-  {
-    "title": "Palindrome Partitioning",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Backtracking", "String", "Dynamic Programming"],
-    "url": "https://www.interviewbit.com/problems/palindrome-partitioning/",
-    "description": "Partition a string such that every substring is a palindrome."
-  },
-  {
-    "title": "First Missing Positive",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["Array", "Hash Table"],
-    "url": "https://www.interviewbit.com/problems/first-missing-positive/",
-    "description": "Find the smallest missing positive integer in an unsorted integer array."
-  },
-  {
-    "title": "Edit Distance",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["Dynamic Programming", "String"],
-    "url": "https://www.interviewbit.com/problems/edit-distance/",
-    "description": "Find the minimum number of operations to convert one string to another."
-  },
-  {
-    "title": "Kth Largest Element",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Array", "Heap", "Quick Select"],
-    "url": "https://www.interviewbit.com/problems/kth-largest-element/",
-    "description": "Find the kth largest element in an unsorted array."
-  },
-  {
-    "title": "Spiral Order Matrix",
-    "platform": "InterviewBit",
-    "difficulty": "Easy",
-    "tags": ["Array", "Matrix"],
-    "url": "https://www.interviewbit.com/problems/spiral-order-matrix-i/",
-    "description": "Return the elements of an NxM matrix in spiral order."
-  },
-  {
-    "title": "Subset Sum Problem",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Dynamic Programming", "Array"],
-    "url": "https://www.interviewbit.com/problems/subset-sum-problem/",
-    "description": "Determine if there exists a subset with sum equal to given target."
-  },
-  {
-    "title": "Clone Graph",
-    "platform": "InterviewBit",
-    "difficulty": "Medium",
-    "tags": ["Graph", "DFS", "BFS", "Hash Table"],
-    "url": "https://www.interviewbit.com/problems/clone-graph/",
-    "description": "Return a deep copy of an undirected graph."
-  },
-  {
-    "title": "Largest Rectangle in Histogram",
-    "platform": "InterviewBit",
-    "difficulty": "Hard",
-    "tags": ["Stack", "Array"],
-    "url": "https://www.interviewbit.com/problems/largest-rectangle-in-histogram/",
-    "description": "Find the area of the largest rectangle that can be formed in a histogram."
-  },
-  {
-    "title": "Valid Binary Search Tree",
-    "platform": "InterviewBit",
-    "difficulty": "Easy",
-    "tags": ["Tree", "Binary Search Tree", "Recursion"],
-    "url": "https://www.interviewbit.com/problems/valid-binary-search-tree/",
-    "description": "Determine if a binary tree is a valid binary search tree."
-  },
-   {
-    "title": "Building Roads",
-    "platform": "CSES",
-    "difficulty": "Easy",
-    "tags": ["Graph", "Connected Components", "Union Find"],
-    "url": "https://cses.fi/problemset/task/1666",
-    "description": "Find the minimum number of roads needed to connect all cities in a country."
-  },
-  {
-    "title": "Message Route",
-    "platform": "CSES",
-    "difficulty": "Easy",
-    "tags": ["Graph", "BFS", "Shortest Path"],
-    "url": "https://cses.fi/problemset/task/1667",
-    "description": "Find the shortest path between two nodes in an unweighted graph using BFS."
-  },
-  {
-    "title": "Building Teams",
-    "platform": "CSES",
-    "difficulty": "Easy",
-    "tags": ["Graph", "Bipartite", "DFS", "Coloring"],
-    "url": "https://cses.fi/problemset/task/1668",
-    "description": "Determine if a graph is bipartite and assign nodes to two teams."
-  },
-  {
-    "title": "Round Trip",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Cycle Detection", "DFS"],
-    "url": "https://cses.fi/problemset/task/1669",
-    "description": "Find a cycle in an undirected graph and output the nodes in the cycle."
-  },
-  {
-    "title": "Monsters",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "BFS", "Multi-source BFS", "Grid"],
-    "url": "https://cses.fi/problemset/task/1194",
-    "description": "Find if you can escape from monsters in a grid maze using multi-source BFS."
-  },
-  {
-    "title": "Shortest Routes I",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Dijkstra", "Shortest Path", "Priority Queue"],
-    "url": "https://cses.fi/problemset/task/1671",
-    "description": "Find shortest distances from a source node to all other nodes using Dijkstra's algorithm."
-  },
-  {
-    "title": "Shortest Routes II",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Floyd Warshall", "All Pairs Shortest Path"],
-    "url": "https://cses.fi/problemset/task/1672",
-    "description": "Process queries for shortest distance between any two nodes using Floyd-Warshall."
-  },
-  {
-    "title": "High Score",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Bellman Ford", "Negative Cycles", "Longest Path"],
-    "url": "https://cses.fi/problemset/task/1673",
-    "description": "Find the maximum score path in a graph, handling negative cycles."
-  },
-  {
-    "title": "Flight Discount",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Dijkstra", "Modified Shortest Path"],
-    "url": "https://cses.fi/problemset/task/1195",
-    "description": "Find shortest path with option to use one discounted flight."
-  },
-  {
-    "title": "Cycle Finding",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Cycle Detection", "Bellman Ford"],
-    "url": "https://cses.fi/problemset/task/1197",
-    "description": "Find a negative cycle in a directed graph using Bellman-Ford algorithm."
-  },
-  {
-    "title": "Flight Routes",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "K Shortest Paths", "Dijkstra", "Priority Queue"],
-    "url": "https://cses.fi/problemset/task/1196",
-    "description": "Find the k shortest paths from source to destination."
-  },
-  {
-    "title": "Round Trip II",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Cycle Detection", "DFS", "Directed Graph"],
-    "url": "https://cses.fi/problemset/task/1678",
-    "description": "Find a cycle in a directed graph and output the cycle."
-  },
-  {
-    "title": "Course Schedule",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Topological Sort", "DFS", "Cycle Detection"],
-    "url": "https://cses.fi/problemset/task/1679",
-    "description": "Determine a valid order to complete courses with prerequisites (topological sort)."
-  },
-  {
-    "title": "Longest Flight Route",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "DAG", "Longest Path", "Dynamic Programming"],
-    "url": "https://cses.fi/problemset/task/1680",
-    "description": "Find the longest path in a directed acyclic graph (DAG)."
-  },
-  {
-    "title": "Game Routes",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "DAG", "Dynamic Programming", "Path Counting"],
-    "url": "https://cses.fi/problemset/task/1681",
-    "description": "Count the number of paths from start to end in a DAG."
-  },
-  {
-    "title": "Investigation",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Dijkstra", "Path Counting", "Dynamic Programming"],
-    "url": "https://cses.fi/problemset/task/1202",
-    "description": "Find shortest routes and count paths, minimum/maximum flights on shortest routes."
-  },
-  {
-    "title": "Planets Queries I",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Binary Lifting", "Functional Graph"],
-    "url": "https://cses.fi/problemset/task/1750",
-    "description": "Process queries on a functional graph using binary lifting technique."
-  },
-  {
-    "title": "Planets Queries II",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Functional Graph", "Cycle Detection", "Binary Lifting"],
-    "url": "https://cses.fi/problemset/task/1751",
-    "description": "Advanced queries on functional graphs with cycle detection."
-  },
-  {
-    "title": "Planets Cycles",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Functional Graph", "Cycle Detection"],
-    "url": "https://cses.fi/problemset/task/1179",
-    "description": "Find cycle information in a functional graph for each starting node."
-  },
-  {
-    "title": "Road Reparation",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "MST", "Kruskal", "Union Find"],
-    "url": "https://cses.fi/problemset/task/1675",
-    "description": "Find minimum spanning tree to connect all cities with minimum cost."
-  },
-  {
-    "title": "Road Construction",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "Union Find", "Connected Components"],
-    "url": "https://cses.fi/problemset/task/1676",
-    "description": "Process road construction queries and track connected components."
-  },
-  {
-    "title": "Flight Routes Check",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "SCC", "Strongly Connected Components", "DFS"],
-    "url": "https://cses.fi/problemset/task/1682",
-    "description": "Check if you can travel between any two cities (strongly connected components)."
-  },
-  {
-    "title": "Planets and Kingdoms",
-    "platform": "CSES",
-    "difficulty": "Medium",
-    "tags": ["Graph", "SCC", "Kosaraju", "Tarjan"],
-    "url": "https://cses.fi/problemset/task/1683",
-    "description": "Find strongly connected components and assign kingdom numbers."
-  },
-  {
-    "title": "Giant Pizza",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "2-SAT", "SCC", "Boolean Satisfiability"],
-    "url": "https://cses.fi/problemset/task/1684",
-    "description": "Solve 2-SAT problem to determine pizza toppings that satisfy all friends."
-  },
-  {
-    "title": "Coin Collector",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "SCC", "DAG", "Dynamic Programming"],
-    "url": "https://cses.fi/problemset/task/1686",
-    "description": "Collect maximum coins in a graph by condensing SCCs and solving on DAG."
-  },
-  {
-    "title": "Mail Delivery",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Eulerian Path", "Hierholzer"],
-    "url": "https://cses.fi/problemset/task/1691",
-    "description": "Find Eulerian path in a graph (visit every edge exactly once)."
-  },
-  {
-    "title": "De Bruijn Sequence",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Eulerian Path", "De Bruijn", "String"],
-    "url": "https://cses.fi/problemset/task/1692",
-    "description": "Construct De Bruijn sequence using Eulerian path in De Bruijn graph."
-  },
-  {
-    "title": "Teleporters Path",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Eulerian Path", "Directed Graph"],
-    "url": "https://cses.fi/problemset/task/1693",
-    "description": "Find Eulerian path in a directed graph from node 1 to node n."
-  },
-  {
-    "title": "Hamiltonian Flights",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Hamiltonian Path", "Bitmask DP", "TSP"],
-    "url": "https://cses.fi/problemset/task/1690",
-    "description": "Count Hamiltonian paths from node 1 to node n using bitmask DP."
-  },
-  {
-    "title": "Knight's Tour",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Hamiltonian Path", "Backtracking", "Chess"],
-    "url": "https://cses.fi/problemset/task/1689",
-    "description": "Find a knight's tour on a chessboard (visit each square exactly once)."
-  },
-  {
-    "title": "Download Speed",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Max Flow", "Ford Fulkerson", "Network Flow"],
-    "url": "https://cses.fi/problemset/task/1694",
-    "description": "Find maximum flow in a network from source to sink."
-  },
-  {
-    "title": "Police Chase",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Min Cut", "Max Flow", "Network Flow"],
-    "url": "https://cses.fi/problemset/task/1695",
-    "description": "Find minimum cut in a network (minimum edges to remove to disconnect source and sink)."
-  },
-  {
-    "title": "School Dance",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Bipartite Matching", "Maximum Matching"],
-    "url": "https://cses.fi/problemset/task/1696",
-    "description": "Find maximum matching in a bipartite graph (maximum number of dance pairs)."
-  },
-  {
-    "title": "Distinct Routes",
-    "platform": "CSES",
-    "difficulty": "Hard",
-    "tags": ["Graph", "Max Flow", "Edge Disjoint Paths"],
-    "url": "https://cses.fi/problemset/task/1711",
-    "description": "Find maximum number of edge-disjoint paths from source to sink."
-  }
-    ]
+  "problems": [
+    {
+      "title": "Two Sum",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Array", "Hash Table"],
+      "url": "https://leetcode.com/problems/two-sum/",
+      "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target."
+    },
+    {
+      "title": "Watermelon",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math", "Brute Force"],
+      "url": "https://codeforces.com/problemset/problem/4/A",
+      "description": "Determine if a given weight of watermelon can be divided into two parts, each weighing an even number of kilos."
+    },
+    {
+      "title": "Weird Algorithm",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Math"],
+      "url": "https://cses.fi/problemset/task/1068",
+      "description": "Consider an algorithm that takes a positive integer n. If n is even, divide it by 2; if n is odd, multiply it by 3 and add 1. Repeat until n becomes 1."
+    },
+    {
+      "title": "Merge Sort",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Sorting", "Divide and Conquer"],
+      "url": "https://practice.geeksforgeeks.org/problems/merge-sort/1",
+      "description": "Implement merge sort algorithm to sort an array of integers in ascending order."
+    },
+    {
+      "title": "MEX rose",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Greedy"],
+      "url": "https://codeforces.com/problemset/problem/2149/C",
+      "description": "Given array a, set elements in [0,n] in one move find minimum steps to get MEX(a) = k"
+    },
+    {
+      "title": "Unconventional Pairs",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://codeforces.com/problemset/problem/2149/B",
+      "description": "Given an array of length n and integers k, l, r, count the number of subarrays with exactly k distinct elements and length between l and r."
+    },
+    {
+      "title": "Hidden Knowledge of the Ancients",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Data Structures", "Two Pointers"],
+      "url": "https://codeforces.com/problemset/problem/2149/E",
+      "description": "Given an even-sized array, pair up elements so that the maximum absolute difference among pairs is minimized. Find this minimum possible maximum difference."
+    },
+    {
+      "title": "Gravity Falls",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Greedy", "Implementation", "Sorting"],
+      "url": "https://codeforces.com/problemset/problem/2148/F",
+      "description": "Given n arrays of varying lengths stacked in any order, apply gravity (elements fall down if empty beneath) until stable. Find the lexicographically smallest possible bottom row over all stackings."
+    },
+    {
+      "title": "Split",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Binary Search", "Data Structures", "Sorting"],
+      "url": "https://codeforces.com/problemset/problem/2148/E",
+      "description": "Given an array of n integers and an integer k, count subarrays that can be distributed into k multisets so that all multisets contain identical elements."
+    },
+    {
+      "title": "Trailing Zeroes",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Math", "Number Theory"],
+      "url": "https://lightoj.com/problem/trailing-zeroes-i",
+      "description": "Count the number of trailing zeroes in the factorial of a given number."
+    },
+    {
+      "title": "Valid Parentheses",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Stack", "String"],
+      "url": "https://leetcode.com/problems/valid-parentheses/",
+      "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid."
+    },
+    {
+      "title": "Theatre Square",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math"],
+      "url": "https://codeforces.com/problemset/problem/1/A",
+      "description": "Calculate the minimum number of square marble tiles needed to cover a rectangular theatre square."
+    },
+    {
+      "title": "Missing Number",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Array", "Math"],
+      "url": "https://cses.fi/problemset/task/1083",
+      "description": "Find the missing number in an array containing n-1 integers in the range 1 to n."
+    },
+     {
+      "title": "Maxflow GCD Coloring",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Constructive Algorithms"],
+      "url": "https://codeforces.com/problemset/problem/2147/H",
+      "description": "Given an undirected graph with positive edge capacities, color the vertices so that the subgraph induced by each color is 'good' i.e., there exists an integer d ≥ 2 that divides the max flow between every pair of vertices in that subgraph. Minimize the number of colors."
+    },
+     {
+      "title": "Cake Collection",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Greedy"],
+      "url": "https://codeforces.com/problemset/problem/2139/B",
+      "description": "Given n ovens that bake cakes at different rates, and m seconds, determine the maximum number of cakes that can be collected if you can teleport to any oven at the end of each second."
+    },
+    {
+      "title": "Kadane's Algorithm",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Array", "Dynamic Programming"],
+      "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1",
+      "description": "Find the maximum sum of a contiguous subarray within a one-dimensional array of numbers."
+    },
+    {
+      "title": "Binary Simulation",
+      "platform": "LightOJ",
+      "difficulty": "Hard",
+      "tags": ["Segment Tree", "Data Structures"],
+      "url": "https://lightoj.com/problem/binary-simulation",
+      "description": "Simulate operations on a binary string including flipping bits and querying the value at a specific position."
+    },
+    {
+      "title": "Add Two Numbers",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Linked List", "Math"],
+      "url": "https://leetcode.com/problems/add-two-numbers/",
+      "description": "Add two numbers represented by two linked lists where each node contains a single digit."
+    },
+    {
+      "title": "Way Too Long Words",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["String", "Implementation"],
+      "url": "https://codeforces.com/problemset/problem/71/A",
+      "description": "Abbreviate words that are too long by writing the first and last letter with the number of letters between them."
+    },
+    {
+      "title": "Repetitions",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["String", "Implementation"],
+      "url": "https://cses.fi/problemset/task/1069",
+      "description": "Find the longest repetition in a DNA sequence (a string consisting of characters A, C, G, and T)."
+    },
+    {
+      "title": "Subset Sum Problem",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Backtracking"],
+      "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1",
+      "description": "Determine if there is a subset of the given set with a sum equal to a given sum."
+    },
+    {
+      "title": "Opposite Task",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Math", "Ad-hoc"],
+      "url": "https://lightoj.com/problem/opposite-task",
+      "description": "Distribute n problems between two computers such that neither gets more than 10 problems."
+    },
+    {
+      "title": "LRU Cache",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "Linked List", "Design"],
+      "url": "https://leetcode.com/problems/lru-cache/",
+      "description": "Design and implement a data structure for Least Recently Used (LRU) cache."
+    },
+    {
+      "title": "Beautiful Matrix",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Math"],
+      "url": "https://codeforces.com/problemset/problem/263/A",
+      "description": "Calculate the minimum number of moves needed to make the matrix beautiful by moving the 1 to the center position."
+    },
+    {
+      "title": "Increasing Array",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Array", "Greedy"],
+      "url": "https://cses.fi/problemset/task/1094",
+      "description": "Find the minimum number of moves required to make an array strictly increasing."
+    },
+    {
+      "title": "N-Queen Problem",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Hard",
+      "tags": ["Backtracking", "Recursion"],
+      "url": "https://practice.geeksforgeeks.org/problems/n-queen-problem0315/1",
+      "description": "Place N queens on an N×N chessboard so that no two queens threaten each other."
+    },
+    {
+      "title": "Discovering Paths",
+      "platform": "LightOJ",
+      "difficulty": "Hard",
+      "tags": ["Graph Theory", "BFS", "DFS"],
+      "url": "https://lightoj.com/problem/discovering-paths-in-grid",
+      "description": "Find the number of paths from the top-left corner to the bottom-right corner of a grid."
+    },
+    {
+      "title": "Longest Substring Without Repeating Characters",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "String", "Sliding Window"],
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "description": "Find the length of the longest substring without repeating characters."
+    },
+    {
+      "title": "Petya and Strings",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Strings"],
+      "url": "https://codeforces.com/problemset/problem/112/A",
+      "description": "Compare two strings lexicographically, ignoring case."
+    },
+    {
+      "title": "Permutations",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Constructive Algorithms", "Implementation"],
+      "url": "https://cses.fi/problemset/task/1070",
+      "description": "Construct a permutation of numbers 1,2,…,n such that there are no adjacent elements whose difference is 1."
+    },
+    {
+      "title": "0-1 Knapsack Problem",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming"],
+      "url": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1",
+      "description": "Select items to maximize value while keeping the total weight under capacity."
+    },
+    {
+      "title": "Hex-a-bonacci",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Math"],
+      "url": "https://lightoj.com/problem/hex-a-bonacci",
+      "description": "Calculate the nth term of the Hex-a-bonacci sequence using dynamic programming."
+    },
+    {
+      "title": "Median of Two Sorted Arrays",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Array", "Binary Search", "Divide and Conquer"],
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "description": "Find the median of the two sorted arrays in logarithmic time complexity."
+    },
+    {
+      "title": "Bit++",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation"],
+      "url": "https://codeforces.com/problemset/problem/282/A",
+      "description": "Track the value of a variable after a sequence of increment and decrement operations."
+    },
+    {
+      "title": "Number Spiral",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://cses.fi/problemset/task/1071",
+      "description": "Find the number at position (y,x) in an infinite spiral of numbers."
+    },
+    {
+      "title": "Minimum Platforms",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Array", "Greedy", "Sorting"],
+      "url": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1",
+      "description": "Find the minimum number of platforms required for a railway station so that no train is kept waiting."
+    },
+    {
+      "title": "How Cow",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Geometry", "Implementation"],
+      "url": "https://lightoj.com/problem/how-cow",
+      "description": "Determine if a cow is inside a rectangular fence."
+    },
+    {
+      "title": "Longest Palindromic Substring",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+      "description": "Find the longest palindromic substring in a given string."
+    },
+    {
+      "title": "Team",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Greedy", "Implementation"],
+      "url": "https://codeforces.com/problemset/problem/231/A",
+      "description": "Count the number of problems a team will solve based on their confidence levels."
+    },
+    {
+      "title": "Two Knights",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Math", "Combinatorics"],
+      "url": "https://cses.fi/problemset/task/1072",
+      "description": "Count the number of ways to place two knights on an n×n chessboard so that they don't attack each other."
+    },
+    {
+      "title": "Egg Dropping Puzzle",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Hard",
+      "tags": ["Dynamic Programming", "Recursion"],
+      "url": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1",
+      "description": "Determine the minimum number of attempts needed to find the critical floor in the worst case."
+    },
+    {
+      "title": "Counting Triangles",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Geometry", "Math"],
+      "url": "https://lightoj.com/problem/counting-triangles",
+      "description": "Count the number of triangles that can be formed with sides of specific lengths."
+    },
+    {
+      "title": "Zigzag Conversion",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String"],
+      "url": "https://leetcode.com/problems/zigzag-conversion/",
+      "description": "Convert a string to a zigzag pattern and then read it line by line."
+    },
+    {
+      "title": "Domino Piling",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math", "Greedy"],
+      "url": "https://codeforces.com/problemset/problem/50/A",
+      "description": "Calculate the maximum number of dominoes that can fit on a rectangular board."
+    },
+    {
+      "title": "Two Sets",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Math", "Constructive Algorithms"],
+      "url": "https://cses.fi/problemset/task/1092",
+      "description": "Divide numbers 1,2,…,n into two sets of equal sum."
+    },
+    {
+      "title": "Coin Change",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Arrays"],
+      "url": "https://practice.geeksforgeeks.org/problems/coin-change2448/1",
+      "description": "Find the number of ways to make change for a given amount using a set of coins."
+    },
+    {
+      "title": "Brushes",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Greedy"],
+      "url": "https://lightoj.com/problem/brushes",
+      "description": "Calculate the minimum number of brushes needed to paint a given number of regions."
+    },
+    {
+      "title": "String to Integer (atoi)",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String", "Math"],
+      "url": "https://leetcode.com/problems/string-to-integer-atoi/",
+      "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer."
+    },
+    {
+      "title": "Next Round",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation"],
+      "url": "https://codeforces.com/problemset/problem/158/A",
+      "description": "Determine how many contestants advance to the next round based on their scores."
+    },
+    {
+      "title": "Bit Strings",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Math", "Combinatorics"],
+      "url": "https://cses.fi/problemset/task/1617",
+      "description": "Calculate the number of bit strings of length n modulo 10^9+7."
+    },
+    {
+      "title": "Fractional Knapsack",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Greedy"],
+      "url": "https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
+      "description": "Maximize value of items put in a knapsack where items can be broken into smaller pieces."
+    },
+    {
+      "title": "Palindrome Numbers",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://lightoj.com/problem/palindrome-numbers",
+      "description": "Determine if a number is palindromic in both decimal and binary representations."
+    },
+    {
+      "title": "Palindrome Number",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Math"],
+      "url": "https://leetcode.com/problems/palindrome-number/",
+      "description": "Determine whether an integer is a palindrome without converting it to a string."
+    },
+    {
+      "title": "String Task",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Strings"],
+      "url": "https://codeforces.com/problemset/problem/118/A",
+      "description": "Transform a string by removing vowels and prefixing consonants with a period."
+    },
+    {
+      "title": "Trailing Zeros",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Math", "Number Theory"],
+      "url": "https://cses.fi/problemset/task/1618",
+      "description": "Calculate the number of trailing zeros in the factorial of n."
+    },
+    {
+      "title": "Job Sequencing Problem",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
+      "description": "Find the maximum profit by sequencing jobs with deadlines to maximize profit."
+    },
+    {
+      "title": "Nusrat's Treat",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://lightoj.com/problem/nusrats-treat",
+      "description": "Calculate the sum of the first n natural numbers."
+    },
+    {
+      "title": "Regular Expression Matching",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["String", "Dynamic Programming", "Recursion"],
+      "url": "https://leetcode.com/problems/regular-expression-matching/",
+      "description": "Implement regular expression matching with support for '.' and '*'."
+    },
+    {
+      "title": "Helpful Maths",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Sorting", "Strings"],
+      "url": "https://codeforces.com/problemset/problem/339/A",
+      "description": "Rearrange the terms in the sum to make it easier to calculate."
+    },
+    {
+      "title": "Coin Combinations I",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1635",
+      "description": "Count the number of ways to produce a sum using a set of coins."
+    },
+    {
+      "title": "Longest Common Subsequence",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "String"],
+      "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1",
+      "description": "Find the length of the longest subsequence present in both of the given sequences."
+    },
+    {
+      "title": "Wavio Sequence",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "LIS"],
+      "url": "https://lightoj.com/problem/wavio-sequence",
+      "description": "Find the longest wavio sequence in an array of integers."
+    },
+    {
+      "title": "Container With Most Water",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Two Pointers", "Greedy"],
+      "url": "https://leetcode.com/problems/container-with-most-water/",
+      "description": "Find two lines that together with the x-axis form a container that holds the most water."
+    },
+    {
+      "title": "Stones on the Table",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation"],
+      "url": "https://codeforces.com/problemset/problem/266/A",
+      "description": "Count the minimum number of stones to take from the table so that any two neighboring stones have different colors."
+    },
+    {
+      "title": "Coin Combinations II",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1636",
+      "description": "Count the ordered ways to produce a sum using a set of coins."
+    },
+    {
+      "title": "Edit Distance",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Strings"],
+      "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1",
+      "description": "Find the minimum number of operations required to convert one string to another."
+    },
+    {
+      "title": "Curious Robin Hood",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Data Structures", "Segment Tree"],
+      "url": "https://lightoj.com/problem/curious-robin-hood",
+      "description": "Perform operations on an array including updates and range sum queries."
+    },
+    {
+      "title": "Integer to Roman",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Math", "String"],
+      "url": "https://leetcode.com/problems/integer-to-roman/",
+      "description": "Convert an integer to a roman numeral."
+    },
+    {
+      "title": "Boy or Girl",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Strings", "Implementation"],
+      "url": "https://codeforces.com/problemset/problem/236/A",
+      "description": "Determine if a username belongs to a boy or a girl based on the number of distinct characters."
+    },
+    {
+      "title": "Removing Digits",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Dynamic Programming", "Greedy"],
+      "url": "https://cses.fi/problemset/task/1637",
+      "description": "Find the minimum number of operations to reduce a number to zero by subtracting one of its digits at a time."
+    },
+    {
+      "title": "Goldbach's Conjecture",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Math", "Number Theory"],
+      "url": "https://lightoj.com/problem/goldbach-conjecture",
+      "description": "Express an even number as the sum of two prime numbers."
+    },
+    {
+      "title": "3Sum",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Two Pointers", "Sorting"],
+      "url": "https://leetcode.com/problems/3sum/",
+      "description": "Find all unique triplets in the array which gives the sum of zero."
+    },
+    {
+      "title": "Word Capitalization",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Strings"],
+      "url": "https://codeforces.com/problemset/problem/281/A",
+      "description": "Capitalize the first letter of a word."
+    },
+    {
+      "title": "Grid Paths",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1638",
+      "description": "Count the number of paths from the top-left square to the bottom-right square in a grid."
+    },
+    {
+      "title": "Activity Selection",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Easy",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://practice.geeksforgeeks.org/problems/activity-selection-1587115620/1",
+      "description": "Select the maximum number of activities that can be performed by a single person."
+    },
+    {
+      "title": "Pairs Forming LCM",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Math", "Number Theory"],
+      "url": "https://lightoj.com/problem/pairs-forming-lcm",
+      "description": "Count the number of pairs whose LCM equals a given number."
+    },
+    {
+      "title": "Letter Combinations of a Phone Number",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String", "Backtracking", "Recursion"],
+      "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+      "description": "Return all possible letter combinations that the number could represent on a phone keypad."
+    },
+    {
+      "title": "Bear and Big Brother",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Math"],
+      "url": "https://codeforces.com/problemset/problem/791/A",
+      "description": "Determine how many years it will take for Limak to become strictly larger than Bob."
+    },
+    {
+      "title": "Book Shop",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Knapsack"],
+      "url": "https://cses.fi/problemset/task/1158",
+      "description": "Maximize the number of pages to read given a budget constraint."
+    },
+    {
+      "title": "Dijkstra's Algorithm",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Shortest Path", "Data Structures"],
+      "url": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
+      "description": "Implement Dijkstra's algorithm to find the shortest path from a source vertex to all other vertices."
+    },
+    {
+      "title": "Area of a Parallelogram",
+      "platform": "LightOJ",
+      "difficulty": "Easy",
+      "tags": ["Geometry", "Math"],
+      "url": "https://lightoj.com/problem/area-of-a-parallelogram",
+      "description": "Calculate the area of a parallelogram given its vertices."
+    },
+    {
+      "title": "Find Peak Element",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Binary Search"],
+      "url": "https://leetcode.com/problems/find-peak-element/",
+      "description": "Find a peak element in an array and return its index."
+    },
+    {
+      "title": "Sum of Digits",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://codeforces.com/problemset/problem/102/B",
+      "description": "Given a number, repeatedly sum its digits until a single digit remains."
+    },
+    {
+      "title": "Distinct Numbers",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Set", "Sorting"],
+      "url": "https://cses.fi/problemset/task/1621",
+      "description": "Count the number of distinct numbers in a list."
+    },
+    {
+      "title": "Find Median",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Easy",
+      "tags": ["Array", "Sorting"],
+      "url": "https://practice.geeksforgeeks.org/problems/find-median-1587115620/1",
+      "description": "Find the median of an unsorted array."
+    },
+    {
+      "title": "LightOJ Sample Problem",
+      "platform": "LightOJ",
+      "difficulty": "Medium",
+      "tags": ["Math", "Ad-hoc"],
+      "url": "https://lightoj.com/problem/sample-problem",
+      "description": "Solve a sample LightOJ problem."
+    },
+    {
+      "title": "Chef and Easy Problem",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://www.codechef.com/problems/EASYPROB",
+      "description": "Solve a simple math problem as described in the statement."
+    },
+    {
+      "title": "Chef and Maximum Subarray",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Array", "Dynamic Programming"],
+      "url": "https://www.codechef.com/problems/MAXSUBARR",
+      "description": "Find the maximum sum subarray in a given array."
+    },
+    {
+      "title": "Chef and Prime Numbers",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Math", "Sieve"],
+      "url": "https://www.codechef.com/problems/PRIMENUM",
+      "description": "Count the number of prime numbers in a given range."
+    },
+    {
+      "title": "Chef and Graph Paths",
+      "platform": "CodeChef",
+      "difficulty": "Hard",
+      "tags": ["Graph", "DFS", "BFS"],
+      "url": "https://www.codechef.com/problems/GRAPHPATH",
+      "description": "Find the number of paths between two nodes in a graph."
+    },
+    {
+      "title": "Chef and Binary String",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["String", "Implementation"],
+      "url": "https://www.codechef.com/problems/BINSTR",
+      "description": "Perform operations on a binary string as described in the problem."
+    },
+    {
+      "title": "Chef and Subset Sums",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Bitmask", "DP"],
+      "url": "https://www.codechef.com/problems/SUBSETSUM",
+      "description": "Count the number of subsets with a given sum."
+    },
+    {
+      "title": "Chef and Minimum Spanning Tree",
+      "platform": "CodeChef",
+      "difficulty": "Hard",
+      "tags": ["Graph", "MST"],
+      "url": "https://www.codechef.com/problems/MINSPT",
+      "description": "Find the minimum spanning tree of a weighted graph."
+    },
+    {
+      "title": "Chef and Palindromic Substrings",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["String", "Palindrome"],
+      "url": "https://www.codechef.com/problems/PALSUB",
+      "description": "Count the number of palindromic substrings in a string."
+    },
+    {
+      "title": "Chef and GCD",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Math", "GCD"],
+      "url": "https://www.codechef.com/problems/GCDPROB",
+      "description": "Find the GCD of two numbers."
+    },
+    {
+      "title": "Chef and Shortest Path",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Dijkstra"],
+      "url": "https://www.codechef.com/problems/SHRTPATH",
+      "description": "Find the shortest path in a weighted graph."
+    },
+    {
+      "title": "Chef and Factorials",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Math", "Factorial"],
+      "url": "https://www.codechef.com/problems/FACTORIAL",
+      "description": "Calculate the factorial of a number."
+    },
+    {
+      "title": "Chef and Array Rotation",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Array", "Rotation"],
+      "url": "https://www.codechef.com/problems/ARRROT",
+      "description": "Rotate an array by k positions."
+    },
+    {
+      "title": "Chef and Subarrays",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Array", "Subarray"],
+      "url": "https://www.codechef.com/problems/SUBARR",
+      "description": "Count the number of subarrays with a given property."
+    },
+    {
+      "title": "Chef and Prime Factors",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Math", "Prime Factorization"],
+      "url": "https://www.codechef.com/problems/PRIMEFACT",
+      "description": "Find all prime factors of a number."
+    },
+    {
+      "title": "Chef and Tree Height",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Tree", "DFS"],
+      "url": "https://www.codechef.com/problems/TREEHT",
+      "description": "Find the height of a binary tree."
+    },
+    {
+      "title": "Chef and Matrix Multiplication",
+      "platform": "CodeChef",
+      "difficulty": "Hard",
+      "tags": ["Matrix", "Multiplication"],
+      "url": "https://www.codechef.com/problems/MATMULT",
+      "description": "Multiply two matrices."
+    },
+    {
+      "title": "Chef and Substring XOR",
+      "platform": "CodeChef",
+      "difficulty": "Medium",
+      "tags": ["Bit Manipulation", "XOR"],
+      "url": "https://www.codechef.com/problems/SUBXOR",
+      "description": "Find the number of subarrays with a given XOR."
+    },
+    {
+      "title": "Chef and Balanced Parentheses",
+      "platform": "CodeChef",
+      "difficulty": "Easy",
+      "tags": ["Stack", "Parentheses"],
+      "url": "https://www.codechef.com/problems/BALPAREN",
+      "description": "Check if a string of parentheses is balanced."
+    },
+    {
+      "title": "Chef and Longest Path",
+      "platform": "CodeChef",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Tree", "DFS"],
+      "url": "https://www.codechef.com/problems/LONGPATH",
+      "description": "Find the longest path in a tree."
+    },
+    {
+      "title": "AtCoder Beginner Contest 100 A - Happy Birthday!",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://atcoder.jp/contests/abc100/tasks/abc100_a",
+      "description": "Check if two numbers are less than or equal to 8."
+    },
+    {
+      "title": "AtCoder Beginner Contest 101 B - Digit Sums",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Math", "String"],
+      "url": "https://atcoder.jp/contests/abc101/tasks/abc101_b",
+      "description": "Check if a number is divisible by the sum of its digits."
+    },
+    {
+      "title": "AtCoder Beginner Contest 102 B - Maximum Difference",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Array", "Sorting"],
+      "url": "https://atcoder.jp/contests/abc102/tasks/abc102_b",
+      "description": "Find the difference between the largest and smallest numbers in an array."
+    },
+    {
+      "title": "AtCoder Beginner Contest 103 C - Modulo Summation",
+      "platform": "AtCoder",
+      "difficulty": "Medium",
+      "tags": ["Math", "Greedy"],
+      "url": "https://atcoder.jp/contests/abc103/tasks/abc103_c",
+      "description": "Find the minimum sum of absolute differences modulo a given number."
+    },
+    {
+      "title": "AtCoder Beginner Contest 104 D - We Love ABC",
+      "platform": "AtCoder",
+      "difficulty": "Medium",
+      "tags": ["DP", "String"],
+      "url": "https://atcoder.jp/contests/abc104/tasks/abc104_d",
+      "description": "Count the number of ways to form 'ABC' as a subsequence."
+    },
+    {
+      "title": "AtCoder Beginner Contest 105 C - Base -2 Number",
+      "platform": "AtCoder",
+      "difficulty": "Medium",
+      "tags": ["Math", "Implementation"],
+      "url": "https://atcoder.jp/contests/abc105/tasks/abc105_c",
+      "description": "Convert a number to base -2."
+    },
+    {
+      "title": "AtCoder Beginner Contest 106 B - 105",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Math", "Divisors"],
+      "url": "https://atcoder.jp/contests/abc106/tasks/abc106_b",
+      "description": "Count numbers with exactly 8 divisors."
+    },
+    {
+      "title": "AtCoder Beginner Contest 107 B - Grid Compression",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Implementation", "Grid"],
+      "url": "https://atcoder.jp/contests/abc107/tasks/abc107_b",
+      "description": "Remove all rows and columns in a grid that are completely empty."
+    },
+    {
+      "title": "AtCoder Beginner Contest 108 C - Triangular Relationship",
+      "platform": "AtCoder",
+      "difficulty": "Medium",
+      "tags": ["Math", "Combinatorics"],
+      "url": "https://atcoder.jp/contests/abc108/tasks/abc108_c",
+      "description": "Count the number of ordered triples that satisfy a certain divisibility condition."
+    },
+    {
+      "title": "AtCoder Beginner Contest 109 D - Make Them Even",
+      "platform": "AtCoder",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Grid"],
+      "url": "https://atcoder.jp/contests/abc109/tasks/abc109_d",
+      "description": "Make all numbers in a grid even using the minimum number of moves."
+    },
+    {
+      "title": "Find Median from Data Stream",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Heap", "Design", "Data Stream"],
+      "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "description": "Design a data structure that supports adding numbers and finding the median efficiently."
+    },
+    {
+      "title": "Shortest Routes I",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Dijkstra"],
+      "url": "https://cses.fi/problemset/task/1671",
+      "description": "Find the shortest path from node 1 to all other nodes in a directed weighted graph."
+    },
+    {
+      "title": "XOR Queries",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Bit Manipulation", "Prefix Sum"],
+      "url": "https://codeforces.com/problemset/problem/617/E",
+      "description": "Answer multiple queries about the XOR of subarrays efficiently."
+    },
+    {
+      "title": "Longest Increasing Subsequence",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Binary Search"],
+      "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1",
+      "description": "Find the length of the longest increasing subsequence in an array."
+    },
+    {
+      "title": "Kth Largest Element in an Array",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Heap", "Sorting"],
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "description": "Find the kth largest element in an unsorted array."
+    },
+    {
+      "title": "Subarray Sums I",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Prefix Sum", "Array"],
+      "url": "https://cses.fi/problemset/task/1660",
+      "description": "Count the number of subarrays whose sum is equal to a given value."
+    },
+    {
+      "title": "Balanced Brackets",
+      "platform": "HackerRank",
+      "difficulty": "Easy",
+      "tags": ["Stack", "String"],
+      "url": "https://www.hackerrank.com/challenges/balanced-brackets/problem",
+      "description": "Determine if a string of brackets is balanced."
+    },
+    {
+      "title": "Chef and Maximum Star Value",
+      "platform": "CodeChef",
+      "difficulty": "Hard",
+      "tags": ["Segment Tree", "Data Structures"],
+      "url": "https://www.codechef.com/problems/CHMAXSV",
+      "description": "Find the maximum star value in an array using efficient data structures."
+    },
+    {
+      "title": "Edit Distance",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Dynamic Programming", "String"],
+      "url": "https://leetcode.com/problems/edit-distance/",
+      "description": "Compute the minimum number of operations required to convert one string to another."
+    },
+    {
+      "title": "Subordinates",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Tree", "DFS"],
+      "url": "https://cses.fi/problemset/task/1674",
+      "description": "Count the number of subordinates for each employee in a company hierarchy."
+    },
+    {
+      "title": "Maximum Subarray Sum",
+      "platform": "AtCoder",
+      "difficulty": "Easy",
+      "tags": ["Array", "Kadane's Algorithm"],
+      "url": "https://atcoder.jp/contests/dp/tasks/dp_b",
+      "description": "Find the maximum sum of a contiguous subarray."
+    },
+    {
+      "title": "Find the Duplicate Number",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Binary Search", "Floyd's Cycle"],
+      "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+      "description": "Find the duplicate number in an array containing n+1 integers where each integer is between 1 and n."
+    },
+    {
+      "title": "Binary Tree Maximum Path Sum",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Tree", "DFS", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+      "description": "Find the maximum path sum in a binary tree."
+    },
+    {
+      "title": "Rectangle Cutting",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Geometry"],
+      "url": "https://cses.fi/problemset/task/1744",
+      "description": "Find the minimum number of cuts needed to divide a rectangle into squares."
+    },
+    {
+      "title": "Word Ladder",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["BFS", "Graph", "String"],
+      "url": "https://leetcode.com/problems/word-ladder/",
+      "description": "Find the shortest transformation sequence from beginWord to endWord."
+    },
+    {
+      "title": "Subarray Divisibility",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Prefix Sum", "Hashing"],
+      "url": "https://cses.fi/problemset/task/1662",
+      "description": "Count the number of subarrays whose sum is divisible by n."
+    },
+    {
+      "title": "Remove K Digits",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Stack", "Greedy"],
+      "url": "https://leetcode.com/problems/remove-k-digits/",
+      "description": "Remove k digits from a number to make it the smallest possible."
+    },
+    {
+      "title": "Special Permutation",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math", "Permutation"],
+      "url": "https://codeforces.com/problemset/problem/1352/C",
+      "description": "Find a permutation of numbers with special properties."
+    },
+    {
+      "title": "Collecting Numbers",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Sorting", "Implementation"],
+      "url": "https://cses.fi/problemset/task/2216",
+      "description": "Find the minimum number of rounds needed to collect numbers in increasing order."
+    },
+    {
+      "title": "Maximum Product Subarray",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/maximum-product-subarray/",
+      "description": "Find the contiguous subarray within an array which has the largest product."
+    },
+    {
+      "title": "Sum of Two Values",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Two Pointers", "Sorting"],
+      "url": "https://cses.fi/problemset/task/1640",
+      "description": "Find two values in an array that sum up to a target value."
+    },
+    {
+      "title": "Find All Anagrams in a String",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "Sliding Window"],
+      "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+      "description": "Find all start indices of anagrams of a pattern in a string."
+    },
+    {
+      "title": "Array Description",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Array"],
+      "url": "https://cses.fi/problemset/task/1746",
+      "description": "Count the number of valid arrays that can be formed under given constraints."
+    },
+    {
+      "title": "Minimum Path Sum",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Grid"],
+      "url": "https://leetcode.com/problems/minimum-path-sum/",
+      "description": "Find a path from top left to bottom right of a grid with minimum sum."
+    },
+    {
+      "title": "House Robber",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Array"],
+      "url": "https://leetcode.com/problems/house-robber/",
+      "description": "Find the maximum amount of money you can rob tonight without alerting the police."
+    },
+    {
+      "title": "Subarray Sums II",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Prefix Sum", "Hashing"],
+      "url": "https://cses.fi/problemset/task/1661",
+      "description": "Count the number of subarrays with a given sum."
+    },
+    {
+      "title": "Unique Paths",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Combinatorics"],
+      "url": "https://leetcode.com/problems/unique-paths/",
+      "description": "Count the number of unique paths from top-left to bottom-right in a grid."
+    },
+    {
+      "title": "Maximum Subarray Sum II",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Sliding Window", "Deque"],
+      "url": "https://cses.fi/problemset/task/1644",
+      "description": "Find the maximum sum of a subarray with length between a and b."
+    },
+    {
+      "title": "Longest Consecutive Sequence",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "Union Find"],
+      "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "description": "Find the length of the longest consecutive elements sequence."
+    },
+    {
+      "title": "Palindrome Reorder",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["String", "Hashing"],
+      "url": "https://cses.fi/problemset/task/1755",
+      "description": "Rearrange the letters of a string to form a palindrome, if possible."
+    },
+    {
+      "title": "Maximum Product of Splitted Binary Tree",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Tree", "DFS"],
+      "url": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/",
+      "description": "Find the maximum product of the sums of two subtrees of a binary tree."
+    },
+    {
+      "title": "Movie Festival",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://cses.fi/problemset/task/1629",
+      "description": "Find the maximum number of movies one can watch without overlap."
+    },
+    {
+      "title": "Minimum Window Substring",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Hash Table", "Sliding Window"],
+      "url": "https://leetcode.com/problems/minimum-window-substring/",
+      "description": "Find the minimum window in a string which contains all the characters of another string."
+    },
+    {
+      "title": "Array and Operations",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Array", "Math"],
+      "url": "https://codeforces.com/problemset/problem/1552/A",
+      "description": "Perform operations on an array to achieve a certain property."
+    },
+    {
+      "title": "Find the Town Judge",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Graph", "Array"],
+      "url": "https://leetcode.com/problems/find-the-town-judge/",
+      "description": "Find the town judge given trust relationships among n people."
+    },
+    {
+      "title": "Sum of Round Numbers",
+      "platform": "Codeforces",
+      "difficulty": "Easy",
+      "tags": ["Math", "Implementation"],
+      "url": "https://codeforces.com/problemset/problem/1352/A",
+      "description": "Express a number as a sum of round numbers."
+    },
+    {
+      "title": "Maximum Subtree Sum",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Tree", "DFS"],
+      "url": "https://practice.geeksforgeeks.org/problems/maximum-sub-tree-sum/1",
+      "description": "Find the maximum sum of a subtree in a binary tree."
+    },
+    {
+      "title": "Sum of Three Values",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Two Pointers", "Sorting"],
+      "url": "https://cses.fi/problemset/task/1641",
+      "description": "Find three values in an array that sum up to a target value."
+    },
+    {
+      "title": "Find Center of Star Graph",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Graph"],
+      "url": "https://leetcode.com/problems/find-center-of-star-graph/",
+      "description": "Find the center node of a star graph."
+    },
+    {
+      "title": "Remove Nth Node From End of List",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Linked List", "Two Pointers"],
+      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "description": "Remove the nth node from the end of a linked list."
+    },
+    {
+      "title": "Sum of Distances in Tree",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Tree", "DFS", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+      "description": "Find the sum of distances from each node to all other nodes in a tree."
+    },
+    {
+      "title": "Cool Partition",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://codeforces.com/problemset/problem/2117/C",
+      "description": "Yousef has an array a of size n. He wants to partition the array into one or more contiguous segments such that each element ai belongs to exactly one segment."
+    },
+    {
+      "title": "Retaliation",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Binary Search", "Math"],
+      "url": "https://codeforces.com/problemset/problem/2117/D",
+      "description": "Yousef wants to explode an array a1,a2,…,an. An array gets exploded when all of its elements become equal to zero."
+    },
+    {
+      "title": "Omg Graph",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Graph", "DFS", "BFS", "Union Find"],
+      "url": "https://codeforces.com/problemset/problem/2117/G",
+      "description": "Find the minimum possible value of (maximum edge weight + minimum edge weight) among all paths from vertex 1 to n in a weighted undirected connected graph."
+    },
+    {
+      "title": "Incessant Rain",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Divide and Conquer", "Sorting"],
+      "url": "https://codeforces.com/problemset/problem/2117/H",
+      "description": "After each array update, determine the largest k such that some element is a k-majority in some subarray, meaning it appears at least ⌊(subarray length+1)/2⌋+k times."
+    },
+    {
+      "title": "Build an Array",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Greedy", "Math"],
+      "url": "https://codeforces.com/problemset/problem/2114/G",
+      "description": "Given a target array a of length n and an operation count k, determine if a can be formed from an empty array by exactly k operations, where an operation involves adding an integer to either end, followed by merging any adjacent identical elements by summing them."
+    },
+    {
+      "title": "Two Arrays",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Graph", "DFS", "Math"],
+      "url": "https://codeforces.com/problemset/problem/2113/F",
+      "description": "Given two arrays a and b of length n, we can swap ai and bi for any index i. The goal is to maximize f(a)+f(b), where f(c) is the number of distinct elements in array c, and then output the modified arrays."
+    },
+    {
+      "title": "Fibonacci Cubes",
+      "platform": "Codeforces",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Math"],
+      "url": "https://codeforces.com/problemset/problem/2111/B",
+      "description": "Given n Fibonacci cubes and m boxes, determine for each box if all cubes can fit, following rules: aligned with box, no empty space below, and no larger cube on smaller."
+    },
+    {
+      "title": "D/D/D",
+      "platform": "Codeforces",
+      "difficulty": "Hard",
+      "tags": ["Graph", "DFS", "Greedy"],
+      "url": "https://codeforces.com/problemset/problem/2109/D",
+      "description": "You are given a graph, a multiset A of lengths, and a starting vertex (1). For each vertex i, determine if it's possible to reach i by repeatedly: 1) choosing a length k from A and removing it, and 2) traversing a walk of exactly k edges. Each check for a vertex i is independent."
+    },
+    {
+      "title": "Find All Duplicates in an Array",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Hash Table"],
+      "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+      "description": "Find all elements that appear twice in an array."
+    },
+    {
+      "title": "Maximum Subset XOR",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Hard",
+      "tags": ["Bit Manipulation", "Greedy"],
+      "url": "https://practice.geeksforgeeks.org/problems/maximum-subset-xor/1",
+      "description": "Find the maximum XOR value of any subset of a given array."
+    },
+    {
+      "title": "Subarray with Given XOR",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Hashing", "Prefix Sum"],
+      "url": "https://www.interviewbit.com/problems/subarray-with-given-xor/",
+      "description": "Count the number of subarrays with a given XOR."
+    },
+    {
+      "title": "Find the Smallest Divisor Given a Threshold",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Binary Search", "Array"],
+      "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
+      "description": "Find the smallest divisor such that the sum of the division results is less than or equal to a threshold."
+    },
+    {
+      "title": "Kth Smallest Element in a BST",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Tree", "DFS", "BST"],
+      "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+      "description": "Find the kth smallest element in a binary search tree."
+    },
+    {
+      "title": "Find the Number of Islands",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["DFS", "BFS", "Matrix"],
+      "url": "https://leetcode.com/problems/number-of-islands/",
+      "description": "Count the number of islands in a 2D grid."
+    },
+    {
+      "title": "Find the Celebrity",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Two Pointers"],
+      "url": "https://leetcode.com/problems/find-the-celebrity/",
+      "description": "Find the celebrity in a group of people."
+    },
+    {
+      "title": "Find the Kth Missing Positive Number",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Array", "Binary Search"],
+      "url": "https://leetcode.com/problems/kth-missing-positive-number/",
+      "description": "Find the kth missing positive integer from a sorted array."
+    },
+    {
+      "title": "Find the Intersection Point of Y Linked Lists",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Medium",
+      "tags": ["Linked List", "Two Pointers"],
+      "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
+      "description": "Find the intersection point of two Y-shaped linked lists."
+    },
+    {
+      "title": "Find the Minimum Number of Coins",
+      "platform": "GeeksForGeeks",
+      "difficulty": "Easy",
+      "tags": ["Greedy", "Array"],
+      "url": "https://practice.geeksforgeeks.org/problems/number-of-coins1824/1",
+      "description": "Find the minimum number of coins to make a given value."
+    },
+    {
+      "title": "Find the Maximum Area of Island",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["DFS", "BFS", "Matrix"],
+      "url": "https://leetcode.com/problems/max-area-of-island/",
+      "description": "Find the maximum area of an island in a 2D grid."
+    },
+    {
+      "title": "Find the Number of Provinces",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["DFS", "Union Find"],
+      "url": "https://leetcode.com/problems/number-of-provinces/",
+      "description": "Find the number of provinces in a network of cities."
+    },
+    {
+      "title": "Find the Longest Common Prefix",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["String", "Trie"],
+      "url": "https://leetcode.com/problems/longest-common-prefix/",
+      "description": "Find the longest common prefix among an array of strings."
+    },
+    {
+      "title": "Find the Maximum Length of Pair Chain",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+      "description": "Find the length of the longest chain which can be formed with given pairs."
+    },
+    {
+      "title": "Find the Minimum Cost to Connect Sticks",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Heap", "Greedy"],
+      "url": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+      "description": "Connect sticks with minimum cost using a heap."
+    },
+    {
+      "title": "Find the Maximum Width of Binary Tree",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Tree", "BFS"],
+      "url": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+      "description": "Find the maximum width of a binary tree."
+    },
+    {
+      "title": "Find the Minimum Number of Arrows to Burst Balloons",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Sorting"],
+      "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+      "description": "Find the minimum number of arrows required to burst all balloons."
+    },
+    {
+      "title": "Find the Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Sorting"],
+      "url": "https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/",
+      "description": "Find the maximum area of a piece of cake after making horizontal and vertical cuts."
+    },
+    {
+      "title": "Find the Minimum Number of Operations to Move All Balls to Each Box",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Prefix Sum"],
+      "url": "https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/",
+      "description": "Find the minimum number of operations to move all balls to each box."
+    },
+    {
+      "title": "Find the Maximum Number of Events That Can Be Attended",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Heap"],
+      "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/",
+      "description": "Find the maximum number of events that can be attended given their start and end days."
+    },
+    {
+      "title": "Find the Minimum Path Sum in a Triangle",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Array"],
+      "url": "https://leetcode.com/problems/triangle/",
+      "description": "Find the minimum path sum from top to bottom in a triangle."
+    },
+    {
+      "title": "Find the Maximum Product of Word Lengths",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Bit Manipulation", "Array"],
+      "url": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+      "description": "Find the maximum product of lengths of two words that do not share common letters."
+    },
+    {
+      "title": "Find the Minimum Number of Swaps to Make the String Balanced",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Stack", "String"],
+      "url": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/",
+      "description": "Find the minimum number of swaps to make a string of brackets balanced."
+    },
+    {
+      "title": "Find the Maximum Number of Points on a Line",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Hash Table", "Geometry"],
+      "url": "https://leetcode.com/problems/max-points-on-a-line/",
+      "description": "Find the maximum number of points that lie on the same straight line."
+    },
+    {
+      "title": "Find the Minimum Number of Refueling Stops",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Greedy", "Heap"],
+      "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+      "description": "Find the minimum number of refueling stops to reach the target."
+    },
+    {
+      "title": "Find the Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Hash Table"],
+      "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+      "description": "Find the maximum number of non-overlapping subarrays with sum equals target."
+    },
+    {
+      "title": "Find the Minimum Number of Steps to Make Two Strings Anagram",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "String"],
+      "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
+      "description": "Find the minimum number of steps to make two strings anagrams."
+    },
+    {
+      "title": "Find the Maximum Number of Occurrences of a Substring",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "String"],
+      "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+      "description": "Find the maximum number of occurrences of a substring in a string."
+    },
+    {
+      "title": "Find the Minimum Number of Taps to Open to Water a Garden",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "tags": ["Greedy", "DP"],
+      "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+      "description": "Find the minimum number of taps to open to water the entire garden."
+    },
+    {
+      "title": "Find the Maximum Number of Vowels in a Substring of Given Length",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Sliding Window", "String"],
+      "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/",
+      "description": "Find the maximum number of vowels in a substring of given length."
+    },
+    {
+      "title": "Find the Minimum Number of Operations to Make Array Equal",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Math", "Array"],
+      "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal/",
+      "description": "Find the minimum number of operations to make all array elements equal."
+    },
+    {
+      "title": "Find the Maximum Number of Balloons",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "tags": ["Hash Table", "String"],
+      "url": "https://leetcode.com/problems/maximum-number-of-balloons/",
+      "description": "Find the maximum number of instances of the word 'balloon' that can be formed."
+    },
+    {
+      "title": "Find the Minimum Number of Flips to Make a Binary String Alternating",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String", "Greedy"],
+      "url": "https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-string-alternating/",
+      "description": "Find the minimum number of flips to make a binary string alternating."
+    },
+    {
+      "title": "Find the Maximum Number of Strings Formed by 0s and 1s",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["DP", "Array"],
+      "url": "https://leetcode.com/problems/ones-and-zeroes/",
+      "description": "Find the maximum number of strings that can be formed with a given number of 0s and 1s."
+    },
+    {
+      "title": "Find the Minimum Number of Days to Make m Bouquets",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Binary Search", "Array"],
+      "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
+      "description": "Find the minimum number of days to make m bouquets from flowers."
+    },
+    {
+      "title": "Find the Maximum Number of Coins You Can Get",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Greedy", "Array"],
+      "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get/",
+      "description": "Find the maximum number of coins you can get from piles."
+    },
+    {
+      "title": "Find the Minimum Number of Swaps to Make Strings Equal",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["String", "Greedy"],
+      "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+      "description": "Find the minimum number of swaps to make two strings equal."
+    },
+    {
+      "title": "Find the Minimum Number of Operations to Make Array Increasing",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Greedy"],
+      "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/",
+      "description": "Find the minimum number of operations to make an array strictly increasing."
+    },
+    {
+      "title": "Find the Minimum Number of Operations to Make Array Alternating",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "tags": ["Array", "Greedy"],
+      "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/",
+      "description": "Find the minimum number of operations to make an array alternating."
+    },
+    {
+      "title": "Maximum Sum Path in Binary Tree",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["Tree", "Dynamic Programming", "Recursion"],
+      "url": "https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/",
+      "description": "Find the maximum sum of any path from any node to any other node in a binary tree."
+    },
+    {
+      "title": "Rotate Matrix",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Array", "Matrix"],
+      "url": "https://www.interviewbit.com/problems/rotate-matrix/",
+      "description": "Rotate an NxN matrix by 90 degrees clockwise in-place."
+    },
+    {
+      "title": "Valid Sudoku",
+      "platform": "InterviewBit",
+      "difficulty": "Easy",
+      "tags": ["Array", "Hash Table"],
+      "url": "https://www.interviewbit.com/problems/valid-sudoku/",
+      "description": "Determine if a partially filled 9x9 Sudoku board is valid."
+    },
+    {
+      "title": "Longest Substring Without Repeating Characters",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["String", "Sliding Window", "Hash Table"],
+      "url": "https://www.interviewbit.com/problems/longest-substring-without-repeat/",
+      "description": "Find the length of the longest substring without repeating characters."
+    },
+    {
+      "title": "Generate Parentheses",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Backtracking", "String", "Recursion"],
+      "url": "https://www.interviewbit.com/problems/generate-all-parentheses/",
+      "description": "Generate all combinations of well-formed parentheses for n pairs."
+    },
+    {
+      "title": "Merge K Sorted Lists",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["Linked List", "Heap", "Divide and Conquer"],
+      "url": "https://www.interviewbit.com/problems/merge-k-sorted-lists/",
+      "description": "Merge k sorted linked lists and return it as one sorted list."
+    },
+    {
+      "title": "Word Ladder",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["BFS", "String", "Graph"],
+      "url": "https://www.interviewbit.com/problems/word-ladder-i/",
+      "description": "Find the shortest transformation sequence from beginWord to endWord."
+    },
+    {
+      "title": "Add Two Numbers as Lists",
+      "platform": "InterviewBit",
+      "difficulty": "Easy",
+      "tags": ["Linked List", "Math"],
+      "url": "https://www.interviewbit.com/problems/add-two-numbers-as-lists/",
+      "description": "Add two numbers represented as linked lists and return the sum as a linked list."
+    },
+    {
+      "title": "Container With Most Water",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Array", "Two Pointers"],
+      "url": "https://www.interviewbit.com/problems/container-with-most-water/",
+      "description": "Find two lines that together with the x-axis forms a container that holds the most water."
+    },
+    {
+      "title": "Word Break",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "String"],
+      "url": "https://www.interviewbit.com/problems/word-break/",
+      "description": "Determine if a string can be segmented into a space-separated sequence of dictionary words."
+    },
+    {
+      "title": "Minimum Window Substring",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["String", "Sliding Window", "Hash Table"],
+      "url": "https://www.interviewbit.com/problems/window-string/",
+      "description": "Find the minimum window in string S that contains all characters of string T."
+    },
+    {
+      "title": "Palindrome Partitioning",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Backtracking", "String", "Dynamic Programming"],
+      "url": "https://www.interviewbit.com/problems/palindrome-partitioning/",
+      "description": "Partition a string such that every substring is a palindrome."
+    },
+    {
+      "title": "First Missing Positive",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["Array", "Hash Table"],
+      "url": "https://www.interviewbit.com/problems/first-missing-positive/",
+      "description": "Find the smallest missing positive integer in an unsorted integer array."
+    },
+    {
+      "title": "Edit Distance",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["Dynamic Programming", "String"],
+      "url": "https://www.interviewbit.com/problems/edit-distance/",
+      "description": "Find the minimum number of operations to convert one string to another."
+    },
+    {
+      "title": "Kth Largest Element",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Array", "Heap", "Quick Select"],
+      "url": "https://www.interviewbit.com/problems/kth-largest-element/",
+      "description": "Find the kth largest element in an unsorted array."
+    },
+    {
+      "title": "Spiral Order Matrix",
+      "platform": "InterviewBit",
+      "difficulty": "Easy",
+      "tags": ["Array", "Matrix"],
+      "url": "https://www.interviewbit.com/problems/spiral-order-matrix-i/",
+      "description": "Return the elements of an NxM matrix in spiral order."
+    },
+    {
+      "title": "Subset Sum Problem",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Dynamic Programming", "Array"],
+      "url": "https://www.interviewbit.com/problems/subset-sum-problem/",
+      "description": "Determine if there exists a subset with sum equal to given target."
+    },
+    {
+      "title": "Clone Graph",
+      "platform": "InterviewBit",
+      "difficulty": "Medium",
+      "tags": ["Graph", "DFS", "BFS", "Hash Table"],
+      "url": "https://www.interviewbit.com/problems/clone-graph/",
+      "description": "Return a deep copy of an undirected graph."
+    },
+    {
+      "title": "Largest Rectangle in Histogram",
+      "platform": "InterviewBit",
+      "difficulty": "Hard",
+      "tags": ["Stack", "Array"],
+      "url": "https://www.interviewbit.com/problems/largest-rectangle-in-histogram/",
+      "description": "Find the area of the largest rectangle that can be formed in a histogram."
+    },
+    {
+      "title": "Valid Binary Search Tree",
+      "platform": "InterviewBit",
+      "difficulty": "Easy",
+      "tags": ["Tree", "Binary Search Tree", "Recursion"],
+      "url": "https://www.interviewbit.com/problems/valid-binary-search-tree/",
+      "description": "Determine if a binary tree is a valid binary search tree."
+    },
+    {
+      "title": "Building Roads",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Graph", "Connected Components", "Union Find"],
+      "url": "https://cses.fi/problemset/task/1666",
+      "description": "Find the minimum number of roads needed to connect all cities in a country."
+    },
+    {
+      "title": "Message Route",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Graph", "BFS", "Shortest Path"],
+      "url": "https://cses.fi/problemset/task/1667",
+      "description": "Find the shortest path between two nodes in an unweighted graph using BFS."
+    },
+    {
+      "title": "Building Teams",
+      "platform": "CSES",
+      "difficulty": "Easy",
+      "tags": ["Graph", "Bipartite", "DFS", "Coloring"],
+      "url": "https://cses.fi/problemset/task/1668",
+      "description": "Determine if a graph is bipartite and assign nodes to two teams."
+    },
+    {
+      "title": "Round Trip",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Cycle Detection", "DFS"],
+      "url": "https://cses.fi/problemset/task/1669",
+      "description": "Find a cycle in an undirected graph and output the nodes in the cycle."
+    },
+    {
+      "title": "Monsters",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "BFS", "Multi-source BFS", "Grid"],
+      "url": "https://cses.fi/problemset/task/1194",
+      "description": "Find if you can escape from monsters in a grid maze using multi-source BFS."
+    },
+    {
+      "title": "Shortest Routes II",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Floyd Warshall", "All Pairs Shortest Path"],
+      "url": "https://cses.fi/problemset/task/1672",
+      "description": "Process queries for shortest distance between any two nodes using Floyd-Warshall."
+    },
+    {
+      "title": "High Score",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Bellman Ford", "Negative Cycles", "Longest Path"],
+      "url": "https://cses.fi/problemset/task/1673",
+      "description": "Find the maximum score path in a graph, handling negative cycles."
+    },
+    {
+      "title": "Flight Discount",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Dijkstra", "Modified Shortest Path"],
+      "url": "https://cses.fi/problemset/task/1195",
+      "description": "Find shortest path with option to use one discounted flight."
+    },
+    {
+      "title": "Cycle Finding",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Cycle Detection", "Bellman Ford"],
+      "url": "https://cses.fi/problemset/task/1197",
+      "description": "Find a negative cycle in a directed graph using Bellman-Ford algorithm."
+    },
+    {
+      "title": "Flight Routes",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "K Shortest Paths", "Dijkstra", "Priority Queue"],
+      "url": "https://cses.fi/problemset/task/1196",
+      "description": "Find the k shortest paths from source to destination."
+    },
+    {
+      "title": "Round Trip II",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Cycle Detection", "DFS", "Directed Graph"],
+      "url": "https://cses.fi/problemset/task/1678",
+      "description": "Find a cycle in a directed graph and output the cycle."
+    },
+    {
+      "title": "Course Schedule",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Topological Sort", "DFS", "Cycle Detection"],
+      "url": "https://cses.fi/problemset/task/1679",
+      "description": "Determine a valid order to complete courses with prerequisites (topological sort)."
+    },
+    {
+      "title": "Longest Flight Route",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "DAG", "Longest Path", "Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1680",
+      "description": "Find the longest path in a directed acyclic graph (DAG)."
+    },
+    {
+      "title": "Game Routes",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "DAG", "Dynamic Programming", "Path Counting"],
+      "url": "https://cses.fi/problemset/task/1681",
+      "description": "Count the number of paths from start to end in a DAG."
+    },
+    {
+      "title": "Investigation",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Dijkstra", "Path Counting", "Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1202",
+      "description": "Find shortest routes and count paths, minimum/maximum flights on shortest routes."
+    },
+    {
+      "title": "Planets Queries I",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Binary Lifting", "Functional Graph"],
+      "url": "https://cses.fi/problemset/task/1750",
+      "description": "Process queries on a functional graph using binary lifting technique."
+    },
+    {
+      "title": "Planets Queries II",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": [
+        "Graph",
+        "Functional Graph",
+        "Cycle Detection",
+        "Binary Lifting"
+      ],
+      "url": "https://cses.fi/problemset/task/1751",
+      "description": "Advanced queries on functional graphs with cycle detection."
+    },
+    {
+      "title": "Planets Cycles",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Functional Graph", "Cycle Detection"],
+      "url": "https://cses.fi/problemset/task/1179",
+      "description": "Find cycle information in a functional graph for each starting node."
+    },
+    {
+      "title": "Road Reparation",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "MST", "Kruskal", "Union Find"],
+      "url": "https://cses.fi/problemset/task/1675",
+      "description": "Find minimum spanning tree to connect all cities with minimum cost."
+    },
+    {
+      "title": "Road Construction",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "Union Find", "Connected Components"],
+      "url": "https://cses.fi/problemset/task/1676",
+      "description": "Process road construction queries and track connected components."
+    },
+    {
+      "title": "Flight Routes Check",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "SCC", "Strongly Connected Components", "DFS"],
+      "url": "https://cses.fi/problemset/task/1682",
+      "description": "Check if you can travel between any two cities (strongly connected components)."
+    },
+    {
+      "title": "Planets and Kingdoms",
+      "platform": "CSES",
+      "difficulty": "Medium",
+      "tags": ["Graph", "SCC", "Kosaraju", "Tarjan"],
+      "url": "https://cses.fi/problemset/task/1683",
+      "description": "Find strongly connected components and assign kingdom numbers."
+    },
+    {
+      "title": "Giant Pizza",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "2-SAT", "SCC", "Boolean Satisfiability"],
+      "url": "https://cses.fi/problemset/task/1684",
+      "description": "Solve 2-SAT problem to determine pizza toppings that satisfy all friends."
+    },
+    {
+      "title": "Coin Collector",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "SCC", "DAG", "Dynamic Programming"],
+      "url": "https://cses.fi/problemset/task/1686",
+      "description": "Collect maximum coins in a graph by condensing SCCs and solving on DAG."
+    },
+    {
+      "title": "Mail Delivery",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Eulerian Path", "Hierholzer"],
+      "url": "https://cses.fi/problemset/task/1691",
+      "description": "Find Eulerian path in a graph (visit every edge exactly once)."
+    },
+    {
+      "title": "De Bruijn Sequence",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Eulerian Path", "De Bruijn", "String"],
+      "url": "https://cses.fi/problemset/task/1692",
+      "description": "Construct De Bruijn sequence using Eulerian path in De Bruijn graph."
+    },
+    {
+      "title": "Teleporters Path",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Eulerian Path", "Directed Graph"],
+      "url": "https://cses.fi/problemset/task/1693",
+      "description": "Find Eulerian path in a directed graph from node 1 to node n."
+    },
+    {
+      "title": "Hamiltonian Flights",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Hamiltonian Path", "Bitmask DP", "TSP"],
+      "url": "https://cses.fi/problemset/task/1690",
+      "description": "Count Hamiltonian paths from node 1 to node n using bitmask DP."
+    },
+    {
+      "title": "Knight's Tour",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Hamiltonian Path", "Backtracking", "Chess"],
+      "url": "https://cses.fi/problemset/task/1689",
+      "description": "Find a knight's tour on a chessboard (visit each square exactly once)."
+    },
+    {
+      "title": "Download Speed",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Max Flow", "Ford Fulkerson", "Network Flow"],
+      "url": "https://cses.fi/problemset/task/1694",
+      "description": "Find maximum flow in a network from source to sink."
+    },
+    {
+      "title": "Police Chase",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Min Cut", "Max Flow", "Network Flow"],
+      "url": "https://cses.fi/problemset/task/1695",
+      "description": "Find minimum cut in a network (minimum edges to remove to disconnect source and sink)."
+    },
+    {
+      "title": "School Dance",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Bipartite Matching", "Maximum Matching"],
+      "url": "https://cses.fi/problemset/task/1696",
+      "description": "Find maximum matching in a bipartite graph (maximum number of dance pairs)."
+    },
+    {
+      "title": "Distinct Routes",
+      "platform": "CSES",
+      "difficulty": "Hard",
+      "tags": ["Graph", "Max Flow", "Edge Disjoint Paths"],
+      "url": "https://cses.fi/problemset/task/1711",
+      "description": "Find maximum number of edge-disjoint paths from source to sink."
+    }
+  ]
 }

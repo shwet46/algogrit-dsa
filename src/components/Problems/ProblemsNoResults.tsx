@@ -1,5 +1,5 @@
-import React from "react";
-import { Search } from "lucide-react";
+import React from 'react';
+import { Search } from 'lucide-react';
 
 type ProblemsNoResultsProps = {
   onClear: () => void;
@@ -12,7 +12,8 @@ const ProblemsNoResults: React.FC<ProblemsNoResultsProps> = ({ onClear }) => (
     </div>
     <h3 className="text-2xl font-bold text-white mb-3">No problems found</h3>
     <p className="text-[#7c8bd2] mb-8 text-lg max-w-md mx-auto">
-      Try adjusting your search criteria or filter settings to find more problems
+      Try adjusting your search criteria or filter settings to find more
+      problems
     </p>
     <button
       onClick={onClear}

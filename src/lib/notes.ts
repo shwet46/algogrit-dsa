@@ -1,5 +1,4 @@
-
-import { db } from "@/firebase/config";
+import { db } from '@/firebase/config';
 import {
   collection,
   addDoc,
@@ -10,10 +9,10 @@ import {
   updateDoc,
   deleteDoc,
   serverTimestamp,
-} from "firebase/firestore";
-import { Note } from "@/types/note";
+} from 'firebase/firestore';
+import { Note } from '@/types/note';
 
-const notesCollection = collection(db, "notes");
+const notesCollection = collection(db, 'notes');
 
 export const createNote = async (note: Note) => {
   const docRef = await addDoc(notesCollection, {
@@ -25,13 +24,13 @@ export const createNote = async (note: Note) => {
 };
 
 export const getUserNotes = async (userId: string) => {
-  const q = query(notesCollection, where("userId", "==", userId));
+  const q = query(notesCollection, where('userId', '==', userId));
   const snapshot = await getDocs(q);
   return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
 
 export const updateNote = async (id: string, updatedFields: Partial<Note>) => {
-  const noteRef = doc(db, "notes", id);
+  const noteRef = doc(db, 'notes', id);
   await updateDoc(noteRef, {
     ...updatedFields,
     updatedAt: serverTimestamp(),
@@ -39,5 +38,5 @@ export const updateNote = async (id: string, updatedFields: Partial<Note>) => {
 };
 
 export const deleteNote = async (id: string) => {
-  await deleteDoc(doc(db, "notes", id));
+  await deleteDoc(doc(db, 'notes', id));
 };

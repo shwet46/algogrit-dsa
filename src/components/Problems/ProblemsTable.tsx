@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { CheckCircle, Circle, ExternalLink } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "../../context/authContext";
-import ProblemsSignInPrompt from "./ProblemsSignInPrompt";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { CheckCircle, Circle, ExternalLink, Copy, Clock } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useAuth } from '../../context/authContext';
+import ProblemsSignInPrompt from './ProblemsSignInPrompt';
 
 type Problem = {
   title: string;
@@ -31,7 +31,9 @@ type ProblemsTableProps = {
   startIndex: number;
   toggleCheck: (id: number) => void;
   loading?: boolean;
-  getSolvedProblemWithTimestamp?: (problemIndex: number) => SolvedProblemDetail | undefined;
+  getSolvedProblemWithTimestamp?: (
+    problemIndex: number
+  ) => SolvedProblemDetail | undefined;
 };
 
 const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({
@@ -44,47 +46,59 @@ const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({
 }) => {
   const { user } = useAuth();
   const [showPrompt, setShowPrompt] = useState(false);
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
-  const saveUserSolvedProblem = async (problemIndex: number, solved: boolean) => {
-    if (!user) return;
-    try {
-      await fetch("/api/user/solved-problems", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: user.uid,
-          problemIndex,
-          solved,
-        }),
-      });
-    } catch (err) {
-      console.error("Failed to save solved problem:", err);
-    }
-  };
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
 
   const handleTick = (id: number) => {
     if (!user) {
       setShowPrompt(true);
       return;
     }
-    const isCurrentlySolved = checked.includes(id);
     toggleCheck(id);
-    saveUserSolvedProblem(id, !isCurrentlySolved);
+  };
+
+  const handleCopy = async (url: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 1200);
+    } catch {
+      // no-op
+    }
   };
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="w-10 h-10 border-4 border-[#7c8bd2] border-t-transparent rounded-full animate-spin"></div>
+      <div className="overflow-x-auto rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl bg-zinc-950/40 backdrop-blur-md border border-[#7c8bd2]/25">
+        <div className="p-4 md:p-6">
+          <div className="animate-pulse space-y-4">
+            {[...Array(5)].map((_, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-1 md:grid-cols-6 gap-3 md:gap-6"
+              >
+                <div className="h-6 bg-zinc-800/70 rounded md:col-span-1" />
+                <div className="h-6 bg-zinc-800/70 rounded md:col-span-2" />
+                <div className="h-6 bg-zinc-800/70 rounded md:col-span-1" />
+                <div className="h-6 bg-zinc-800/70 rounded md:col-span-1" />
+                <div className="h-6 bg-zinc-800/70 rounded md:col-span-1" />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
     <>
-      {/* Popup for sign in reminder */}
+      {/* Popup for sign in */}
       {showPrompt && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="relative max-w-md w-full rounded-2xl shadow-2xl p-0 overflow-hidden border-2 border-[#7c8bd2] bg-gradient-to-br from-[#23243a] via-[#2e3261] to-[#5d6bb7]">
@@ -97,173 +111,305 @@ const ProblemsTable: React.FC<ProblemsTableProps & { loading?: boolean }> = ({
               ×
             </button>
             <div className="p-0">
-              <ProblemsSignInPrompt onSignIn={() => { setShowPrompt(false); /* trigger your sign in flow here */ }} />
+              <ProblemsSignInPrompt
+                onSignIn={() => {
+                  setShowPrompt(false);
+                }}
+              />
             </div>
           </div>
         </div>
       )}
-      <div className="overflow-x-auto rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl bg-zinc-900/40 backdrop-blur-md border border-[#7c8bd2]/30">
-        <table className="min-w-full divide-y divide-[#7c8bd2]/20 text-xs sm:text-sm">
-          <thead className="hidden md:table-header-group">
-            <tr className="bg-gradient-to-r from-[#7c8bd2]/20 to-[#5d6bb7]/20">
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Status</th>
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Problem</th>
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Platform</th>
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Difficulty</th>
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Tags</th>
-              <th className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-6 text-left font-bold text-[#7c8bd2] uppercase tracking-wider">Action</th>
+      <div className="overflow-x-auto rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl bg-zinc-900/40 backdrop-blur-md border border-[#7c8bd2]/25">
+        <table className="min-w-full divide-y divide-[#7c8bd2]/15 text-xs sm:text-sm">
+          <caption className="sr-only">
+            Practice problems table with status, platform, difficulty, tags, and
+            actions
+          </caption>
+          <thead className="hidden md:table-header-group sticky top-0 z-20 backdrop-blur bg-zinc-800/70 border-b border-[#7c8bd2]/20">
+            <tr>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Status
+              </th>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Problem
+              </th>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Platform
+              </th>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Difficulty
+              </th>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Tags
+              </th>
+              <th
+                scope="col"
+                className="px-1 sm:px-2 md:px-4 lg:px-8 py-2 sm:py-3 md:py-5 text-left font-semibold text-[#c6cbf5] uppercase tracking-wider"
+              >
+                Action
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#7c8bd2]/10">
             {visibleProblems.map((problem, idx) => {
               const globalIndex = startIndex + idx;
+              const solvedDetail = getSolvedProblemWithTimestamp?.(globalIndex);
               const isSolved = getSolvedProblemWithTimestamp
-                ? Boolean(getSolvedProblemWithTimestamp(globalIndex))
+                ? Boolean(solvedDetail)
                 : checked.includes(globalIndex);
+              const isEvenRow = idx % 2 === 1;
+
               return (
-                <tr key={globalIndex} className={cn(
-                  "transition-all duration-300 hover:bg-gradient-to-r hover:from-[#7c8bd2]/10 hover:to-[#5d6bb7]/10 group block md:table-row w-full mb-4 md:mb-0 rounded-xl md:rounded-none bg-zinc-900/60 md:bg-transparent p-4 md:p-0",
-                  isSolved && "bg-gradient-to-r from-green-500/10 to-emerald-500/10"
-                )}>
+                <tr
+                  key={globalIndex}
+                  className={cn(
+                    'transition-colors duration-200 group block md:table-row w-full mb-3 md:mb-0 rounded-xl md:rounded-none bg-zinc-900/60 md:bg-transparent p-4 md:p-0',
+
+                    !isSolved && isEvenRow && 'md:bg-zinc-900/20',
+                    'hover:bg-zinc-900/70 md:hover:bg-zinc-900/40',
+                    isSolved && 'md:border-l-4 md:border-l-emerald-400/50'
+                  )}
+                >
                   <td colSpan={6} className="block md:hidden p-0">
-                    <div className="flex flex-col gap-2 p-4 rounded-xl border border-[#7c8bd2]/20 bg-zinc-900/80">
-                      {/* Removed # from mobile view */}
+                    <div className="flex flex-col gap-2 p-4 rounded-xl border border-[#7c8bd2]/20 bg-zinc-950/70">
                       <div className="flex items-center justify-between">
-                        <span></span>
+                        <span className="text-xs text-neutral-400">
+                          {isSolved && solvedDetail?.solvedAt && (
+                            <span className="inline-flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5 text-emerald-300" />
+                              Solved on {formatDate(solvedDetail.solvedAt)}
+                            </span>
+                          )}
+                        </span>
                         <button
                           onClick={() => handleTick(globalIndex)}
                           className={cn(
-                            "transition-all duration-300 hover:scale-125 p-2 rounded-full",
-                            isSolved 
-                              ? "text-green-400 hover:text-green-300 bg-green-500/10" 
-                              : "text-[#7c8bd2] hover:text-[#5d6bb7] hover:bg-[#7c8bd2]/10"
+                            'transition-transform duration-150 hover:scale-110 p-2 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-zinc-950',
+                            isSolved
+                              ? 'text-emerald-300 bg-emerald-500/10'
+                              : 'text-[#c6cbf5] hover:bg-[#7c8bd2]/10'
                           )}
-                          aria-label={isSolved ? "Mark as unsolved" : "Mark as solved"}
+                          aria-label={
+                            isSolved ? 'Mark as unsolved' : 'Mark as solved'
+                          }
+                          aria-pressed={isSolved}
+                          title={
+                            isSolved ? 'Unmark as solved' : 'Mark as solved'
+                          }
                         >
                           {isSolved ? (
-                            <CheckCircle className="w-7 h-7" />
+                            <CheckCircle className="w-6 h-6" />
                           ) : (
-                            <Circle className="w-7 h-7" />
+                            <Circle className="w-6 h-6" />
                           )}
                         </button>
                       </div>
-                      <h3 className={cn(
-                        "font-bold text-xl leading-tight transition-colors",
-                        isSolved 
-                          ? "text-green-300 line-through opacity-75" 
-                          : "text-white group-hover:text-[#7c8bd2]"
-                      )}>{problem.title}</h3>
-                      <p className="text-sm text-neutral-300 line-clamp-2 leading-relaxed max-w-md">{problem.description}</p>
+                      <h3
+                        className={cn(
+                          'font-semibold text-lg leading-tight',
+                          isSolved ? 'text-neutral-300' : 'text-white'
+                        )}
+                      >
+                        {problem.title}
+                      </h3>
+                      <p className="text-sm text-neutral-300/90 leading-relaxed max-w-md">
+                        {problem.description}
+                      </p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="inline-flex items-center px-4 py-2 rounded-xl text-sm font-bold bg-gradient-to-r from-[#7c8bd2]/20 to-[#5d6bb7]/20 text-[#7c8bd2] border border-[#7c8bd2]/30">{problem.platform}</span>
-                        <span className={cn(
-                          "inline-flex items-center px-4 py-2 rounded-xl text-sm font-bold border-2",
-                          problem.difficulty === "Easy"
-                            ? "bg-green-500/20 text-green-300 border-green-500/40"
-                            : problem.difficulty === "Medium"
-                            ? "bg-yellow-500/20 text-yellow-300 border-yellow-500/40"
-                            : "bg-red-500/20 text-red-300 border-red-500/40"
-                        )}>{problem.difficulty}</span>
+                        <span className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium text-[#c6cbf5] border border-[#7c8bd2]/40 bg-zinc-900/60">
+                          {problem.platform}
+                        </span>
+                        <span
+                          className={cn(
+                            'inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium border',
+                            problem.difficulty === 'Easy'
+                              ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
+                              : problem.difficulty === 'Medium'
+                                ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
+                                : 'bg-rose-500/10 text-rose-300 border-rose-500/30'
+                          )}
+                        >
+                          {problem.difficulty}
+                        </span>
                       </div>
                       <div className="flex flex-wrap gap-2 max-w-sm">
-                        {problem.tags.slice(0, 3).map(tag => (
+                        {problem.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="inline-flex items-center text-xs px-3 py-1.5 bg-zinc-800/60 text-[#7c8bd2] rounded-lg font-mono border border-[#7c8bd2]/30 hover:border-[#5d6bb7]/50 transition-colors"
+                            className="inline-flex items-center text-[11px] px-2.5 py-1 bg-zinc-900/70 text-[#c6cbf5] rounded-md border border-[#7c8bd2]/30"
                           >
                             {tag}
                           </span>
                         ))}
                         {problem.tags.length > 3 && (
-                          <span className="inline-flex items-center text-xs px-3 py-1.5 bg-zinc-700/60 text-neutral-400 rounded-lg font-mono">
+                          <span className="inline-flex items-center text-[11px] px-2.5 py-1 bg-zinc-800/70 text-neutral-400 rounded-md">
                             +{problem.tags.length - 3}
                           </span>
                         )}
                       </div>
-                      <Link
-                        href={problem.url}
-                        target="_blank"
-                        className="inline-flex items-center gap-3 text-[#7c8bd2] hover:text-white text-sm font-bold transition-all duration-200 hover:underline group-hover:gap-4 bg-[#7c8bd2]/10 hover:bg-[#5d6bb7]/20 px-4 py-2 rounded-xl mt-2"
-                      >
-                        Solve
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
+                      <div className="flex gap-2 mt-1">
+                        <Link
+                          href={problem.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#c6cbf5] hover:text-white text-sm font-medium transition-colors bg-zinc-900/60 hover:bg-zinc-800/60 px-3 py-2 rounded-lg"
+                          title="Open problem in a new tab"
+                        >
+                          Solve
+                          <ExternalLink className="w-4 h-4" />
+                        </Link>
+                        <button
+                          onClick={() => handleCopy(problem.url, globalIndex)}
+                          className="inline-flex items-center gap-2 text-neutral-300 hover:text-white text-sm font-medium transition-colors bg-zinc-900/60 hover:bg-zinc-800/60 px-3 py-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-zinc-950"
+                          title="Copy problem link"
+                        >
+                          <Copy className="w-4 h-4" />
+                          {copiedIndex === globalIndex ? 'Copied' : 'Copy'}
+                          <span
+                            className="sr-only"
+                            aria-live="polite"
+                            role="status"
+                          >
+                            {copiedIndex === globalIndex
+                              ? 'Link copied to clipboard'
+                              : ''}
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </td>
-                  {/* Removed # column from desktop view */}
-                  {/* <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell text-[#7c8bd2] font-mono text-lg font-bold">
-                    {String(globalIndex + 1).padStart(3, '0')}
-                  </td> */}
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
+
+                  {/* Desktop cells */}
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
                     <button
                       onClick={() => handleTick(globalIndex)}
                       className={cn(
-                        "transition-all duration-300 hover:scale-125 p-2 rounded-full",
-                        isSolved 
-                          ? "text-green-400 hover:text-green-300 bg-green-500/10" 
-                          : "text-[#7c8bd2] hover:text-[#5d6bb7] hover:bg-[#7c8bd2]/10"
+                        'transition-transform duration-150 hover:scale-110 p-2 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-zinc-950',
+                        isSolved
+                          ? 'text-emerald-300 bg-emerald-500/10'
+                          : 'text-[#c6cbf5] hover:bg-[#7c8bd2]/10'
                       )}
-                      aria-label={isSolved ? "Mark as unsolved" : "Mark as solved"}
+                      aria-label={
+                        isSolved ? 'Mark as unsolved' : 'Mark as solved'
+                      }
+                      aria-pressed={isSolved}
+                      title={isSolved ? 'Unmark as solved' : 'Mark as solved'}
                     >
                       {isSolved ? (
-                        <CheckCircle className="w-7 h-7" />
+                        <CheckCircle className="w-6 h-6" />
                       ) : (
-                        <Circle className="w-7 h-7" />
+                        <Circle className="w-6 h-6" />
                       )}
                     </button>
                   </td>
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
-                    <div className="space-y-2">
-                      <h3 className={cn(
-                        "font-bold text-xl leading-tight transition-colors",
-                        isSolved 
-                          ? "text-green-300 line-through opacity-75" 
-                          : "text-white group-hover:text-[#7c8bd2]"
-                      )}>{problem.title}</h3>
-                      <p className="text-sm text-neutral-300 line-clamp-2 leading-relaxed max-w-md">{problem.description}</p>
+
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
+                    <div className="space-y-1.5">
+                      <h3
+                        className={cn(
+                          'font-semibold text-base',
+                          isSolved ? 'text-neutral-300' : 'text-white'
+                        )}
+                      >
+                        {problem.title}
+                      </h3>
+                      <p className="text-[13px] text-neutral-300/90 leading-relaxed max-w-xl">
+                        {problem.description}
+                      </p>
+                      {isSolved && solvedDetail?.solvedAt && (
+                        <div className="text-xs text-neutral-400 inline-flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-emerald-300" />
+                          Solved on {formatDate(solvedDetail.solvedAt)}
+                        </div>
+                      )}
                     </div>
                   </td>
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
-                    <span className="inline-flex items-center px-4 py-2 rounded-xl text-sm font-bold bg-gradient-to-r from-[#7c8bd2]/20 to-[#5d6bb7]/20 text-[#7c8bd2] border border-[#7c8bd2]/30">{problem.platform}</span>
+
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
+                    <span className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium text-[#c6cbf5] border border-[#7c8bd2]/40 bg-zinc-900/60">
+                      {problem.platform}
+                    </span>
                   </td>
-                  <td className={cn(
-                    "px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell"
-                  )}>
-                    <span className={cn(
-                      "inline-flex items-center px-4 py-2 rounded-xl text-sm font-bold border-2",
-                      problem.difficulty === "Easy"
-                        ? "bg-green-500/20 text-green-300 border-green-500/40"
-                        : problem.difficulty === "Medium"
-                        ? "bg-yellow-500/20 text-yellow-300 border-yellow-500/40"
-                        : "bg-red-500/20 text-red-300 border-red-500/40"
-                    )}>{problem.difficulty}</span>
+
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
+                    <span
+                      className={cn(
+                        'inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium border',
+                        problem.difficulty === 'Easy'
+                          ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
+                          : problem.difficulty === 'Medium'
+                            ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
+                            : 'bg-rose-500/10 text-rose-300 border-rose-500/30'
+                      )}
+                    >
+                      {problem.difficulty}
+                    </span>
                   </td>
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
+
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
                     <div className="flex flex-wrap gap-2 max-w-sm">
-                      {problem.tags.slice(0, 3).map(tag => (
+                      {problem.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center text-xs px-3 py-1.5 bg-zinc-800/60 text-[#7c8bd2] rounded-lg font-mono border border-[#7c8bd2]/30 hover:border-[#5d6bb7]/50 transition-colors"
+                          className="inline-flex items-center text-[11px] px-2.5 py-1 bg-zinc-900/70 text-[#c6cbf5] rounded-md border border-[#7c8bd2]/30"
                         >
                           {tag}
                         </span>
                       ))}
                       {problem.tags.length > 3 && (
-                        <span className="inline-flex items-center text-xs px-3 py-1.5 bg-zinc-700/60 text-neutral-400 rounded-lg font-mono">
+                        <span className="inline-flex items-center text-[11px] px-2.5 py-1 bg-zinc-800/70 text-neutral-400 rounded-md">
                           +{problem.tags.length - 3}
                         </span>
                       )}
                     </div>
                   </td>
-                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-6 hidden md:table-cell">
-                    <Link
-                      href={problem.url}
-                      target="_blank"
-                      className="inline-flex items-center gap-3 text-[#7c8bd2] hover:text-white text-sm font-bold transition-all duration-200 hover:underline group-hover:gap-4 bg-[#7c8bd2]/10 hover:bg-[#5d6bb7]/20 px-4 py-2 rounded-xl"
-                    >
-                      Solve
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
+
+                  <td className="px-1 sm:px-2 md:px-4 lg:px-8 py-4 sm:py-5 hidden md:table-cell align-middle">
+                    <div className="inline-flex items-center gap-2">
+                      <Link
+                        href={problem.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#c6cbf5] hover:text-white text-sm font-medium transition-colors bg-zinc-900/60 hover:bg-zinc-800/60 px-3 py-2 rounded-lg"
+                        title="Open problem in a new tab"
+                      >
+                        Solve
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                      <button
+                        onClick={() => handleCopy(problem.url, globalIndex)}
+                        className="inline-flex items-center gap-2 text-neutral-300 hover:text-white text-sm font-medium transition-colors bg-zinc-900/60 hover:bg-zinc-800/60 px-3 py-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-zinc-950"
+                        title="Copy problem link"
+                      >
+                        <Copy className="w-4 h-4" />
+                        {copiedIndex === globalIndex ? 'Copied' : 'Copy'}
+                        <span
+                          className="sr-only"
+                          aria-live="polite"
+                          role="status"
+                        >
+                          {copiedIndex === globalIndex
+                            ? 'Link copied to clipboard'
+                            : ''}
+                        </span>
+                      </button>
+                    </div>
                   </td>
                 </tr>
               );

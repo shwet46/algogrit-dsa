@@ -1,6 +1,6 @@
-import React from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React from 'react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function NotesPagination({
   currentPage,
@@ -17,10 +17,10 @@ export default function NotesPagination({
         onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
         className={cn(
-          "flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200",
+          'flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200',
           currentPage === 1
-            ? "bg-zinc-800 text-zinc-500 cursor-not-allowed"
-            : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100"
+            ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
+            : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100'
         )}
       >
         <ArrowLeft className="w-4 h-4" />
@@ -36,10 +36,10 @@ export default function NotesPagination({
         onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
         className={cn(
-          "flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200",
+          'flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200',
           currentPage === totalPages
-            ? "bg-zinc-800 text-zinc-500 cursor-not-allowed"
-            : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100"
+            ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
+            : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100'
         )}
       >
         Next

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Filter, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React, { useState } from 'react';
+import { Filter, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function NotesTagFilters({
   allTags,
@@ -41,10 +41,10 @@ export default function NotesTagFilters({
               key={tag}
               onClick={() => toggleTag(tag)}
               className={cn(
-                "px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border",
+                'px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border',
                 sel
-                  ? "bg-[#7c8bd2] text-white border-[#7c8bd2] shadow-md"
-                  : "bg-zinc-800 text-zinc-300 border-zinc-700 hover:bg-zinc-700 hover:border-zinc-600"
+                  ? 'bg-[#7c8bd2] text-white border-[#7c8bd2] shadow-md'
+                  : 'bg-zinc-800 text-zinc-300 border-zinc-700 hover:bg-zinc-700 hover:border-zinc-600'
               )}
             >
               {tag}
@@ -58,7 +58,7 @@ export default function NotesTagFilters({
           onClick={() => setShowAll(!showAll)}
           className="text-sm text-indigo-400 hover:underline"
         >
-          {showAll ? "Show less" : `Show all (${allTags.length})`}
+          {showAll ? 'Show less' : `Show all (${allTags.length})`}
         </button>
       )}
     </div>

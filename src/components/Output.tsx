@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import {
   Play,
   Loader2,
@@ -11,18 +11,18 @@ import {
   Terminal,
   AlertCircle,
   Clock,
-} from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
+} from 'lucide-react';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Badge } from '@/components/ui/badge';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
-import { executeCode } from "../lib/api";
+} from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
+import { executeCode } from '../lib/api';
 
 interface RunResult {
   stdout?: string;
@@ -43,7 +43,7 @@ interface OutputProps {
 }
 
 const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
-  const [output, setOutput] = useState<string>("");
+  const [output, setOutput] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [isExecuting, setIsExecuting] = useState<boolean>(false);
   const [executionTime, setExecutionTime] = useState<number | null>(null);
@@ -54,7 +54,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
 
     setIsExecuting(true);
     setError(null);
-    setOutput("");
+    setOutput('');
     setExecutionTime(null);
 
     const startTime = performance.now();
@@ -68,28 +68,30 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
       if (result.run.stderr) {
         setError(result.run.stderr);
       } else {
-        let outputText = result.run.stdout || "";
+        let outputText = result.run.stdout || '';
         if (result.run.output && result.run.output !== outputText) {
           outputText += result.run.output;
         }
-        setOutput(outputText || "Code executed successfully with no output");
+        setOutput(outputText || 'Code executed successfully with no output');
       }
     } catch (err) {
-      let errorMessage = "An error occurred while executing the code";
+      let errorMessage = 'An error occurred while executing the code';
       if (err instanceof Error) {
         errorMessage = err.message;
       } else if (
-        typeof err === "object" &&
+        typeof err === 'object' &&
         err !== null &&
-        "response" in err &&
-        typeof err.response === "object" &&
+        'response' in err &&
+        typeof err.response === 'object' &&
         err.response !== null &&
-        "data" in err.response &&
-        typeof err.response.data === "object" &&
+        'data' in err.response &&
+        typeof err.response.data === 'object' &&
         err.response.data !== null &&
-        "message" in err.response.data
+        'message' in err.response.data
       ) {
-        errorMessage = String((err.response.data as { message: string }).message);
+        errorMessage = String(
+          (err.response.data as { message: string }).message
+        );
       }
       setError(errorMessage);
     } finally {
@@ -108,9 +110,9 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
 
   const hasContent = output || error;
   const getStatusColor = () => {
-    if (error) return "text-red-500";
-    if (output) return "text-green-500";
-    return "text-muted-foreground";
+    if (error) return 'text-red-500';
+    if (output) return 'text-green-500';
+    return 'text-muted-foreground';
   };
 
   return (
@@ -118,11 +120,14 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
       <div className="flex justify-between border-transparent items-center px-4 py-3 rounded-t-xl bg-muted/30 border-b">
         <div className="flex items-center space-x-4">
           <div className="flex items-center">
-            <Terminal className={cn("h-4 w-4 mr-2", getStatusColor())} />
+            <Terminal className={cn('h-4 w-4 mr-2', getStatusColor())} />
             <div className="font-semibold text-sm">
               Console
               {error && (
-                <Badge variant="destructive" className="ml-2 text-xs px-2 py-0.5">
+                <Badge
+                  variant="destructive"
+                  className="ml-2 text-xs px-2 py-0.5"
+                >
                   Error
                 </Badge>
               )}
@@ -193,8 +198,8 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
                   disabled={isExecuting}
                   size="sm"
                   className={cn(
-                    "h-8 font-medium",
-                    !isExecuting && "bg-green-600 hover:bg-green-700 text-white"
+                    'h-8 font-medium',
+                    !isExecuting && 'bg-green-600 hover:bg-green-700 text-white'
                   )}
                 >
                   {isExecuting ? (

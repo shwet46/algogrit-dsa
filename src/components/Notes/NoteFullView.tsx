@@ -1,6 +1,6 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import type { Note } from "./NoteEditForm";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import type { Note } from './NoteEditForm';
 
 interface NoteFullViewProps {
   note: Note;
@@ -8,20 +8,29 @@ interface NoteFullViewProps {
   onEdit?: () => void;
 }
 
-export default function NoteFullView({ note, onClose, onEdit }: NoteFullViewProps) {
+export default function NoteFullView({
+  note,
+  onClose,
+  onEdit,
+}: NoteFullViewProps) {
   if (!note) return null;
 
-  let createdAtStr = "";
+  let createdAtStr = '';
   if (
     note.createdAt &&
-    typeof note.createdAt === "object" &&
+    typeof note.createdAt === 'object' &&
     note.createdAt !== null &&
-    typeof (note.createdAt as { toDate?: unknown }).toDate === "function"
+    typeof (note.createdAt as { toDate?: unknown }).toDate === 'function'
   ) {
-    createdAtStr = ((note.createdAt as unknown) as { toDate: () => Date }).toDate().toLocaleString();
+    createdAtStr = (note.createdAt as unknown as { toDate: () => Date })
+      .toDate()
+      .toLocaleString();
   } else if (note.createdAt instanceof Date) {
     createdAtStr = note.createdAt.toLocaleString();
-  } else if (typeof note.createdAt === "string" || typeof note.createdAt === "number") {
+  } else if (
+    typeof note.createdAt === 'string' ||
+    typeof note.createdAt === 'number'
+  ) {
     createdAtStr = String(note.createdAt);
   }
 
@@ -43,7 +52,10 @@ export default function NoteFullView({ note, onClose, onEdit }: NoteFullViewProp
         {note.tags?.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
             {note.tags.map((tag: string) => (
-              <span key={tag} className="px-3 py-1 bg-zinc-800 text-[#7c8bd2] text-xs rounded-full border border-[#7c8bd2]/30">
+              <span
+                key={tag}
+                className="px-3 py-1 bg-zinc-800 text-[#7c8bd2] text-xs rounded-full border border-[#7c8bd2]/30"
+              >
                 {tag}
               </span>
             ))}

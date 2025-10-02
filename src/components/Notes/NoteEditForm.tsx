@@ -1,25 +1,25 @@
-import React, { useState, useRef } from "react";
-import ReactMarkdown from "react-markdown";
-import { 
-  Bold, 
-  Italic, 
-  Underline, 
-  Link, 
-  Heading1, 
-  Heading2, 
-  Heading3, 
-  Code, 
-  Quote, 
-  List, 
-  ListOrdered, 
-  Minus, 
+import React, { useState, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import {
+  Bold,
+  Italic,
+  Underline,
+  Link,
+  Heading1,
+  Heading2,
+  Heading3,
+  Code,
+  Quote,
+  List,
+  ListOrdered,
+  Minus,
   Eraser,
   Eye,
   EyeOff,
   Save,
   X,
-  Tag
-} from "lucide-react";
+  Tag,
+} from 'lucide-react';
 
 export type Note = {
   id: string;
@@ -46,19 +46,19 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
   // Markdown toolbar handlers
   const insertMarkdown = (
     syntax:
-      | "bold"
-      | "italic"
-      | "underline"
-      | "link"
-      | "heading"
-      | "heading2"
-      | "heading3"
-      | "code"
-      | "quote"
-      | "ul"
-      | "ol"
-      | "hr"
-      | "clear"
+      | 'bold'
+      | 'italic'
+      | 'underline'
+      | 'link'
+      | 'heading'
+      | 'heading2'
+      | 'heading3'
+      | 'code'
+      | 'quote'
+      | 'ul'
+      | 'ol'
+      | 'hr'
+      | 'clear'
   ) => {
     const textarea = textareaRef.current;
     if (!textarea) return;
@@ -67,88 +67,90 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
     const before = content.substring(0, start);
     const after = content.substring(end);
     const selected = content.substring(start, end);
-    let insert = "";
-    
+    let insert = '';
+
     switch (syntax) {
-      case "bold":
-        insert = `**${selected || "bold text"}**`;
+      case 'bold':
+        insert = `**${selected || 'bold text'}**`;
         break;
-      case "italic":
-        insert = `*${selected || "italic text"}*`;
+      case 'italic':
+        insert = `*${selected || 'italic text'}*`;
         break;
-      case "underline":
-        insert = `<u>${selected || "underline"}</u>`;
+      case 'underline':
+        insert = `<u>${selected || 'underline'}</u>`;
         break;
-      case "link":
-        insert = `[${selected || "link text"}](https://)`;
+      case 'link':
+        insert = `[${selected || 'link text'}](https://)`;
         break;
-      case "heading":
-        insert = `# ${selected || "Heading"}`;
+      case 'heading':
+        insert = `# ${selected || 'Heading'}`;
         break;
-      case "heading2":
-        insert = `## ${selected || "Heading 2"}`;
+      case 'heading2':
+        insert = `## ${selected || 'Heading 2'}`;
         break;
-      case "heading3":
-        insert = `### ${selected || "Heading 3"}`;
+      case 'heading3':
+        insert = `### ${selected || 'Heading 3'}`;
         break;
-      case "code":
-        insert = `\`\`\`\n${selected || "code"}\n\`\`\``;
+      case 'code':
+        insert = `\`\`\`\n${selected || 'code'}\n\`\`\``;
         break;
-      case "quote":
-        insert = `> ${selected || "quote"}`;
+      case 'quote':
+        insert = `> ${selected || 'quote'}`;
         break;
-      case "ul":
-        insert = `- ${selected || "list item"}`;
+      case 'ul':
+        insert = `- ${selected || 'list item'}`;
         break;
-      case "ol":
-        insert = `1. ${selected || "numbered item"}`;
+      case 'ol':
+        insert = `1. ${selected || 'numbered item'}`;
         break;
-      case "hr":
+      case 'hr':
         insert = `\n---\n`;
         break;
-      case "clear":
+      case 'clear':
         const cleared = selected
-          .replace(/(\*\*|__)(.*?)\1/g, "$2")
-          .replace(/(\*|_)(.*?)\1/g, "$2")
-          .replace(/<u>(.*?)<\/u>/g, "$1")
-          .replace(/\[(.*?)\]\((.*?)\)/g, "$1")
-          .replace(/^#{1,6}\s+/gm, "")
-          .replace(/`{1,3}([^`]*)`{1,3}/g, "$1")
-          .replace(/^>\s?/gm, "")
-          .replace(/^(-|\*)\s+/gm, "")
-          .replace(/^\d+\.\s+/gm, "")
-          .replace(/^-{3,}$/gm, "");
+          .replace(/(\*\*|__)(.*?)\1/g, '$2')
+          .replace(/(\*|_)(.*?)\1/g, '$2')
+          .replace(/<u>(.*?)<\/u>/g, '$1')
+          .replace(/\[(.*?)\]\((.*?)\)/g, '$1')
+          .replace(/^#{1,6}\s+/gm, '')
+          .replace(/`{1,3}([^`]*)`{1,3}/g, '$1')
+          .replace(/^>\s?/gm, '')
+          .replace(/^(-|\*)\s+/gm, '')
+          .replace(/^\d+\.\s+/gm, '')
+          .replace(/^-{3,}$/gm, '');
         insert = cleared;
         break;
       default:
         break;
     }
-    
+
     const newContent = before + insert + after;
     setContent(newContent);
-    
+
     setTimeout(() => {
       textarea.focus();
-      if (syntax === "link") {
+      if (syntax === 'link') {
         textarea.setSelectionRange(start + 1, start + insert.length - 11);
-      } else if (syntax === "bold" || syntax === "italic") {
+      } else if (syntax === 'bold' || syntax === 'italic') {
         textarea.setSelectionRange(start + 2, start + insert.length - 2);
-      } else if (syntax === "underline") {
+      } else if (syntax === 'underline') {
         textarea.setSelectionRange(start + 3, start + insert.length - 4);
-      } else if (syntax === "heading") {
+      } else if (syntax === 'heading') {
         textarea.setSelectionRange(start + 2, start + insert.length);
-      } else if (syntax === "heading2") {
+      } else if (syntax === 'heading2') {
         textarea.setSelectionRange(start + 3, start + insert.length);
-      } else if (syntax === "heading3") {
+      } else if (syntax === 'heading3') {
         textarea.setSelectionRange(start + 4, start + insert.length);
-      } else if (syntax === "code") {
+      } else if (syntax === 'code') {
         textarea.setSelectionRange(start + 4, start + insert.length - 4);
-      } else if (syntax === "quote" || syntax === "ul" || syntax === "ol") {
+      } else if (syntax === 'quote' || syntax === 'ul' || syntax === 'ol') {
         textarea.setSelectionRange(
-          start + insert.indexOf(selected || ""),
-          start + insert.indexOf(selected || "") + (selected ? selected.length : 0)
+          start + insert.indexOf(selected || ''),
+          start +
+            insert.indexOf(selected || '') +
+            (selected ? selected.length : 0)
         );
-      } else if (syntax === "clear") {
+      } else if (syntax === 'clear') {
         textarea.setSelectionRange(start, start + insert.length);
       }
     }, 0);
@@ -160,7 +162,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
     try {
       onSave({ ...note, title, content, tags });
     } catch (error) {
-      console.error("Error saving note:", error);
+      console.error('Error saving note:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -193,11 +195,13 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
         <div className="flex items-center justify-between p-6 border-b border-zinc-700/50 bg-gradient-to-r from-zinc-900 to-zinc-800">
           <div>
             <h3 className="text-2xl font-bold text-white">Edit Note</h3>
-            <p className="text-zinc-400 text-sm mt-1">Make changes to your note with markdown support</p>
+            <p className="text-zinc-400 text-sm mt-1">
+              Make changes to your note with markdown support
+            </p>
           </div>
-          <button 
-            type="button" 
-            onClick={onCancel} 
+          <button
+            type="button"
+            onClick={onCancel}
             disabled={isSubmitting}
             className="p-2 rounded-lg hover:bg-zinc-700 transition-colors disabled:opacity-50 text-zinc-400 hover:text-white"
           >
@@ -205,7 +209,10 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-6 max-h-[calc(90vh-100px)] overflow-y-auto algogrit-scrollbar">
+        <form
+          onSubmit={handleSubmit}
+          className="p-6 space-y-6 max-h-[calc(90vh-100px)] overflow-y-auto algogrit-scrollbar"
+        >
           {/* Title Input */}
           <div className="space-y-2">
             <label className="block text-sm font-medium text-zinc-300">
@@ -215,7 +222,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
               type="text"
               className="w-full px-4 py-3 bg-zinc-800 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]/50 focus:border-[#7c8bd2] transition-colors text-lg font-semibold"
               value={title}
-              onChange={e => setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
               required
               disabled={isSubmitting}
               placeholder="Note title..."
@@ -235,10 +242,10 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                 disabled={isSubmitting}
               >
                 {showPreview ? <EyeOff size={14} /> : <Eye size={14} />}
-                {showPreview ? "Hide Preview" : "Show Preview"}
+                {showPreview ? 'Hide Preview' : 'Show Preview'}
               </button>
             </div>
-            
+
             {/* Enhanced Markdown Toolbar */}
             <div className="flex flex-wrap gap-1 p-3 bg-zinc-800 rounded-lg border border-zinc-700">
               <div className="flex gap-1">
@@ -246,7 +253,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Bold"
-                  onClick={() => insertMarkdown("bold")}
+                  onClick={() => insertMarkdown('bold')}
                   disabled={isSubmitting}
                 >
                   <Bold size={16} />
@@ -255,7 +262,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Italic"
-                  onClick={() => insertMarkdown("italic")}
+                  onClick={() => insertMarkdown('italic')}
                   disabled={isSubmitting}
                 >
                   <Italic size={16} />
@@ -264,7 +271,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Underline"
-                  onClick={() => insertMarkdown("underline")}
+                  onClick={() => insertMarkdown('underline')}
                   disabled={isSubmitting}
                 >
                   <Underline size={16} />
@@ -273,21 +280,21 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Link"
-                  onClick={() => insertMarkdown("link")}
+                  onClick={() => insertMarkdown('link')}
                   disabled={isSubmitting}
                 >
                   <Link size={16} />
                 </button>
               </div>
-              
+
               <div className="w-px h-8 bg-zinc-600 mx-1"></div>
-              
+
               <div className="flex gap-1">
                 <button
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Heading 1"
-                  onClick={() => insertMarkdown("heading")}
+                  onClick={() => insertMarkdown('heading')}
                   disabled={isSubmitting}
                 >
                   <Heading1 size={16} />
@@ -296,7 +303,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Heading 2"
-                  onClick={() => insertMarkdown("heading2")}
+                  onClick={() => insertMarkdown('heading2')}
                   disabled={isSubmitting}
                 >
                   <Heading2 size={16} />
@@ -305,21 +312,21 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Heading 3"
-                  onClick={() => insertMarkdown("heading3")}
+                  onClick={() => insertMarkdown('heading3')}
                   disabled={isSubmitting}
                 >
                   <Heading3 size={16} />
                 </button>
               </div>
-              
+
               <div className="w-px h-8 bg-zinc-600 mx-1"></div>
-              
+
               <div className="flex gap-1">
                 <button
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Code Block"
-                  onClick={() => insertMarkdown("code")}
+                  onClick={() => insertMarkdown('code')}
                   disabled={isSubmitting}
                 >
                   <Code size={16} />
@@ -328,7 +335,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Quote"
-                  onClick={() => insertMarkdown("quote")}
+                  onClick={() => insertMarkdown('quote')}
                   disabled={isSubmitting}
                 >
                   <Quote size={16} />
@@ -337,7 +344,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Bullet List"
-                  onClick={() => insertMarkdown("ul")}
+                  onClick={() => insertMarkdown('ul')}
                   disabled={isSubmitting}
                 >
                   <List size={16} />
@@ -346,7 +353,7 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Numbered List"
-                  onClick={() => insertMarkdown("ol")}
+                  onClick={() => insertMarkdown('ol')}
                   disabled={isSubmitting}
                 >
                   <ListOrdered size={16} />
@@ -355,44 +362,48 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                   type="button"
                   className="p-2 rounded-md bg-zinc-700 text-zinc-200 hover:bg-zinc-600 transition-colors disabled:opacity-50"
                   title="Horizontal Rule"
-                  onClick={() => insertMarkdown("hr")}
+                  onClick={() => insertMarkdown('hr')}
                   disabled={isSubmitting}
                 >
                   <Minus size={16} />
                 </button>
               </div>
-              
+
               <div className="w-px h-8 bg-zinc-600 mx-1"></div>
-              
+
               <button
                 type="button"
                 className="p-2 rounded-md bg-red-700 text-white hover:bg-red-600 transition-colors disabled:opacity-50"
                 title="Clear Formatting"
-                onClick={() => insertMarkdown("clear")}
+                onClick={() => insertMarkdown('clear')}
                 disabled={isSubmitting}
               >
                 <Eraser size={16} />
               </button>
             </div>
 
-            <div className={`grid gap-4 ${showPreview ? 'lg:grid-cols-2' : 'grid-cols-1'}`}>
+            <div
+              className={`grid gap-4 ${showPreview ? 'lg:grid-cols-2' : 'grid-cols-1'}`}
+            >
               {/* Content Editor */}
               <div>
                 <textarea
                   ref={textareaRef}
                   className="w-full h-64 rounded-lg bg-zinc-800 border border-zinc-600 px-4 py-3 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]/50 focus:border-[#7c8bd2] transition-colors resize-none algogrit-scrollbar"
                   value={content}
-                  onChange={e => setContent(e.target.value)}
+                  onChange={(e) => setContent(e.target.value)}
                   required
                   disabled={isSubmitting}
                   placeholder="Write your note here using Markdown..."
                 />
               </div>
-              
+
               {/* Preview */}
               {showPreview && (
                 <div>
-                  <div className="text-xs font-medium text-zinc-400 mb-2">Live Preview</div>
+                  <div className="text-xs font-medium text-zinc-400 mb-2">
+                    Live Preview
+                  </div>
                   <div className="h-64 prose prose-invert prose-sm bg-zinc-800 border border-zinc-600 rounded-lg p-4 overflow-auto algogrit-scrollbar">
                     <ReactMarkdown>{content}</ReactMarkdown>
                   </div>
@@ -401,39 +412,37 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
             </div>
           </div>
 
-          {/* Tags Section */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-zinc-300">
               <Tag size={16} />
               Tags
-              <span className="text-xs text-zinc-400 font-normal">(select or type and press Enter)</span>
+              <span className="text-xs text-zinc-400 font-normal">
+                (select or type and press Enter)
+              </span>
             </label>
             <div className="space-y-2">
-              {/* Tag input with add-on-enter and tag suggestions */}
               <input
                 type="text"
                 className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-600 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7c8bd2]/50 focus:border-[#7c8bd2] transition-colors"
                 placeholder="Type a tag and press Enter..."
-                onKeyDown={e => {
-                  if (e.key === "Enter") {
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
                     e.preventDefault();
                     const value = (e.target as HTMLInputElement).value.trim();
                     if (value && !tags.includes(value)) {
                       setTags([...tags, value]);
-                      (e.target as HTMLInputElement).value = "";
+                      (e.target as HTMLInputElement).value = '';
                     }
                   }
                 }}
                 disabled={isSubmitting}
                 list="note-tag-suggestions"
               />
-              {/* Tag suggestions (optional, can be removed if not needed) */}
               <datalist id="note-tag-suggestions">
-                {tags.map(tag => (
+                {tags.map((tag) => (
                   <option key={tag} value={tag} />
                 ))}
               </datalist>
-              {/* Tag display and remove */}
               {tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-2">
                   {tags.map((tag, index) => (
@@ -445,7 +454,9 @@ export default function NoteEditForm({ note, onSave, onCancel }: Props) {
                       <button
                         type="button"
                         className="ml-2 text-[#7c8bd2] hover:text-red-500"
-                        onClick={() => setTags(tags.filter((t, i) => i !== index))}
+                        onClick={() =>
+                          setTags(tags.filter((t, i) => i !== index))
+                        }
                         tabIndex={-1}
                         aria-label={`Remove tag ${tag}`}
                       >

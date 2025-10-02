@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { useState, useRef, useEffect } from "react";
-import { Bot, Send } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import { useAuth } from "@/context/authContext";
+import { useState, useRef, useEffect } from 'react';
+import { Bot, Send } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import { useAuth } from '@/context/authContext';
 
 type Message = {
-  sender: "user" | "bot";
+  sender: 'user' | 'bot';
   text: string;
 };
 
 export default function CodeAssistant() {
   const { user } = useAuth();
   const [open, setOpen] = useState(false);
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -22,15 +22,15 @@ export default function CodeAssistant() {
     if (!prompt.trim()) return;
 
     const userMessage = prompt.trim();
-    setMessages((prev) => [...prev, { sender: "user", text: userMessage }]);
-    setPrompt("");
+    setMessages((prev) => [...prev, { sender: 'user', text: userMessage }]);
+    setPrompt('');
     setLoading(true);
 
     try {
-      const res = await fetch("/api/ask", {
-        method: "POST",
+      const res = await fetch('/api/ask', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           message: userMessage,
@@ -40,17 +40,17 @@ export default function CodeAssistant() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to get response");
+        throw new Error(data.error || 'Failed to get response');
       }
 
       const botReply = data.reply || "Sorry, I couldn't generate a response.";
 
-      setMessages((prev) => [...prev, { sender: "bot", text: botReply }]);
+      setMessages((prev) => [...prev, { sender: 'bot', text: botReply }]);
     } catch (err) {
-      console.error("API error:", err);
+      console.error('API error:', err);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Failed to get response from AI assistant." },
+        { sender: 'bot', text: 'Failed to get response from AI assistant.' },
       ]);
     } finally {
       setLoading(false);
@@ -58,7 +58,7 @@ export default function CodeAssistant() {
   };
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, loading]);
 
   return (
@@ -83,12 +83,12 @@ export default function CodeAssistant() {
           }
         `}
       </style>
-      {/* Floating button */}
+      {/* button */}
       <div className="fixed bottom-5 right-5 z-50">
         <button
           onClick={() => {
             if (!user) {
-              window.location.href = "/signup";
+              window.location.href = '/signup';
               return;
             }
             setOpen(!open);
@@ -123,18 +123,18 @@ export default function CodeAssistant() {
               <div
                 key={i}
                 className={`my-2 flex ${
-                  msg.sender === "user" ? "justify-end" : "justify-start"
+                  msg.sender === 'user' ? 'justify-end' : 'justify-start'
                 }`}
               >
                 <div
                   className={`px-4 py-2 max-w-[80%] rounded-lg whitespace-pre-wrap text-sm ${
-                    msg.sender === "user"
-                      ? "bg-gradient-to-r from-zinc-800 to-zinc-700 text-white rounded-br-none border border-[#5d6bb7]/20"
-                      : "bg-gradient-to-r from-[#5d6bb7]/10 to-[#3f4b9c]/10 text-zinc-300 border border-[#5d6bb7]/30 rounded-bl-none max-h-[350px] overflow-y-auto"
+                    msg.sender === 'user'
+                      ? 'bg-gradient-to-r from-zinc-800 to-zinc-700 text-white rounded-br-none border border-[#5d6bb7]/20'
+                      : 'bg-gradient-to-r from-[#5d6bb7]/10 to-[#3f4b9c]/10 text-zinc-300 border border-[#5d6bb7]/30 rounded-bl-none max-h-[350px] overflow-y-auto'
                   }`}
                   style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                 >
-                  {msg.sender === "bot" ? (
+                  {msg.sender === 'bot' ? (
                     <ReactMarkdown
                       components={{
                         strong: (props) => (
@@ -144,13 +144,24 @@ export default function CodeAssistant() {
                           <em className="italic text-[#7c8bd2]" {...props} />
                         ),
                         code: (props) => (
-                          <code className="bg-zinc-800 px-1 py-0.5 rounded text-[#7c8bd2] font-mono break-words whitespace-pre-wrap inline-block max-w-full overflow-x-auto" {...props} />
+                          <code
+                            className="bg-zinc-800 px-1 py-0.5 rounded text-[#7c8bd2] font-mono break-words whitespace-pre-wrap inline-block max-w-full overflow-x-auto"
+                            {...props}
+                          />
                         ),
                         pre: (props) => (
-                          <pre className="bg-zinc-900 rounded p-2 my-2 overflow-x-auto text-xs" style={{ maxWidth: '100%' }} {...props} />
+                          <pre
+                            className="bg-zinc-900 rounded p-2 my-2 overflow-x-auto text-xs"
+                            style={{ maxWidth: '100%' }}
+                            {...props}
+                          />
                         ),
-                        ul: (props) => <ul className="list-disc ml-5" {...props} />,
-                        ol: (props) => <ol className="list-decimal ml-5" {...props} />,
+                        ul: (props) => (
+                          <ul className="list-disc ml-5" {...props} />
+                        ),
+                        ol: (props) => (
+                          <ol className="list-decimal ml-5" {...props} />
+                        ),
                         li: (props) => <li className="mb-1" {...props} />,
                         a: (props) => (
                           <a
@@ -185,15 +196,15 @@ export default function CodeAssistant() {
               placeholder="e.g., How does Dijkstra's algorithm work?"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             />
             <button
               onClick={handleSend}
               disabled={!prompt.trim()}
               className={`relative p-2.5 rounded-lg text-white transition-all duration-300 group overflow-hidden ${
                 !prompt.trim()
-                  ? "opacity-50 cursor-not-allowed bg-gray-600"
-                  : "bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] hover:from-[#5d6bb7] hover:to-[#3f4b9c] shadow-lg hover:shadow-xl"
+                  ? 'opacity-50 cursor-not-allowed bg-gray-600'
+                  : 'bg-gradient-to-r from-[#7c8bd2] to-[#5d6bb7] hover:from-[#5d6bb7] hover:to-[#3f4b9c] shadow-lg hover:shadow-xl'
               }`}
             >
               {prompt.trim() && (

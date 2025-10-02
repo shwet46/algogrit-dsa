@@ -5,10 +5,10 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <>
-    <main className="min-h-screen antialiased">
+      <main className="min-h-screen antialiased">
         <CodeEditor />
-        <Footer/>
-    </main>
+        <Footer />
+      </main>
     </>
   );
 }

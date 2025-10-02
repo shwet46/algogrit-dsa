@@ -1,13 +1,13 @@
-import React from "react";
-import { ArrowLeft, ArrowRight, MoreHorizontal } from "lucide-react";
+import React from 'react';
+import { ArrowLeft, ArrowRight, MoreHorizontal } from 'lucide-react';
 
-// Simple cn utility for className merging
 interface CnArg {
   toString(): string;
 }
 
-const cn = (...classes: (string | undefined | false | null | 0 | CnArg)[]): string =>
-  classes.filter(Boolean).join(' ');
+const cn = (
+  ...classes: (string | undefined | false | null | 0 | CnArg)[]
+): string => classes.filter(Boolean).join(' ');
 
 type ProblemsPaginationProps = {
   currentPage: number;
@@ -18,36 +18,30 @@ type ProblemsPaginationProps = {
 const ProblemsPagination: React.FC<ProblemsPaginationProps> = ({
   currentPage,
   totalPages,
-  setCurrentPage
+  setCurrentPage,
 }) => {
-  // Generate page numbers with ellipsis logic
   const generatePageNumbers = () => {
     const pages = [];
     const showEllipsis = totalPages > 7;
-    
+
     if (!showEllipsis) {
-      // Show all pages if 7 or fewer
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      // Complex ellipsis logic for better UX
       if (currentPage <= 4) {
-        // Near beginning: 1 2 3 4 5 ... last
         for (let i = 1; i <= 5; i++) {
           pages.push(i);
         }
         pages.push('ellipsis');
         pages.push(totalPages);
       } else if (currentPage >= totalPages - 3) {
-        // Near end: 1 ... last-4 last-3 last-2 last-1 last
         pages.push(1);
         pages.push('ellipsis');
         for (let i = totalPages - 4; i <= totalPages; i++) {
           pages.push(i);
         }
       } else {
-        // Middle: 1 ... current-1 current current+1 ... last
         pages.push(1);
         pages.push('ellipsis');
         for (let i = currentPage - 1; i <= currentPage + 1; i++) {
@@ -57,7 +51,7 @@ const ProblemsPagination: React.FC<ProblemsPaginationProps> = ({
         pages.push(totalPages);
       }
     }
-    
+
     return pages;
   };
 
@@ -70,19 +64,19 @@ const ProblemsPagination: React.FC<ProblemsPaginationProps> = ({
         onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
         className={cn(
-          "group flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 border-2",
-          "transform hover:scale-105 active:scale-95",
+          'group flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 border-2',
+          'transform hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950',
           currentPage === 1
-            ? "text-neutral-500 border-neutral-700 cursor-not-allowed bg-neutral-800/30"
-            : "text-[#7c8bd2] border-[#7c8bd2]/40 hover:border-[#7c8bd2] hover:bg-[#7c8bd2]/10 hover:shadow-lg hover:shadow-[#7c8bd2]/20"
+            ? 'text-neutral-500 border-[#7c8bd2]/20 cursor-not-allowed bg-neutral-800/30'
+            : 'text-zinc-100 border-[#7c8bd2]/25 hover:text-[#c6cbf5] hover:border-[#7c8bd2]/40 hover:bg-zinc-900/40 hover:shadow-lg hover:shadow-[#7c8bd2]/20'
         )}
       >
-        <ArrowLeft 
-          size={18} 
+        <ArrowLeft
+          size={18}
           className={cn(
-            "transition-transform duration-300",
-            currentPage !== 1 && "group-hover:-translate-x-1"
-          )} 
+            'transition-transform duration-300',
+            currentPage !== 1 && 'group-hover:-translate-x-1'
+          )}
         />
         <span className="hidden sm:inline">Previous</span>
       </button>
@@ -102,22 +96,19 @@ const ProblemsPagination: React.FC<ProblemsPaginationProps> = ({
           }
 
           const isActive = page === currentPage;
-          
+
           return (
             <button
               key={page}
               onClick={() => setCurrentPage(page as number)}
               className={cn(
-                "w-10 h-10 rounded-xl text-sm font-bold transition-all duration-300 relative overflow-hidden",
-                "transform hover:scale-110 active:scale-95",
+                'w-10 h-10 rounded-xl text-sm font-bold transition-all duration-300 relative overflow-hidden',
+                'transform hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950',
                 isActive
-                  ? "bg-gradient-to-br from-[#7c8bd2] via-[#6a7bc8] to-[#5d6bb7] text-white shadow-lg shadow-[#7c8bd2]/30 border-2 border-[#7c8bd2]/50"
-                  : "text-[#7c8bd2] hover:text-white hover:bg-[#7c8bd2]/20 border-2 border-transparent hover:border-[#7c8bd2]/30 hover:shadow-md hover:shadow-[#7c8bd2]/20"
+                  ? 'bg-zinc-900/60 text-[#c6cbf5] border-2 border-[#7c8bd2]/40 hover:border-[#7c8bd2]/60'
+                  : 'bg-zinc-950/40 text-neutral-300 border-2 border-[#7c8bd2]/25 hover:text-white hover:bg-zinc-900/40 hover:border-[#7c8bd2]/40 hover:shadow-md hover:shadow-[#7c8bd2]/20'
               )}
             >
-              {isActive && (
-                <div className="absolute inset-0 bg-white/20 animate-pulse rounded-xl" />
-              )}
               <span className="relative z-10">{page}</span>
             </button>
           );
@@ -129,28 +120,28 @@ const ProblemsPagination: React.FC<ProblemsPaginationProps> = ({
         onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
         className={cn(
-          "group flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 border-2",
-          "transform hover:scale-105 active:scale-95",
+          'group flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 border-2',
+          'transform hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c8bd2] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950',
           currentPage === totalPages
-            ? "text-neutral-500 border-neutral-700 cursor-not-allowed bg-neutral-800/30"
-            : "text-[#7c8bd2] border-[#7c8bd2]/40 hover:border-[#7c8bd2] hover:bg-[#7c8bd2]/10 hover:shadow-lg hover:shadow-[#7c8bd2]/20"
+            ? 'text-neutral-500 border-[#7c8bd2]/20 cursor-not-allowed bg-neutral-800/30'
+            : 'text-zinc-100 border-[#7c8bd2]/25 hover:text-[#c6cbf5] hover:border-[#7c8bd2]/40 hover:bg-zinc-900/40 hover:shadow-lg hover:shadow-[#7c8bd2]/20'
         )}
       >
         <span className="hidden sm:inline">Next</span>
-        <ArrowRight 
-          size={18} 
+        <ArrowRight
+          size={18}
           className={cn(
-            "transition-transform duration-300",
-            currentPage !== totalPages && "group-hover:translate-x-1"
-          )} 
+            'transition-transform duration-300',
+            currentPage !== totalPages && 'group-hover:translate-x-1'
+          )}
         />
       </button>
 
       {/* Page Info - Mobile Friendly */}
       <div className="sm:hidden w-full text-center mt-2">
         <span className="text-sm text-neutral-400">
-          Page <span className="font-bold text-[#7c8bd2]">{currentPage}</span> of{" "}
-          <span className="font-bold text-[#7c8bd2]">{totalPages}</span>
+          Page <span className="font-bold text-[#7c8bd2]">{currentPage}</span>{' '}
+          of <span className="font-bold text-[#7c8bd2]">{totalPages}</span>
         </span>
       </div>
     </div>

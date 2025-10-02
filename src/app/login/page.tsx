@@ -1,59 +1,59 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { auth } from '@/firebase/config'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { auth } from '@/firebase/config';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
-import { z } from 'zod'
-import { WavyBackground } from '@/components/ui/wavy-background'
-import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { z } from 'zod';
+import { WavyBackground } from '@/components/ui/wavy-background';
+import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 
 const LoginSchema = z.object({
   email: z.string().email('Invalid email address.'),
-  password: z.string().min(6, 'Password must be at least 6 characters.')
-})
+  password: z.string().min(6, 'Password must be at least 6 characters.'),
+});
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const router = useRouter()
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleLogin = async () => {
-    setError('')
-    const validation = LoginSchema.safeParse({ email, password })
+    setError('');
+    const validation = LoginSchema.safeParse({ email, password });
 
     if (!validation.success) {
-      setError(validation.error.errors[0].message)
-      return
+      setError(validation.error.errors[0].message);
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-      router.push('/')
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push('/');
     } catch (err: unknown) {
-      let message = 'Login failed. Please try again.'
+      let message = 'Login failed. Please try again.';
       if (err && typeof err === 'object' && 'code' in err) {
-        const code = (err as { code?: string }).code
+        const code = (err as { code?: string }).code;
         message =
           code === 'auth/user-not-found'
             ? 'User not found.'
             : code === 'auth/wrong-password'
-            ? 'Incorrect password.'
-            : code === 'auth/invalid-email'
-            ? 'Invalid email address.'
-            : 'Login failed. Please try again.'
+              ? 'Incorrect password.'
+              : code === 'auth/invalid-email'
+                ? 'Invalid email address.'
+                : 'Login failed. Please try again.';
       }
 
-      setError(message)
-      console.error('Login error:', err)
+      setError(message);
+      console.error('Login error:', err);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <WavyBackground containerClassName="min-h-screen w-full flex items-center justify-center bg-black">
@@ -62,7 +62,9 @@ export default function LoginPage() {
           <h1 className="text-4xl md:text-5xl text-indigo-300 font-black mb-3 tracking-tight">
             AlgoGrit DSA
           </h1>
-          <p className="text-zinc-400 text-lg font-medium">Sign in to your account</p>
+          <p className="text-zinc-400 text-lg font-medium">
+            Sign in to your account
+          </p>
         </div>
 
         <div className="space-y-5">
@@ -84,7 +86,9 @@ export default function LoginPage() {
 
         {error && (
           <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-            <p className="text-red-400 text-sm font-medium text-center">{error}</p>
+            <p className="text-red-400 text-sm font-medium text-center">
+              {error}
+            </p>
           </div>
         )}
 
@@ -118,7 +122,7 @@ export default function LoginPage() {
         </div>
       </div>
     </WavyBackground>
-  )
+  );
 }
 
 function InputField({
@@ -126,13 +130,13 @@ function InputField({
   placeholder,
   type,
   value,
-  onChange
+  onChange,
 }: {
-  icon: React.ReactNode
-  placeholder: string
-  type: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  icon: React.ReactNode;
+  placeholder: string;
+  type: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
     <div className="group relative">
@@ -147,5 +151,5 @@ function InputField({
         className="w-full pl-12 pr-4 py-4 bg-zinc-900/60 backdrop-blur-sm border border-zinc-700/50 rounded-lg focus:border-indigo-400/50 focus:bg-zinc-800/80 outline-none text-white placeholder:text-zinc-400 text-base font-medium transition-all duration-300"
       />
     </div>
-  )
+  );
 }
