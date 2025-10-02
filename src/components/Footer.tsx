@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaStar } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { VscTerminal } from 'react-icons/vsc';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -118,6 +118,17 @@ const Footer = () => {
               className="hover:text-blue-400 transition-colors"
             >
               <MdEmail size={18} />
+            </a>
+          </div>
+          <div className="pt-2">
+            <a
+              href="https://github.com/shwet46/algogrit-dsa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-500/40 text-indigo-300 hover:bg-indigo-500/10 px-3 py-2 text-sm"
+            >
+              <FaStar size={16} />
+              Star us on GitHub
             </a>
           </div>
           <p className="text-xs text-neutral-500 pt-4">

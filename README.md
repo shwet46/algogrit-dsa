@@ -1,6 +1,14 @@
 # AlgoGrit DSA 👩🏻‍💻
 
+<p align="center">
+	<img src="./public/algoui.png" alt="AlgoGrit UI" width="800" />
+	<br/>
+	<br/><br/>
+</p>
+
 A web application for mastering Data Structures and Algorithms (DSA) with smart tools, code execution, notes, and problem tracking. Built with Next.js, Firebase, and a beautiful custom UI.
+
+If you like this project, please ⭐ star the repo !
 
 ## Features
 
@@ -30,7 +38,7 @@ npm install
 - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
 - Enable Authentication (Email/Password)
 - Create a Firestore database
-- Set your Firestore rules (see below)
+- Set your Firestore rules (see firestore.rules)
 - Copy your Firebase config to `.env.local`:
 
 ```
@@ -50,5 +58,9 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+---
+
+Contributions are welcome, feel free to open an issue for bugs/feature requests or send a PR with improvements.
 
 ---

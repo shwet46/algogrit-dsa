@@ -1,0 +1,104 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /problems/{problemId} {
+      allow read: if true;
+    }
+    match /publicData/{document} {
+      allow read: if true;
+    }
+
+    match /users/{userId} {
+      function validEmailLower(e) {
+        return e is string && e.matches('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$');
+      }
+      function validUsernameLower(u) {
+        return u is string && u.matches('^[a-z0-9_]{3,20}$');
+      }
+      function isStringOrNull(v) {
+        return (v == null) || (v is string);
+      }
+      function baseUserChecks() {
+        return request.resource.data.uid == userId
+          && validEmailLower(request.resource.data.emailLower)
+          && validUsernameLower(request.resource.data.usernameLower)
+          && (request.resource.data.email is string || request.resource.data.email == null)
+          && request.resource.data.createdAt is timestamp
+          && (!('name' in request.resource.data) || request.resource.data.name is string && request.resource.data.name.size() <= 100)
+          && (!('dob' in request.resource.data) || request.resource.data.dob is string && request.resource.data.dob.matches('^\\d{4}-\\d{2}-\\d{2}$'))
+          && (!('photoURL' in request.resource.data) || isStringOrNull(request.resource.data.photoURL));
+      }
+
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null && request.auth.uid == userId && baseUserChecks();
+
+      allow update: if request.auth != null && request.auth.uid == userId && baseUserChecks();
+      allow delete: if request.auth != null && request.auth.uid == userId;
+
+      match /notes/{noteId} {
+        allow read, create, update, delete: if request.auth != null && request.auth.uid == userId;
+
+        allow create: if request.auth != null &&
+          request.auth.uid == userId &&
+          request.resource.data.keys().hasAll(['title', 'content', 'tags']) &&
+          request.resource.data.title is string &&
+          request.resource.data.content is string &&
+          request.resource.data.tags is list &&
+          request.resource.data.title.size() > 0;
+
+        allow update: if request.auth != null &&
+          request.auth.uid == userId &&
+          request.resource.data.keys().hasAll(['title', 'content', 'tags']) &&
+          request.resource.data.title is string &&
+          request.resource.data.content is string &&
+          request.resource.data.tags is list &&
+          request.resource.data.title.size() > 0;
+      }
+
+      match /solvedProblems/{problemId} {
+        allow read, create, update, delete: if request.auth != null && request.auth.uid == userId;
+      }
+
+      match /{subcollection}/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    match /usernames/{usernameLower} {
+      function valid(u) { return u is string && u.matches('^[a-z0-9_]{3,20}$'); }
+      allow read: if true; 
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.usernameLower == usernameLower
+        && valid(usernameLower)
+        && (!('emailLower' in request.resource.data) || request.resource.data.emailLower is string);
+      allow update: if request.auth != null
+        && resource.data.uid == request.auth.uid
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.usernameLower == usernameLower
+        && valid(usernameLower);
+      allow delete: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid);
+    }
+
+    match /emails/{emailLower} {
+      function valid(e) { return e is string && e.matches('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$'); }
+      allow read: if true;
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.emailLower == emailLower
+        && valid(emailLower);
+      allow update: if request.auth != null
+        && resource.data.uid == request.auth.uid
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.emailLower == emailLower
+        && valid(emailLower);
+      allow delete: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
