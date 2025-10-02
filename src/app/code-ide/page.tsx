@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeEditor from '@/components/CodeEditor';
+import CodeEditor from '@/components/Code-ide/CodeEditor';
 import Footer from '@/components/Footer';
 
 export default function Home() {

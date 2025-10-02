@@ -52,7 +52,6 @@ export function Navbar() {
       navItems={navItems}
       isLoggedIn={!!user}
       onSignInOut={handleSignInOut}
-      user={user}
     />
   );
 }

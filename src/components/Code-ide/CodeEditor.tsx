@@ -1,8 +1,7 @@
 'use client';
-
 import React, { useRef, useState, useEffect } from 'react';
 import { Editor, OnMount } from '@monaco-editor/react';
-import { CODE_SNIPPETS } from '../lib/constants';
+import { CODE_SNIPPETS } from '../../lib/constants';
 import LanguageSelector from './LanguageSelector';
 import Output from './Output';
 import { Button } from '@/components/ui/button';
@@ -163,14 +162,24 @@ const CodeEditor: React.FC = () => {
   };
 
   const getFileExtension = (lang: SupportedLanguage): string => {
-    const extensions: Record<SupportedLanguage, string> = {
+    const extensions: Partial<Record<SupportedLanguage, string>> = {
       javascript: 'js',
       typescript: 'ts',
       python: 'py',
       java: 'java',
       csharp: 'cs',
+      cpp: 'cpp',
+      c: 'c',
+      go: 'go',
+      php: 'php',
+      ruby: 'rb',
+      rust: 'rs',
+      swift: 'swift',
+      kotlin: 'kt',
+      bash: 'sh',
+      sql: 'sql',
     };
-    return extensions[lang] || 'txt';
+    return extensions[lang] ?? 'txt';
   };
 
   const copyCode = (): void => {

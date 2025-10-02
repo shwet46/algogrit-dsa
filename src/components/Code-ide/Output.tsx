@@ -3,15 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import {
-  Play,
-  Loader2,
-  Copy,
-  CheckCheck,
-  Terminal,
-  AlertCircle,
-  Clock,
-} from 'lucide-react';
+import { Play, Loader2, Copy, CheckCheck, Terminal, AlertCircle, Clock } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
@@ -22,16 +14,19 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { executeCode } from '../lib/api';
+import axios from 'axios';
+import { LANGUAGE_IDS } from '@/lib/constants';
 
-interface RunResult {
-  stdout?: string;
-  stderr?: string;
-  output?: string;
-}
-
-interface ExecutionResponse {
-  run: RunResult;
+// Judge0 response types (partial)
+interface Judge0Response {
+  token: string;
+  stdout: string | null;
+  stderr: string | null;
+  compile_output: string | null;
+  message?: string | null;
+  status?: { id: number; description: string };
+  time?: string | null;
+  memory?: number | null;
 }
 interface EditorRef {
   getValue: () => string;
@@ -49,6 +44,15 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
   const [executionTime, setExecutionTime] = useState<number | null>(null);
   const [copied, setCopied] = useState<boolean>(false);
 
+  const b64decode = (input: string | null | undefined): string => {
+    if (!input) return '';
+    try {
+      return decodeURIComponent(escape(atob(input)));
+    } catch {
+      return input;
+    }
+  };
+
   const runCode = async () => {
     if (!editorRef.current) return;
 
@@ -61,18 +65,29 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
     const sourceCode = editorRef.current.getValue();
 
     try {
-      const result: ExecutionResponse = await executeCode(language, sourceCode);
+      const languageId = LANGUAGE_IDS[language as keyof typeof LANGUAGE_IDS];
+      if (!languageId) throw new Error(`Language not supported: ${language}`);
+      const res = await axios.post<Judge0Response>(
+        '/api/exectue',
+        {
+          language_id: languageId,
+          source_code: sourceCode,
+          stdin: '',
+        },
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+      const result = res.data;
       const endTime = performance.now();
       setExecutionTime(Math.round((endTime - startTime) * 100) / 100);
 
-      if (result.run.stderr) {
-        setError(result.run.stderr);
+      const statusId = result.status?.id ?? 0;
+      const stderrText = b64decode(result.stderr) || b64decode(result.compile_output) || '';
+      const stdoutText = b64decode(result.stdout);
+
+      if (statusId >= 6 || stderrText) {
+        setError(stderrText || result.status?.description || 'Execution error');
       } else {
-        let outputText = result.run.stdout || '';
-        if (result.run.output && result.run.output !== outputText) {
-          outputText += result.run.output;
-        }
-        setOutput(outputText || 'Code executed successfully with no output');
+        setOutput(stdoutText || 'Code executed successfully with no output');
       }
     } catch (err) {
       let errorMessage = 'An error occurred while executing the code';
