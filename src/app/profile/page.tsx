@@ -11,21 +11,26 @@ import {
 } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
-import { ProfileHeader } from "@/components/Profile/ProfileHeader";
+// Removed unused ProfileHeader import (was triggering no-unused-vars lint error)
 import { InfoRow } from "@/components/Profile/InfoRow";
 import { FormField } from "@/components/Profile/FormField";
 import { DateOfBirthPicker } from "@/components/Profile/DateOfBirthPicker";
+import Image from "next/image";
 
 export default function ProfilePage() {
   return (
-    <div className="relative min-h-screen mt-20 w-full mb-16 bg-black text-white py-8 px-2 sm:px-6 md:px-12 lg:px-20">
+    <div className="relative min-h-screen mt-20 w-full mb-24 text-white py-10 px-3 sm:px-6 md:px-10 lg:px-16">
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-black" />
-        <div className="absolute inset-0 [background-size:20px_20px] [background-image:radial-gradient(circle,#262626_1px,transparent_1px)] opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-950 to-black" />
+        <div className="absolute inset-0 [background-size:26px_26px] [background-image:radial-gradient(circle,#262626_1.2px,transparent_1.2px)] opacity-20" />
       </div>
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-6xl mx-auto space-y-10">
+        <header className="flex flex-col gap-4">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-indigo-300 via-indigo-200 to-indigo-300 bg-clip-text text-transparent">Account Dashboard</h1>
+          <p className="text-sm sm:text-base text-zinc-400 max-w-2xl">Review and manage all of the information associated with your AlgoGrit account. You can update your public profile, view authentication metadata, and sign out securely.</p>
+        </header>
         <ProfileContent />
       </div>
     </div>
@@ -63,12 +68,14 @@ function ProfileContent() {
   const [form, setForm] = useState({ username: "", name: "", dob: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loadingProfile, setLoadingProfile] = useState(false);
 
   useEffect(() => {
     if (!user) return;
     let ignore = false;
     const load = async () => {
       try {
+        setLoadingProfile(true);
         const refDoc = doc(db, "users", user.uid);
         const snap = await getDoc(refDoc);
         if (!ignore) {
@@ -81,7 +88,7 @@ function ProfileContent() {
           });
         }
       } finally {
-        // no loading state UI 
+        setLoadingProfile(false);
       }
     };
     load();
@@ -228,89 +235,112 @@ function ProfileContent() {
     );
   }
 
+  // Firebase auth metadata (live, not stored in Firestore)
+  // If auth metadata is needed later, access via user.metadata (removed unused variable that triggered lint error)
+  // (Metadata retained if needed for future, but not displayed now)
+  // const creationTime = authMeta?.creationTime ? new Date(authMeta.creationTime) : undefined;
+  // const lastSignInTime = authMeta?.lastSignInTime ? new Date(authMeta.lastSignInTime) : undefined;
+  // const providers = user.providerData?.map(p => p?.providerId).filter(Boolean) || [];
+  const photoURL = user.photoURL || undefined;
+
   return (
-    <div className="rounded-2xl border border-[#7c8bd2]/25 bg-zinc-950/40 shadow-xl p-6">
-      <h1 className="text-2xl font-bold text-white mb-2">Profile</h1>
-      <p className="text-zinc-300 mb-6">Manage your account details</p>
-
-      {error && (
-        <div className="mb-3 p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
-          {error}
-        </div>
-      )}
-      {success && (
-        <div className="mb-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm">
-          {success}
-        </div>
-      )}
-
-      {/* Account details */}
-      <div className="grid gap-6">
-        {!editing ? (
-          <div className="bg-zinc-900/60 border border-[#7c8bd2]/25 rounded-xl p-6">
-            <ProfileHeader
-              title={profile?.name || user.displayName || profile?.username || "Your profile"}
-              username={profile?.username}
+    <div className="rounded-2xl border border-indigo-400/15 bg-zinc-950/60 shadow-[0_0_0_1px_rgba(120,131,255,0.15)] backdrop-blur-sm p-6 sm:p-8 space-y-8">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+        <div className="relative w-24 h-24 shrink-0 rounded-2xl border border-indigo-400/30 bg-gradient-to-br from-zinc-800 via-zinc-800 to-zinc-900 flex items-center justify-center overflow-hidden shadow-inner">
+          {photoURL ? (
+            <Image
+              src={photoURL}
+              alt="Avatar"
+              fill
+              sizes="96px"
+              className="object-cover"
+              priority
             />
+          ) : (
+            <span className="text-3xl font-semibold text-indigo-200">
+              {(profile?.name || user.displayName || profile?.username || user.email || "?").slice(0,1).toUpperCase()}
+            </span>
+          )}
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-white/5" />
+        </div>
+        <div className="flex-1 space-y-2">
+          <h2 className="text-2xl font-semibold tracking-tight text-indigo-100 flex items-center gap-3">{profile?.name || user.displayName || profile?.username || "Your profile"}
+            {user.emailVerified && <span className="text-[10px] uppercase bg-emerald-500/15 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">Verified</span>}
+          </h2>
+          <p className="text-sm text-zinc-400">Manage your personal details below.</p>
+        </div>
+      </div>
 
+      <section className="bg-zinc-900/60 border border-indigo-400/15 rounded-xl p-5 sm:p-6">
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-300 mb-4">Profile Details</h3>
+        {loadingProfile && !profile ? (
+          <div className="space-y-3 animate-pulse">
+            <div className="h-4 bg-zinc-800 rounded" />
+            <div className="h-4 bg-zinc-800 rounded w-2/3" />
+            <div className="h-4 bg-zinc-800 rounded w-1/3" />
+          </div>
+        ) : !editing ? (
+          <div className="space-y-2">
             <InfoRow label="Username" value={profile?.username || "—"} onCopy={() => copy("username", profile?.username)} copied={copiedField === "username"} />
             <InfoRow label="Email" value={user.email || "—"} onCopy={() => copy("email", user.email)} copied={copiedField === "email"} />
-            <InfoRow label="Created" value={formatDate(profile?.createdAt)} />
             <InfoRow label="Name" value={profile?.name || user.displayName || "—"} />
-
-            <div className="mt-6 flex items-center gap-3">
+            <InfoRow label="Date of Birth" value={profile?.dob || "—"} />
+            <div className="pt-4 flex items-center gap-3 flex-wrap">
               <button
                 onClick={() => setEditing(true)}
                 className="px-4 py-2 rounded-lg border border-indigo-500/40 text-indigo-300 hover:bg-indigo-500/10 text-sm"
               >
                 Edit profile
               </button>
+              <button
+                onClick={doSignOut}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-red-500/30 text-red-300 hover:bg-red-500/10 text-sm"
+              >
+                <ArrowRightOnRectangleIcon className="h-4 w-4" />
+                Sign out
+              </button>
             </div>
           </div>
         ) : (
-          <div className="bg-zinc-900/60 border border-[#7c8bd2]/25 rounded-xl p-6">
+          <div className="space-y-5">
             <div className="grid gap-4 sm:grid-cols-2">
               <FormField label="Username" type="text" value={form.username} onChange={(e) => setForm((f) => ({ ...f, username: e.target.value }))} placeholder="your_handle" />
               <FormField label="Name" type="text" value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} placeholder="Full name" />
               <DateOfBirthPicker value={form.dob} onChange={(v) => setForm((f) => ({ ...f, dob: v }))} />
             </div>
-
-            <div className="mt-6 flex items-center gap-3">
+            <div className="flex items-center gap-3 pt-2 flex-wrap">
               <button onClick={() => setEditing(false)} className="px-4 py-2 rounded-lg border border-zinc-700/50 text-zinc-400 hover:bg-zinc-800 text-sm">
                 Cancel
               </button>
               <button onClick={handleSave} disabled={saving} className="px-4 py-2 rounded-lg border border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/10 text-sm disabled:opacity-50">
                 {saving ? "Saving…" : "Save changes"}
               </button>
+              <button
+                onClick={doSignOut}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-red-500/30 text-red-300 hover:bg-red-500/10 text-sm"
+              >
+                <ArrowRightOnRectangleIcon className="h-4 w-4" />
+                Sign out
+              </button>
             </div>
           </div>
         )}
+      </section>
 
-        {/* Security */}
-        <div className="bg-zinc-900/60 border border-[#7c8bd2]/25 rounded-xl p-6">
-          <h2 className="text-lg font-semibold text-[#c6cbf5] mb-2">Security</h2>
-          <div className="flex items-center justify-between">
-            <p className="text-sm text-zinc-400">This account uses Firebase Authentication.</p>
-            <button
-              onClick={doSignOut}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-red-500/30 text-red-300 hover:bg-red-500/10 text-sm"
-            >
-              <ArrowRightOnRectangleIcon className="h-4 w-4" />
-              Sign out
-            </button>
-          </div>
+      {error && (
+        <div className="mt-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+          {error}
         </div>
-      </div>
+      )}
+      {success && (
+        <div className="mt-4 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm">
+            {success}
+        </div>
+      )}
+
+    
     </div>
   );
 }
 
-function formatDate(val: unknown): string {
-  if (!val) return "—";
-  try {
-    if (typeof val === "string") return new Date(val).toLocaleDateString();
-    if (isTimestamp(val)) return val.toDate().toLocaleDateString();
-    if (val instanceof Date) return val.toLocaleDateString();
-  } catch {}
-  return "—";
-}
+// Removed unused helper function formatDate (lint no-unused-vars)
